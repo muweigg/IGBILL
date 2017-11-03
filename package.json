@@ -1,0 +1,43 @@
+{
+  "name": "gulp4",
+  "version": "1.0.0",
+  "description": "This is a quick start creating a multi-page application with Gulp 4.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "prod": "gulp prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MuWei",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^8.0.31",
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-css-adjust-url-path": "^1.0.2",
+    "gulp-data": "^1.2.1",
+    "gulp-empty": "^0.1.2",
+    "gulp-filter": "^5.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-inject": "^4.3.0",
+    "gulp-nunjucks": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^8.0.0",
+    "gulp-rev-collector": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-typescript": "^3.2.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp.spritesmith": "^6.5.1",
+    "merge-stream": "^1.0.1",
+    "ts-node": "^3.3.0",
+    "tslib": "^1.8.0",
+    "typescript": "^2.5.3"
+  }
+}

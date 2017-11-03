@@ -1,0 +1,187 @@
+{% extends './common/base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/index.css">
+{% endblock %}
+
+{% block scripts %}
+    <script src="./js/index.js"></script>
+{% endblock %}
+
+{% block content %}
+    <main class="index">
+
+        <header>
+            <img class="icon" src="./assets/images/text.png"
+                srcset="./assets/images/text.png 1x, ./assets/images/text@2x.png 2x, ./assets/images/text@3x.png 3x">
+
+            <button>
+                <span>开始兑换</span>
+                <img class="icon" src="./assets/images/button-arrow.png"
+                    srcset="./assets/images/button-arrow.png 1x, ./assets/images/button-arrow@2x.png 2x, ./assets/images/button-arrow@3x.png 3x">
+            </button>
+
+            <div class="games">
+                <span>
+                    <svg class="svg-icon">
+                        <use xlink:href="#icon-csgo"></use>
+                    </svg>
+                    CSGO
+                </span>
+                <span>
+                    <svg class="svg-icon">
+                        <use xlink:href="#icon-dota2"></use>
+                    </svg>
+                    DOTA2
+                </span>
+                <span>
+                    <svg class="svg-icon">
+                        <use xlink:href="#icon-h1z1"></use>
+                    </svg>
+                    H!Z1
+                </span>
+                <span>
+                    <svg class="svg-icon">
+                        <use xlink:href="#icon-pubg"></use>
+                    </svg>
+                    PUBG
+                </span>
+            </div>
+        </header>
+
+        <!-- 轮播 -->
+        <div class="carousel">
+            <div class="container-wrap">
+                    <div class="count hide-on-small-only">
+                        饰品兑换数量：<em>23232323</em>
+                    </div>
+                    <div class="users">
+                        <!-- 用户滚动 -->
+                        <div class="users-wrap">
+                            <div class="user">
+                                渣渣哇哇 兑换：
+                                <em><sup>￥</sup>1111</em>
+                                <span>
+                                    <img class="icon" src="./assets/images/clock-s.png"
+                                        srcset="./assets/images/clock-s.png 1x, ./assets/images/clock-s@2x.png 2x, ./assets/images/clock-s@3x.png 3x">
+                                    23分钟
+                                </span>
+                            </div>
+                            <div class="user">
+                                渣渣哇哇 兑换：
+                                <em><sup>￥</sup>2222</em>
+                                <span>
+                                    <img class="icon" src="./assets/images/clock-s.png"
+                                        srcset="./assets/images/clock-s.png 1x, ./assets/images/clock-s@2x.png 2x, ./assets/images/clock-s@3x.png 3x">
+                                    23分钟
+                                </span>
+                            </div>
+                            <div class="user">
+                                渣渣哇哇 兑换：
+                                <em><sup>￥</sup>3333</em>
+                                <span>
+                                    <img class="icon" src="./assets/images/clock-s.png"
+                                        srcset="./assets/images/clock-s.png 1x, ./assets/images/clock-s@2x.png 2x, ./assets/images/clock-s@3x.png 3x">
+                                    23分钟
+                                </span>
+                            </div>
+                            <div class="user">
+                                渣渣哇哇 兑换：
+                                <em><sup>￥</sup>4444</em>
+                                <span>
+                                    <img class="icon" src="./assets/images/clock-s.png"
+                                        srcset="./assets/images/clock-s.png 1x, ./assets/images/clock-s@2x.png 2x, ./assets/images/clock-s@3x.png 3x">
+                                    23分钟
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- 克隆一份 -->
+                        <div class="users-wrap">
+                            <div class="user">
+                                渣渣哇哇 兑换：
+                                <em><sup>￥</sup>1111</em>
+                                <span>
+                                    <img class="icon" src="./assets/images/clock-s.png"
+                                        srcset="./assets/images/clock-s.png 1x, ./assets/images/clock-s@2x.png 2x, ./assets/images/clock-s@3x.png 3x">
+                                    23分钟
+                                </span>
+                            </div>
+                            <div class="user">
+                                渣渣哇哇 兑换：
+                                <em><sup>￥</sup>2222</em>
+                                <span>
+                                    <img class="icon" src="./assets/images/clock-s.png"
+                                        srcset="./assets/images/clock-s.png 1x, ./assets/images/clock-s@2x.png 2x, ./assets/images/clock-s@3x.png 3x">
+                                    23分钟
+                                </span>
+                            </div>
+                            <div class="user">
+                                渣渣哇哇 兑换：
+                                <em><sup>￥</sup>3333</em>
+                                <span>
+                                    <img class="icon" src="./assets/images/clock-s.png"
+                                        srcset="./assets/images/clock-s.png 1x, ./assets/images/clock-s@2x.png 2x, ./assets/images/clock-s@3x.png 3x">
+                                    23分钟
+                                </span>
+                            </div>
+                            <div class="user">
+                                渣渣哇哇 兑换：
+                                <em><sup>￥</sup>4444</em>
+                                <span>
+                                    <img class="icon" src="./assets/images/clock-s.png"
+                                        srcset="./assets/images/clock-s.png 1x, ./assets/images/clock-s@2x.png 2x, ./assets/images/clock-s@3x.png 3x">
+                                    23分钟
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 流程 -->
+        <div class="process">
+            <div class="container-wrap">
+                <div class="row">
+                    <div class="col m6 s12">
+                        <span class="block">
+                            <img class="icon" src="./assets/images/steam-login.png"
+                                srcset="./assets/images/steam-login.png 1x, ./assets/images/steam-login@2x.png 2x, ./assets/images/steam-login@3x.png 3x">
+                            <em>【STEAM登录】</em>
+                        </span>
+                        <span class="block">
+                            <img class="icon" src="./assets/images/exchange.png"
+                                srcset="./assets/images/exchange.png 1x, ./assets/images/exchange@2x.png 2x, ./assets/images/exchange@3x.png 3x">
+                            <em>【兑换商品】</em>
+                        </span>
+                        <span class="block">
+                            <img class="icon" src="./assets/images/get-balance.png"
+                                srcset="./assets/images/get-balance.png 1x, ./assets/images/get-balance@2x.png 2x, ./assets/images/get-balance@3x.png 3x">
+                            <em>【获取余额】</em>
+                        </span>
+                    </div>
+                    <div class="col m6 s12">
+                        <span class="block">
+                            <img class="icon" src="./assets/images/cooperation.png"
+                                srcset="./assets/images/cooperation.png 1x, ./assets/images/cooperation@2x.png 2x, ./assets/images/cooperation@3x.png 3x">
+                            <em>【选择合作网站】</em>
+                        </span>
+                        <span class="block">
+                            <img class="icon" src="./assets/images/favorite-goods.png"
+                                srcset="./assets/images/favorite-goods.png 1x, ./assets/images/favorite-goods@2x.png 2x, ./assets/images/favorite-goods@3x.png 3x">
+                            <em>【获得心仪商品】</em>
+                        </span>
+                        <span class="block">
+                            <img class="icon" src="./assets/images/consumption-balance.png"
+                                srcset="./assets/images/consumption-balance.png 1x, ./assets/images/consumption-balance@2x.png 2x, ./assets/images/consumption-balance@3x.png 3x">
+                            <em>【消费余额】</em>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+{% endblock %}
+
