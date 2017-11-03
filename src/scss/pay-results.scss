@@ -27,6 +27,32 @@
     @media #{$small-and-down} {
         top: 1.0938rem;
         bottom: 1.765625rem;
+
+        div {
+            text-align: center;
+            font-size: 14px;
+            transform: translate(-50%, -70%);
+
+            img {
+                transform: translateX(-10px);
+            }
+
+            p {
+                white-space: nowrap;
+                // margin-top: 20px;
+                text-align: center;
+                line-height: 2.5;
+
+                span {
+                    display: none;
+                }
+
+                strong {
+                    font-size: 26px;
+                    font-weight: bold;
+                }
+            }
+        }
     }
 
     @media #{$medium-and-up} {
