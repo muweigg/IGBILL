@@ -10,14 +10,14 @@
     bottom: 0;
 }
 
-.pay-results {
+.payment {
     position: fixed;
     left: 0;
     right: 0;
     color: #36373e;
     font-size: 16px;
 
-    div {
+    div.pay-results {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -28,7 +28,7 @@
         top: 1.0938rem;
         bottom: 1.765625rem;
 
-        div {
+        div.pay-results {
             text-align: center;
             font-size: 14px;
             transform: translate(-50%, -70%);
@@ -59,7 +59,7 @@
         top: 70px;
         bottom: 113px;
         
-        div {
+        div.pay-results {
 
             img {
                 float: left;

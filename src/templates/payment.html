@@ -1,7 +1,7 @@
 {% extends './common/base.html' %}
 
 {% block css %}
-    <link rel="stylesheet" href="./css/pay-results.css">
+    <link rel="stylesheet" href="./css/payment.css">
 {% endblock %}
 
 {% block header %}
@@ -9,8 +9,10 @@
 {% endblock %}
 
 {% block content %}
-    <main class="pay-results">
-        <div>
+    <main class="payment">
+        
+        <!-- 支付结果 -->
+        <div class="pay-results">
             <!-- 支付成功 -->
             <img class="icon" src="./assets/images/pay-success.png"
                 srcset="./assets/images/pay-success.png 1x, ./assets/images/pay-success@2x.png 2x, ./assets/images/pay-success@3x.png 3x">
