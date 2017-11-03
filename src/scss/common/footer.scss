@@ -2,99 +2,10 @@ footer.main-footer {
     background-color: #1e1d2b;
     color: #b2b2b2;
 
-    h3 {
-        margin: 0;
-        line-height: 1;
-        text-align: center;
-        color: #fff;
-
-        span {
-            position: relative;
-        }
-    }
-
     @media #{$small-and-down} {
-        padding: .625rem .3125rem 0;
-
-        h3 {
-            font-size: 20px;
-
-            span {
-                
-                &:before, &:after {
-                    content: '';
-                    display: block;
-                    width: 20px;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    border-top: 1px solid #3c414b;
-                }
-
-                &:before {
-                    right: 100%;
-                    transform: translate(-14px, -50%)
-                }
-
-                &:after {
-                    left: 100%;
-                    transform: translate(14px, -50%)
-                }
-            }
-        }
-
-        .swiper-custom-wrapper {
-            position: relative;
-            padding: 0 .625rem;
-        
-            .swiper-container {
-                width: 100%;
-                margin-top: 0.3125rem;
-            
-                .swiper-slide {
-                    width: 2.8438rem;
-                    height: 1.5rem;
-                    text-align: center;
-                    font-size: 0.2813rem;
-                    border: 0.0156rem solid #3c414b;
-                    position: relative;
-
-                    img {
-                        max-width: 100%;
-                        max-height: 100%;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                    }
-                }
-            }
-
-            .swiper-btn-prev, .swiper-btn-next {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                cursor: pointer;
-                z-index: 1;
-
-                &.disabled {
-                    opacity: .5;
-                    cursor: default;
-                }
-            }
-
-            .swiper-btn-prev {
-                left: 0;
-            }
-
-            .swiper-btn-next {
-                transform: scaleX(-1) translateY(-50%);
-                right: 0;
-            }
-        }
 
         .links {
-            margin: 0.7813rem 0 0.2344rem;
+            padding: 0.3125rem 0 0.2344rem;
 
             a {
                 color: #b2b2b2;
@@ -133,81 +44,10 @@ footer.main-footer {
     }
 
     @media #{$medium-and-up} {
-        padding-top: 35px;
-        
-        h3 {
-            font-size: 20px;
-
-            span {
-                
-                &:before, &:after {
-                    content: '';
-                    display: block;
-                    width: 20px;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    border-top: 1px solid #3c414b;
-                }
-
-                &:before {
-                    right: 100%;
-                    transform: translate(-14px, -50%)
-                }
-
-                &:after {
-                    left: 100%;
-                    transform: translate(14px, -50%)
-                }
-            }
-        }
-
-        .swiper-custom-wrapper {
-            position: relative;
-        
-            .swiper-container {
-                width: 100%;
-                margin-top: 20px;
-            
-                .swiper-slide {
-                    width: 182px;
-                    height: 100px;
-                    text-align: center;
-                    font-size: 18px;
-                    border: 1px solid #3c414b;
-
-                    /* Center slide text vertically */
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-
-            .swiper-btn-prev, .swiper-btn-next {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                cursor: pointer;
-
-                &.disabled {
-                    opacity: .5;
-                    cursor: default;
-                }
-            }
-
-            .swiper-btn-prev {
-                right: calc(100% + 20px);
-            }
-
-            .swiper-btn-next {
-                transform: scaleX(-1) translateY(-50%);
-                left: calc(100% + 20px);
-            }
-        }
 
         .links {
             text-align: center;
-            margin: 50px 0 15px;
+            padding: 20px 0 15px;
 
             a {
                 color: #b2b2b2;
