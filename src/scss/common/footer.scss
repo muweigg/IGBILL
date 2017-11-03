@@ -78,7 +78,7 @@ footer.main-footer {
                 z-index: 1;
 
                 &.disabled {
-                    opacity: .7;
+                    opacity: .5;
                     cursor: default;
                 }
             }
@@ -189,8 +189,8 @@ footer.main-footer {
                 transform: translateY(-50%);
                 cursor: pointer;
 
-                .disabled {
-                    opacity: .7;
+                &.disabled {
+                    opacity: .5;
                     cursor: default;
                 }
             }
