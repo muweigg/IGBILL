@@ -2,10 +2,10 @@
 @import './common/third-party/materialize/components/_variables';
 @import './common/variables';
 @import './common/mixins';
-@import './common/icons.scss';
 
 body {
     background-color: #1e1d2b;
+    background: url('../../assets/images/bg.jpg') top center no-repeat;
 }
 
 .index {

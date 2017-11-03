@@ -1,0 +1,31 @@
+{% extends './common/base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/pay-results.css">
+{% endblock %}
+
+{% block header %}
+    {% include './common/pay-header.html' %}
+{% endblock %}
+
+{% block content %}
+    <main class="pay-results">
+        <div>
+            <!-- 支付成功 -->
+            <img class="icon" src="./assets/images/pay-success.png"
+                srcset="./assets/images/pay-success.png 1x, ./assets/images/pay-success@2x.png 2x, ./assets/images/pay-success@3x.png 3x">
+            <!-- 支付失败 -->
+            <!-- <img class="icon" src="./assets/images/pay-fail.png"
+                srcset="./assets/images/pay-fail.png 1x, ./assets/images/pay-fail@2x.png 2x, ./assets/images/pay-fail@3x.png 3x"> -->
+            <!-- 支付超时 -->
+            <!-- <img class="icon" src="./assets/images/pay-timeout.png"
+                srcset="./assets/images/pay-timeout.png 1x, ./assets/images/pay-timeout@2x.png 2x, ./assets/images/pay-timeout@3x.png 3x"> -->
+            <p>
+                <strong>支付成功！</strong>等待跳转...
+                <br>
+                你也可以 <a href="javascript:">"点击这里"</a> 立即跳转回 XXXXXX 。
+            </p>
+        </div>
+    </main>
+{% endblock %}
+
