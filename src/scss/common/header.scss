@@ -72,22 +72,30 @@ header.main-header {
             line-height: 1;
 
             button.login {
-                width: 0.625rem;
+                $width: 2.1875rem;
+                position: absolute;
+                left: $width / 2;
+                width: $width;
                 height: 0.625rem;
                 line-height: calc(0.625rem - 2px);
                 border: 1px solid #3c414b;
-                border-radius: 50%;
+                border-radius: .3125rem;
                 background-color: transparent;
                 position: relative;
-                text-align: center;
+                color: #fff;
+                font-size: 0;
+                white-space: nowrap;
 
                 img {
                     width: 0.2969rem;
                     height: 0.2969rem;
+                    transform: translateY(0.0313rem);
                 }
 
                 span {
-                    display: none;
+                    font-size: 12px;
+                    display: inline-block;
+                    transform: scale(.9);
                 }
             }
 
