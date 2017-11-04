@@ -26,7 +26,7 @@
             <div class="content-wrap">
 
                 <!-- 登录前 -->
-                <div class="login-igb">
+                <div class="login-igb" style="display: none;">
                     <p>用<span>STEAM</span>账户登入<span>IGB</span>，完成支付</p>
                     <button>
                         <span>登录IGB</span>
@@ -47,7 +47,76 @@
 
                 <!-- 选择饰品 -->
                 <div class="chose-skins">
-                    
+                    <div class="balance">
+                        <span>您的账户余额：<em class="c1">35</em></span>
+                        <span>支付饰品金额：<em class="c2">35</em></span>
+                        <span class="c3">【仅需饰品抵扣xx元，支付完成，剩余20元将存入您的余额】</span>
+                        <button>
+                            <span>立即支付</span>
+                            <img class="icon" src="./assets/images/button-arrow.png"
+                                srcset="./assets/images/button-arrow.png 1x, ./assets/images/button-arrow@2x.png 2x, ./assets/images/button-arrow@3x.png 3x">
+                        </button>
+                    </div>
+
+                    <div class="trade-url">
+                        交易前，确认您的Steam隐私已经设置为<span class="c1">"公开"</span>，并填入<span class="c1">Trade Url</span>：
+                        <input type="text">
+                    </div>
+
+                    <div class="skins">
+                        <div class="filter-games">
+                            <div class="checkboxs">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>
+                                        <i class="checkbox">
+                                            <img class="icon" src="./assets/images/checked.png"
+                                                srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                        </i>
+                                        CSGO
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>
+                                        <i class="checkbox">
+                                            <img class="icon" src="./assets/images/checked.png"
+                                                srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                        </i>
+                                        DOTA 2
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>
+                                        <i class="checkbox">
+                                            <img class="icon" src="./assets/images/checked.png"
+                                                srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                        </i>
+                                        H1Z1:KotK
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>
+                                        <i class="checkbox">
+                                            <img class="icon" src="./assets/images/checked.png"
+                                                srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                        </i>
+                                        H1Z1:JS
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="search-bar">
+                                <input type="text">
+                                <i>
+                                    <img class="icon" src="./assets/images/search.png"
+                                        srcset="./assets/images/search.png 1x, ./assets/images/search@2x.png 2x, ./assets/images/search@3x.png 3x">
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>

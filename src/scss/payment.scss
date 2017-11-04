@@ -24,6 +24,21 @@
         transform: translate(-50%, -50%);
         font-size: 16px;
     }
+
+    .c1 {
+        color: #00a4ff;
+    }
+    .c2 {
+        color: #fbbb3b;
+    }
+
+    .c3 {
+        color: #808080;
+    }
+
+    input {
+        outline: none;
+    }
     
     @media #{$small-and-down} {
         top: 1.0938rem;
@@ -38,7 +53,6 @@
             background-color: #00a4ff;
             color: #fff;
             border: 0;
-            margin-top: 0.3906rem;
             cursor: pointer;
             position: relative;
 
@@ -113,7 +127,7 @@
                 height: 0.7813rem * 2;
                 line-height: 0.5469rem;
                 background-color: #f2f7fa;
-                border-bottom: 0.0156rem solid #dcdddd;
+                border-bottom: 1px solid #dcdddd;
                 padding: .15625rem 0.3125rem 0 0.7813rem;
                 font-size: 0;
 
@@ -121,8 +135,9 @@
                     display: inline-block;
                     position: relative;
                     width: 50%;
-                    font-size: 12px;
+                    font-size: 0.2813rem;
                     white-space: nowrap;
+                    padding-right: 0.4688rem;
                     // margin-right: 1.0156rem;
                         
                     &:before, &:after {
@@ -200,6 +215,184 @@
                             }
                         }
                     }
+
+                    button {
+                        margin-top: 0.3906rem;
+                    }
+                }
+                
+                .chose-skins {
+
+                    .balance {
+                        height: 2.9688rem;
+                        // line-height: calc(2.9688rem - 1px);
+                        border-bottom: 1px solid #dcdddd;
+                        padding: 0.3125rem;
+
+                        span {
+                            margin-right: 0.4688rem;
+                            font-size: 0.2813rem;
+
+                            em {
+                                font-style: normal;
+                                // font-weight: bold;
+                                font-size: 0.375rem;
+                            }
+
+                            &:nth-of-type(3) {
+                                display: inline-block;
+                            }
+                        }
+
+                        button {
+                            display: block;
+                            margin: 0.2344rem auto;
+                            font-size: 0.375rem;
+                        }
+                    }
+
+                    .trade-url {
+                        height: 2.0313rem;
+                        border-bottom: 1px solid #dcdddd;
+                        padding: 0.3125rem;
+                        white-space: nowrap;
+                        font-size: 0.2969rem;
+
+                        input {
+                            display: block;
+                            background-color: #f2f7fa;
+                            border: 0.0156rem solid #dcdddd;
+                            height: 0.7031rem;
+                            width: 100%;
+                            line-height: 1;
+                            padding: 0 0.1563rem;
+                            margin-top: 0.2344rem;
+                        }
+                    }
+
+                    .skins {
+                        position: absolute;
+                        top: calc(2.9688rem + 2.0313rem);
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        padding: 0 0.3125rem;
+
+                        .filter-games {
+                            height: 0.9375rem;
+                            line-height: 0.9375rem;
+                            position: relative;
+                            white-space: nowrap;
+
+                            .checkboxs {
+                                margin-right: 0.9375rem;
+                                overflow-x: auto;
+
+                                label {
+                                    margin-right: 0.3906rem;
+                                    cursor: pointer;
+                                    position: relative;
+
+                                    input {
+                                        width: 0;
+                                        height: 0;
+                                        display: none;
+                                        // width: 100%;
+                                        // opacity: 0;
+                                        // position: absolute;
+                                        // top: 0;
+                                        // left: 0;
+                                        // right: 0;
+                                        // bottom: 0;
+                                        // z-index: 1;
+                                    }
+
+                                    span {
+
+                                        i.checkbox {
+                                            display: inline-block;
+                                            width: 16px;
+                                            height: 16px;
+                                            border: 1px solid #dcdddd;
+                                            margin-right: 5px;
+                                            vertical-align: sub;
+                                            overflow: hidden;
+                                            position: relative;
+                                            transition: all .1s linear;
+
+                                            img {
+                                                position: absolute;
+                                                top: 1px;
+                                                left: 1px;
+                                                transform: scale(0);
+                                                transition: all .1s linear;
+                                                // transform-origin: 0 50%;
+                                            }
+                                        }
+                                    }
+
+                                    input:checked ~ span {
+
+                                        i.checkbox {
+                                            border-color: #00a4ff;
+                                            background-color: #00a4ff;
+
+                                            img {
+                                                transform: scale(.9);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .search-bar {
+                                width: 0.625rem;
+                                height: 0.625rem;
+                                line-height: 0.625rem;
+                                position: absolute;
+                                top: 50%;
+                                right: 0;
+                                transform: translateY(-50%);
+                                z-index: 1;
+                                transition: all .2s linear;
+
+                                input {
+                                    width: 100%;
+                                    opacity: 0;
+                                    height: 0.625rem;
+                                    border: 1px solid #dcdddd;
+                                    border-radius: 0.3125rem;
+                                    // padding: 0 0.7813rem 0 0.2344rem;
+                                    padding: 0;
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 0;
+                                    transform: translateY(-50%);
+                                    transition: all .2s linear;
+                                }
+
+                                i {
+                                    position: absolute;
+                                    top: 0.0469rem;
+                                    right: 0.1563rem;
+                                    
+                                    img {
+                                        width: 0.3438rem;
+                                        height: 0.3438rem;
+                                    }
+                                }
+
+                                &.open {
+                                    width: 60%;
+
+                                    input {
+                                        opacity: 1;
+                                        padding: 0 0.7813rem 0 0.2344rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -243,7 +436,6 @@
             background-color: #00a4ff;
             color: #fff;
             border: 0;
-            margin-top: 25px;
             cursor: pointer;
             position: relative;
 
@@ -399,6 +591,142 @@
                                 display: inline-block;
                                 font-style: normal;
                                 transform: scale(1.5) translateX(20%);
+                            }
+                        }
+                    }
+
+                    button {
+                        margin-top: 25px;
+                    }
+                }
+                
+                .chose-skins {
+
+                    .balance {
+                        height: 70px;
+                        line-height: 69px;
+                        border-bottom: 1px solid #dcdddd;
+                        padding: 0 20px;
+
+                        span {
+                            margin-right: 30px;
+
+                            em {
+                                font-style: normal;
+                                font-weight: bold;
+                                font-size: 18px;
+                            }
+                        }
+
+                        button {
+                            float: right;
+                            margin-top: 10px;
+                            font-size: 16px;
+                        }
+                    }
+
+                    .trade-url {
+                        height: 70px;
+                        line-height: 69px;
+                        border-bottom: 1px solid #dcdddd;
+                        padding: 0 20px;
+                        white-space: nowrap;
+
+                        input {
+                            background-color: #f2f7fa;
+                            border: 1px solid #dcdddd;
+                            height: 45px;
+                            width: 730px;
+                            line-height: 1;
+                            padding: 0 10px;
+                        }
+                    }
+
+                    .skins {
+                        position: absolute;
+                        top: 140px;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        padding: 0 20px;
+
+                        .filter-games {
+                            height: 60px;
+                            line-height: 60px;
+                            position: relative;
+
+                            .checkboxs {
+
+                                label {
+                                    margin-right: 25px;
+                                    cursor: pointer;
+                                    position: relative;
+
+                                    input {
+                                        width: 0;
+                                        height: 0;
+                                        display: none;
+                                    }
+
+                                    span {
+
+                                        i.checkbox {
+                                            display: inline-block;
+                                            width: 16px;
+                                            height: 16px;
+                                            border: 1px solid #dcdddd;
+                                            margin-right: 5px;
+                                            vertical-align: sub;
+                                            overflow: hidden;
+                                            position: relative;
+                                            transition: all .1s linear;
+
+                                            img {
+                                                position: absolute;
+                                                top: 1px;
+                                                left: 1px;
+                                                transform: scale(0);
+                                                transition: all .1s linear;
+                                                // transform-origin: 0 50%;
+                                            }
+                                        }
+                                    }
+
+                                    input:checked ~ span {
+
+                                        i.checkbox {
+                                            border-color: #00a4ff;
+                                            background-color: #00a4ff;
+
+                                            img {
+                                                transform: scale(.9);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .search-bar {
+                                width: 150px;
+                                position: absolute;
+                                top: 50%;
+                                right: 0;
+                                transform: translateY(-50%);
+                                z-index: 1;
+
+                                input {
+                                    width: 100%;
+                                    height: 35px;
+                                    border: 1px solid #dcdddd;
+                                    border-radius: 18px;
+                                    padding: 0 10px;
+                                }
+
+                                i {
+                                    position: absolute;
+                                    top: 3px;
+                                    right: 10px;
+                                }
                             }
                         }
                     }
