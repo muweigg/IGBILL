@@ -4,24 +4,71 @@
     <link rel="stylesheet" href="./css/payment.css">
 {% endblock %}
 
+{% block scripts %}
+    <script src="./js/payment.js"></script>
+{% endblock %}
+
 {% block header %}
     {% include './common/pay-header.html' %}
 {% endblock %}
 
 {% block content %}
     <main class="payment">
-        
+
+        <div class="container-wrap">
+            <div class="count-down">订单将在<em>4分钟</em>后关闭</div>
+            <header>
+                <span>订单信息：XXXXXXXXXX</span>
+                <span>流水编号：XXXXXXXXXX</span>
+                <span>商户名称：XXXXXXXXXX</span>
+                <span class="pay-amount">支付金额：<sup>￥</sup><em>2323</em></span>
+            </header>
+            <div class="content-wrap">
+
+                <!-- 登录前 -->
+                <div class="login-igb">
+                    <p>用<span>STEAM</span>账户登入<span>IGB</span>，完成支付</p>
+                    <button>
+                        <span>登录IGB</span>
+                        <img class="icon" src="./assets/images/button-arrow.png"
+                            srcset="./assets/images/button-arrow.png 1x, ./assets/images/button-arrow@2x.png 2x, ./assets/images/button-arrow@3x.png 3x">
+                    </button>
+                </div>
+
+                <!-- 登录后 -->
+                <div class="confirm-pay" style="display: none;">
+                    <p>您账户余额：<span><sup>￥</sup><em>2323</em></span></p>
+                    <button>
+                        <span>确认支付</span>
+                        <img class="icon" src="./assets/images/button-arrow.png"
+                            srcset="./assets/images/button-arrow.png 1x, ./assets/images/button-arrow@2x.png 2x, ./assets/images/button-arrow@3x.png 3x">
+                    </button>
+                </div>
+
+                <!-- 选择饰品 -->
+                <div class="chose-skins">
+                    
+                </div>
+
+            </div>
+
+        </div>
+
         <!-- 支付结果 -->
-        <div class="pay-results">
+        <div class="pay-results" style="display: none;">
+
             <!-- 支付成功 -->
             <img class="icon" src="./assets/images/pay-success.png"
                 srcset="./assets/images/pay-success.png 1x, ./assets/images/pay-success@2x.png 2x, ./assets/images/pay-success@3x.png 3x">
+
             <!-- 支付失败 -->
             <!-- <img class="icon" src="./assets/images/pay-fail.png"
                 srcset="./assets/images/pay-fail.png 1x, ./assets/images/pay-fail@2x.png 2x, ./assets/images/pay-fail@3x.png 3x"> -->
+
             <!-- 支付超时 -->
             <!-- <img class="icon" src="./assets/images/pay-timeout.png"
                 srcset="./assets/images/pay-timeout.png 1x, ./assets/images/pay-timeout@2x.png 2x, ./assets/images/pay-timeout@3x.png 3x"> -->
+
             <p>
                 <strong>支付成功！</strong><span>等待跳转...</span>
                 <br>
