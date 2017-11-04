@@ -110,11 +110,11 @@
             }
 
             header {
-                // height: 0.7813rem;
-                line-height: 0.7813rem;
+                height: 0.7813rem * 2;
+                line-height: 0.5469rem;
                 background-color: #f2f7fa;
                 border-bottom: 0.0156rem solid #dcdddd;
-                padding: 0 0.3125rem 0 0.7813rem;
+                padding: .15625rem 0.3125rem 0 0.7813rem;
                 font-size: 0;
 
                 span {
@@ -174,7 +174,7 @@
 
             .content-wrap {
                 position: absolute;
-                top: 0.7813rem;
+                top: 0.7813rem * 2;
                 left: 0;
                 right: 0;
                 bottom: 0;
