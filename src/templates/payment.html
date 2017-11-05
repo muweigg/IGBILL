@@ -26,7 +26,7 @@
             <div class="content-wrap">
 
                 <!-- 登录前 -->
-                <div class="login-igb" style="display: none;">
+                <div class="login-igb">
                     <p>用<span>STEAM</span>账户登入<span>IGB</span>，完成支付</p>
                     <button>
                         <span>登录IGB</span>
@@ -46,7 +46,7 @@
                 </div>
 
                 <!-- 选择饰品 -->
-                <div class="chose-skins">
+                <div class="chose-skins" style="display: none;">
                     <div class="balance">
                         <span>您的账户余额：<em class="c1">35</em></span>
                         <span>支付饰品金额：<em class="c2">35</em></span>
@@ -63,6 +63,7 @@
                         <input type="text">
                     </div>
 
+                    <!-- 皮肤选择 -->
                     <div class="skins">
                         <div class="filter-games">
                             <div class="checkboxs">
@@ -530,10 +531,16 @@
                         </div>
                     </div>
 
+                    <!-- 报价等待 -->
+                    <div class="waiting" style="display: none;">
+                        <div>
+                            我们已经向您steam账号发送报价，验证码<span class="c1">xxxxxx</span>
+                            <br>
+                            您可以使用你的Steam令牌进行交易确认，或<a href="javascript:">点击到steam接受报价</a>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-
         </div>
 
         <!-- 支付结果 -->

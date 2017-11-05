@@ -577,6 +577,25 @@
                             }
                         }
                     }
+
+                    .waiting {
+                        position: absolute;
+                        top: 2.9688rem;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: rgba(255, 255, 255, .77);
+                        z-index: 1;
+
+                        div {
+                            text-align: center;
+                            border-bottom: 0.0156rem solid #dcdddd;
+                            background-color: #ccf2ff;
+                            height: 1.4063rem;
+                            line-height: 2;
+                            padding-top: 0.1563rem;
+                        }
+                    }
                 }
             }
         }
@@ -1094,6 +1113,25 @@
                                     }
                                 }
                             }
+                        }
+                    }
+
+                    .waiting {
+                        position: absolute;
+                        top: 70px;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: rgba(255, 255, 255, .77);
+                        z-index: 1;
+
+                        div {
+                            text-align: center;
+                            border-bottom: 1px solid #dcdddd;
+                            background-color: #ccf2ff;
+                            height: 90px;
+                            line-height: 2;
+                            padding-top: 16px;
                         }
                     }
                 }
