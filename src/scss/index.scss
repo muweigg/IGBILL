@@ -1,18 +1,17 @@
-@import './common/third-party/materialize/components/_color';
-@import './common/third-party/materialize/components/_variables';
 @import './common/variables';
 @import './common/mixins';
 
 body {
-    background-color: #1e1d2b;
-    background: url('../../assets/images/bg.jpg') top center no-repeat;
+    background: #1e1d2b url('../assets/images/bg.jpg') top center no-repeat;
 
     @media #{$small-and-down} {
         padding-top: $mob-pay-header-height;
+        background-size: auto 8.4375rem;
     }
 
     @media #{$medium-and-up} {
         padding-top: $pc-pay-header-height;
+        background-size: auto 700px;
     }
 }
 
@@ -173,7 +172,7 @@ body {
                             width: 5px;
                             height: 5px;
                             background-color: #fd7c7e;
-                            left: -14px;
+                            left: -13px;
                         }
 
                         sup {
@@ -517,7 +516,7 @@ body {
                             width: 5px;
                             height: 5px;
                             background-color: #fd7c7e;
-                            left: -14px;
+                            left: -13px;
                         }
 
                         sup {
