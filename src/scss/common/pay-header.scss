@@ -17,14 +17,14 @@ header.pay-header {
     }
 
     @media #{$small-and-down} {
-        height: 1.0938rem;
-        line-height: 1.0938rem;
+        height: $mob-pay-header-height;
+        line-height: $mob-pay-header-height;
         padding: 0 0.7813rem;
     }
 
     @media #{$medium-and-up} {
-        height: 70px;
-        line-height: 70px;
+        height: $pc-pay-header-height;
+        line-height: $pc-pay-header-height;
         padding: 0 50px;
     }
 

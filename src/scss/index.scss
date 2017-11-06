@@ -6,6 +6,14 @@
 body {
     background-color: #1e1d2b;
     background: url('../../assets/images/bg.jpg') top center no-repeat;
+
+    @media #{$small-and-down} {
+        padding-top: $mob-pay-header-height;
+    }
+
+    @media #{$medium-and-up} {
+        padding-top: $pc-pay-header-height;
+    }
 }
 
 .index {

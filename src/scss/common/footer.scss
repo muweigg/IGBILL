@@ -3,9 +3,13 @@ footer.main-footer {
     color: #b2b2b2;
 
     @media #{$small-and-down} {
+        // display: none;
+        padding: 0 .3125rem;
+        flex: 0 0 0;
 
         .links {
             padding: 0.2344rem 0;
+            margin-left: -0.3125rem;
 
             a {
                 color: #b2b2b2;
@@ -35,10 +39,12 @@ footer.main-footer {
         }
 
         p {
+            height: 1.796875rem;
+            flex: 0 0 auto;
             line-height: 1.8;
             border-top: 1px solid #3c414b;
-            padding: .234375rem 0;
-            margin: 0 .3125rem;
+            display: flex;
+            align-items: center;
         }
 
     }

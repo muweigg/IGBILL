@@ -237,7 +237,7 @@ gulp.task('webserver',
     () => gulp.src('dist')
         .pipe(server({
             defaultFile: 'index.html',
-            host: 'localhost',
+            host: '0.0.0.0',
             port: '5555',
             livereload: {
                 enable: true,

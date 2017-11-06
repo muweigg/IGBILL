@@ -3,27 +3,30 @@
 @import './common/variables';
 @import './common/mixins';
 
+body {
+
+    @media #{$small-and-down} {
+        padding-top: $mob-pay-header-height;
+    }
+
+    @media #{$medium-and-up} {
+        padding-top: $pc-pay-header-height;
+    }
+}
+
 .main-footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+
+    @media #{$medium-and-up} {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
 }
 
 .payment {
-    position: fixed;
-    left: 0;
-    right: 0;
     color: #36373e;
     font-size: 14px;
-
-    div.pay-results {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 16px;
-    }
 
     .c1 {
         color: #00a4ff;
@@ -41,9 +44,11 @@
     }
     
     @media #{$small-and-down} {
-        top: 1.0938rem;
-        bottom: 1.765625rem;
         font-size: 12px;
+        padding: 0.9375rem .3125rem .3125rem;
+        flex: 1 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
 
         button {
             width: 7.25rem;
@@ -105,12 +110,11 @@
         }
         
         .container-wrap {
-            position: absolute;
-            top: 0.9375rem;
-            left: .3125rem;
-            right: .3125rem;
-            bottom: 1.4844rem;
+            flex: 1 0 auto;
             border: 0.0156rem solid #dcdddd;
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
 
             .count-down {
                 position: absolute;
@@ -124,6 +128,7 @@
             }
 
             header {
+                flex: 0 0 0;
                 height: 0.7813rem * 2;
                 line-height: 0.5469rem;
                 background-color: #f2f7fa;
@@ -188,17 +193,17 @@
             }
 
             .content-wrap {
-                position: absolute;
-                top: 0.7813rem * 2;
-                left: 0;
-                right: 0;
-                bottom: 0;
+                flex: 1 0 auto;
+                display: flex;
+                flex-flow: column nowrap;
 
                 .login-igb, .confirm-pay {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                    flex: 1 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-flow: column nowrap;
+
                     font-size: 0.4688rem;
                     text-align: center;
 
@@ -222,12 +227,15 @@
                 }
                 
                 .chose-skins {
+                    display: flex;
+                    flex-flow: column nowrap;
 
                     .balance {
                         height: 2.9688rem;
                         // line-height: calc(2.9688rem - 1px);
                         border-bottom: 1px solid #dcdddd;
                         padding: 0.3125rem;
+                        flex: 0 0 0;
 
                         span {
                             margin-right: 0.4688rem;
@@ -257,6 +265,7 @@
                         padding: 0.3125rem;
                         white-space: nowrap;
                         font-size: 0.2969rem;
+                        flex: 0 0 0;
 
                         input {
                             display: block;
@@ -271,12 +280,7 @@
                     }
 
                     .skins {
-                        position: absolute;
-                        top: calc(2.9688rem + 2.0313rem);
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        padding: 0 0.3125rem;
+                        padding: 0 0.3125rem 0.3125rem;
 
                         .filter-games {
                             height: 0.9375rem;
@@ -466,14 +470,9 @@
 
                         .chose-skin {
                             background-color: #f2f7fa;
-                            position: absolute;
-                            top: 1.7188rem;
-                            left: 0.3125rem;
-                            right: 0.3125rem;
-                            bottom: 0.3125rem;
                             border: 0.0156rem solid #dcdddd;
-                            overflow-x: hidden;
-                            overflow-y: auto;
+                            // overflow-x: hidden;
+                            // overflow-y: auto;
                             font-size: 0;
                             padding: 0 0.2344rem 0.2344rem 0.2344rem;
 
@@ -601,9 +600,12 @@
         }
 
         div.pay-results {
-            text-align: center;
-            font-size: 14px;
-            transform: translate(-50%, -70%);
+            flex: 1 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column nowrap;
+            margin-top: -0.9375rem;
 
             img {
                 transform: translateX(-10px);
@@ -628,6 +630,9 @@
     }
 
     @media #{$medium-and-up} {
+        position: fixed;
+        left: 0;
+        right: 0;
         top: 70px;
         bottom: 113px;
 
@@ -1139,6 +1144,11 @@
         }
 
         div.pay-results {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
 
             img {
                 float: left;

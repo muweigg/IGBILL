@@ -41,6 +41,13 @@ ul {
     color: #fff;
 }
 
+html, body {
+
+    @media #{$small-and-down} {
+        height: 100%;
+    }
+}
+
 body {
     font-size: 0;
 
@@ -49,14 +56,16 @@ body {
     }
 
     @media #{$small-and-down} {
+        // padding-top: 1.375rem;
         font-size: 0.2188rem;
-        padding-top: 1.375rem;
         background-size: auto 8.4375rem;
+        display: flex;
+        flex-flow: column nowrap;
     }
 
     @media #{$medium-and-up} {
+        // padding-top: 70px;
         font-size: 14px;
-        padding-top: 70px;
         background-size: auto 700px;
 
         .container-wrap {
