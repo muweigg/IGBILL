@@ -222,6 +222,29 @@ body {
 
                     button {
                         margin-top: 0.3906rem;
+                        font-size: 0.375rem;
+                    }
+                }
+
+                .confirm-pay {
+                    font-size: 0.2813rem;
+
+                    p {
+                        font-size: 0.375rem;
+                        
+                        span {
+                            color: #00a4ff;
+
+                            em {
+                                font-size: .4375rem;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    button {
+                        margin-top: 0.3906rem;
+                        font-size: 0.375rem;
                     }
                 }
                 
@@ -719,7 +742,7 @@ body {
         .container-wrap {
             position: absolute;
             top: 50px;
-            bottom: 20px;
+            bottom: 50px;
             left: 50%;
             transform: translateX(-50%);
             border: 1px solid #dcdddd;
@@ -805,7 +828,7 @@ body {
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%, -50%);
+                    transform: translate(-50%, calc(-50% + -20px));
                     font-size: 24px;
                     text-align: center;
 
@@ -824,6 +847,22 @@ body {
 
                     button {
                         margin-top: 25px;
+                        font-size: 18px;
+                    }
+                }
+
+                .confirm-pay {
+                    font-size: 16px;
+
+                    p {
+                        transform: translateX(-5%);
+                        
+                        span {
+
+                            em {
+                                font-weight: bold;
+                            }
+                        }
                     }
                 }
                 
@@ -836,7 +875,7 @@ body {
                         padding: 0 20px;
 
                         span {
-                            margin-right: 30px;
+                            margin-right: 25px;
 
                             em {
                                 font-style: normal;
@@ -1046,8 +1085,8 @@ body {
 
                                 label {
                                     display: inline-block;
-                                    width: 134px;
-                                    height: 134px;
+                                    width: 126px;
+                                    height: 126px;
                                     position: relative;
                                     font-size: 12px;
                                     margin: 15px 0 0 15px;

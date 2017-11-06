@@ -1,0 +1,35 @@
+@import './common/variables';
+@import './common/mixins';
+
+body {
+    
+    @media #{$small-and-down} {
+        padding-top: $mob-pay-header-height;
+        background-size: auto 8.4375rem;
+    }
+
+    @media #{$medium-and-up} {
+        padding-top: $pc-pay-header-height;
+        background-size: auto 700px;
+    }
+}
+
+.main-footer {
+
+    @media #{$medium-and-up} {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.user-center {
+
+    @media #{$small-and-down} {
+    }
+
+    @media #{$medium-and-up} {
+    }
+
+}

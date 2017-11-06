@@ -221,13 +221,14 @@ header.main-header {
             right: 0;
             bottom: 0;
             text-align: center;
+            font-size: 16px;
 
             a {
                 display: inline-block;
                 color: #fff;
                 padding: 0 30px;
                 overflow: hidden;
-                width: 108px;
+                width: 126px;
                 height: $pc-header-height;
 
                 span {
