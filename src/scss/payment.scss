@@ -196,6 +196,7 @@ body {
                 flex: 1 0 auto;
                 display: flex;
                 flex-flow: column nowrap;
+                position: relative;
 
                 .login-igb, .confirm-pay {
                     flex: 1 0 auto;
@@ -235,7 +236,14 @@ body {
                         // line-height: calc(2.9688rem - 1px);
                         border-bottom: 1px solid #dcdddd;
                         padding: 0.3125rem;
-                        flex: 0 0 0;
+                        
+                        flex: 0 0 auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        flex-flow: row wrap;
+
+                        background-color: #fff;
 
                         span {
                             margin-right: 0.4688rem;
@@ -298,17 +306,15 @@ body {
                                     position: relative;
 
                                     input {
-                                        width: 0;
-                                        height: 0;
-                                        display: none;
-                                        // width: 100%;
-                                        // opacity: 0;
-                                        // position: absolute;
-                                        // top: 0;
-                                        // left: 0;
-                                        // right: 0;
-                                        // bottom: 0;
-                                        // z-index: 1;
+                                        width: 100%;
+                                        height: 100%;
+                                        opacity: 0;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        z-index: 1;
                                     }
 
                                     span {
@@ -373,6 +379,7 @@ body {
                                     right: 0;
                                     transform: translateY(-50%);
                                     transition: all .2s linear;
+                                    pointer-events: none;
                                 }
 
                                 i {
@@ -392,6 +399,7 @@ body {
                                     input {
                                         opacity: 1;
                                         padding: 0 0.7813rem 0 0.2344rem;
+                                        pointer-events: auto;
                                     }
                                 }
                             }
@@ -407,9 +415,15 @@ body {
                                 position: relative;
 
                                 input {
-                                    width: 0;
-                                    height: 0;
-                                    display: none;
+                                    width: 100%;
+                                    height: 100%;
+                                    opacity: 0;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    z-index: 1;
                                 }
 
                                 span {
@@ -488,12 +502,19 @@ body {
                                     position: relative;
                                     font-size: 0.1875rem;
                                     margin: 0.2344rem 0 0 0;
+                                    position: relative;
                                     cursor: pointer;
 
                                     input {
-                                        width: 0;
-                                        height: 0;
-                                        display: none;
+                                        width: 100%;
+                                        height: 100%;
+                                        opacity: 0;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        z-index: 1;
                                     }
 
                                     div {
