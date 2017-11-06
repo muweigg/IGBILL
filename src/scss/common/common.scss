@@ -96,19 +96,36 @@ ul {
     color: #fff;
 }
 
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
 html, body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     @media #{$small-and-down} {
         height: 100%;
     }
+
 }
 
 body {
     font-size: 0;
 
-    .row > .col {
-        padding: 0;
+    .row {
+        margin: 0;
+        
+        .col {
+            padding: 0 !important;
+        }
     }
 
     @media #{$small-and-down} {
