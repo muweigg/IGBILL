@@ -75,9 +75,12 @@ i.icon {
     -webkit-overflow-scrolling: touch;
 }
 
-a, button {
+a, button, select {
     outline: none;
     text-decoration: none;
+}
+
+a {
     color: #00a4ff;
     // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
