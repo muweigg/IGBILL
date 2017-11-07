@@ -10,7 +10,6 @@ header.main-header {
     z-index: 100;
     // border-bottom: 1px solid $header-border-color;
     transition: background-color .3s linear, box-shadow .3s linear;
-    min-width: $pc-container-width;
 
     &.fixed {
         background-color: #1f2125;
@@ -214,6 +213,7 @@ header.main-header {
         line-height: $pc-header-height - 1px;
         border-bottom: 1px solid $header-border-color;
         padding: $pc-header-padding;
+        min-width: $pc-container-width;
 
         nav {
             position: absolute;
