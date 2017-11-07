@@ -1,0 +1,234 @@
+{% extends './common/base.html' %}
+
+{% block svg %}
+    {% include './common/svg.html' %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/skin-details.css">
+{% endblock %}
+
+{% block scripts %}
+    <script src="./js/skin-details.js"></script>
+{% endblock %}
+
+{% block content %}
+    <main class="skin-details">
+        <div class="container-wrap">
+            <div class="row skin-caption">
+                <div class="col s12 align-left">
+                    <img class="icon" src="./assets/images/icon-history.png"
+                        srcset="./assets/images/icon-history.png 1x, ./assets/images/icon-history@2x.png 2x, ./assets/images/icon-history@3x.png 3x">
+                    饰品充值记录
+                </div>
+            </div>
+            <div class="list-wrap">
+                <header>
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <div class="row">
+                                <div class="col s1 hide-on-small-only">
+                                    时间：
+                                </div>
+                                <div class="col s7">
+                                    <div class="row">
+                                        <!-- <div class="col s1"></div> -->
+                                        <div class="col s5">
+                                            <div class="date-from-wrap">
+                                                <img class="icon" src="./assets/images/icon-date.png"
+                                                    srcset="./assets/images/icon-date.png 1x, ./assets/images/icon-date@2x.png 2x, ./assets/images/icon-date@3x.png 3x">
+                                                <input type="text" class="date-from" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col s2 s-ta-c"> - </div>
+                                        <div class="col s5">
+                                            <div class="date-to-wrap">
+                                                <img class="icon" src="./assets/images/icon-date.png"
+                                                    srcset="./assets/images/icon-date.png 1x, ./assets/images/icon-date@2x.png 2x, ./assets/images/icon-date@3x.png 3x">
+                                                <input type="text" class="date-to" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s3 m2 s-ta-c">
+                                    <a href="javascript:">最近1个月</a>
+                                </div>
+                                <div class="col s2 s-ta-c">
+                                    <a href="javascript:">1个月前</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 s-ta-r">
+                            <button class="btn">
+                                <span>查询</span>
+                                <img class="icon" src="./assets/images/button-arrow.png"
+                                    srcset="./assets/images/button-arrow.png 1x, ./assets/images/button-arrow@2x.png 2x, ./assets/images/button-arrow@3x.png 3x">
+                            </button>
+                        </div>
+                    </div>
+                </header>
+                <div class="list-head hide-on-small-only">
+                    <div class="row">
+                        <div class="col s3">
+                            时间
+                        </div>
+                        <div class="col s3 s-ta-c">
+                            饰品
+                        </div>
+                        <div class="col s3 s-ta-c">
+                            状态
+                        </div>
+                        <div class="col s3 s-ta-r">
+                            备注
+                        </div>
+                    </div>
+                </div>
+                <div class="list-data">
+                    <div class="row">
+                        <div class="col s5 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s4 m3 s-ta-c">
+                            封装的涂鸦 | 王 (黄褐)
+                        </div>
+                        <div class="col s3 m3 s-ta-r m-ta-c">
+                            XXXX
+                        </div>
+                        <div class="col s12 m3 s-ta-l m-ta-r">
+                            +33元余额
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s5 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s4 m3 s-ta-c">
+                            封装的涂鸦 | 王 (黄褐)
+                        </div>
+                        <div class="col s3 m3 s-ta-r m-ta-c">
+                            XXXX
+                        </div>
+                        <div class="col s12 m3 s-ta-l m-ta-r">
+                            +33元余额
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s5 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s4 m3 s-ta-c">
+                            封装的涂鸦 | 王 (黄褐)
+                        </div>
+                        <div class="col s3 m3 s-ta-r m-ta-c">
+                            XXXX
+                        </div>
+                        <div class="col s12 m3 s-ta-l m-ta-r">
+                            +33元余额
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s5 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s4 m3 s-ta-c">
+                            封装的涂鸦 | 王 (黄褐)
+                        </div>
+                        <div class="col s3 m3 s-ta-r m-ta-c">
+                            XXXX
+                        </div>
+                        <div class="col s12 m3 s-ta-l m-ta-r">
+                            +33元余额
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s5 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s4 m3 s-ta-c">
+                            封装的涂鸦 | 王 (黄褐)
+                        </div>
+                        <div class="col s3 m3 s-ta-r m-ta-c">
+                            XXXX
+                        </div>
+                        <div class="col s12 m3 s-ta-l m-ta-r">
+                            +33元余额
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s5 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s4 m3 s-ta-c">
+                            封装的涂鸦 | 王 (黄褐)
+                        </div>
+                        <div class="col s3 m3 s-ta-r m-ta-c">
+                            XXXX
+                        </div>
+                        <div class="col s12 m3 s-ta-l m-ta-r">
+                            +33元余额
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s5 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s4 m3 s-ta-c">
+                            封装的涂鸦 | 王 (黄褐)
+                        </div>
+                        <div class="col s3 m3 s-ta-r m-ta-c">
+                            XXXX
+                        </div>
+                        <div class="col s12 m3 s-ta-l m-ta-r">
+                            +33元余额
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s5 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s4 m3 s-ta-c">
+                            封装的涂鸦 | 王 (黄褐)
+                        </div>
+                        <div class="col s3 m3 s-ta-r m-ta-c">
+                            XXXX
+                        </div>
+                        <div class="col s12 m3 s-ta-l m-ta-r">
+                            +33元余额
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s5 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s4 m3 s-ta-c">
+                            封装的涂鸦 | 王 (黄褐)
+                        </div>
+                        <div class="col s3 m3 s-ta-r m-ta-c">
+                            XXXX
+                        </div>
+                        <div class="col s12 m3 s-ta-l m-ta-r">
+                            +33元余额
+                        </div>
+                    </div>
+                    <div class="row s-ta-c hide-on-med-and-up">
+                        <span>加载更多</span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-paging hide-on-small-only">
+                <div class="row">
+                    <div class="col s12 s-ta-r">
+                        <a href="javascript:" class="prev">&nbsp;</a>
+                        <a href="javascript:">1</a>
+                        <a href="javascript:">2</a>
+                        <a href="javascript:">3</a>
+                        <span>…</span>
+                        <a href="javascript:">99</a>
+                        <a href="javascript:" class="next">&nbsp;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+

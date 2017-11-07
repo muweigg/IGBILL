@@ -47,6 +47,7 @@ const paths = {
         js: [
             'src/js/common/**/vue.js',
             'src/js/common/**/jquery*.js',
+            'src/js/common/**/pickadate.js/picker.js',
             'src/js/common/**/*.js',
         ],
         css: [
