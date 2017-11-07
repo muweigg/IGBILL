@@ -237,6 +237,10 @@ body {
                             text-overflow: ellipsis;
                             white-space: nowrap;
                             overflow: hidden;
+
+                            &:nth-last-of-type(2) {
+                                text-align: right;
+                            }
                         }
                     }
                 }
