@@ -1,0 +1,528 @@
+{% extends './common/base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/skin-recharge.css">
+{% endblock %}
+
+{% block scripts %}
+    <script src="./js/skin-recharge.js"></script>
+{% endblock %}
+
+{% block content %}
+    <main class="skin-recharge">
+        <div class="container-wrap">
+            <div class="row skin-caption">
+                <div class="col s6">
+                    <img class="icon" src="./assets/images/icon-history.png"
+                        srcset="./assets/images/icon-history.png 1x, ./assets/images/icon-history@2x.png 2x, ./assets/images/icon-history@3x.png 3x">
+                    饰品充值
+                </div>
+                <div class="col s6 s-ta-r">
+                    查看<a href="javascript:">我的饰品交易详情</a>
+                </div>
+            </div>
+
+            <!-- 选择饰品 -->
+            <div class="chose-skins">
+                <header>
+                    <div class="row">
+                        <div class="col s12 m6 s-ta-c m-ta-l">
+                            交易前，确认您的Steam隐私已经设置为<span class="c1">"公开"</span>，并填入<span class="c1">Trade Url</span>：
+                        </div>
+                        <div class="col s12 m6 s-ta-l m-ta-r">
+                            <span>存入饰品数量：<em class="c2">35</em></span>
+                            <span>可获得：<em class="c1">35</em></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <input type="text">
+                            <button>
+                                <span>立即支付</span>
+                                <img class="icon" src="./assets/images/button-arrow.png"
+                                    srcset="./assets/images/button-arrow.png 1x, ./assets/images/button-arrow@2x.png 2x, ./assets/images/button-arrow@3x.png 3x">
+                            </button>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- 皮肤选择 -->
+                <div class="skins">
+                    <div class="filter-games">
+                        <div class="checkboxs">
+                            <label>
+                                <input type="checkbox">
+                                <span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    CSGO
+                                </span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    DOTA 2
+                                </span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    H1Z1:KotK
+                                </span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    H1Z1:JS
+                                </span>
+                            </label>
+                        </div>
+                        <div class="search-bar">
+                            <input type="text">
+                            <i>
+                                <img class="icon" src="./assets/images/search.png"
+                                    srcset="./assets/images/search.png 1x, ./assets/images/search@2x.png 2x, ./assets/images/search@3x.png 3x">
+                            </i>
+                        </div>
+                    </div>
+
+                    <div class="all-and-sort">
+                        <label>
+                            <input type="checkbox">
+                            <span>
+                                <i class="checkbox">
+                                    <img class="icon" src="./assets/images/checked.png"
+                                        srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                </i>
+                                全选
+                            </span>
+                        </label>
+                        <span class="sort">
+                            价格排序
+                            <img class="icon" src="./assets/images/sort.png"
+                                srcset="./assets/images/sort.png 1x, ./assets/images/sort@2x.png 2x, ./assets/images/sort@3x.png 3x">
+                        </span>
+                    </div>
+
+                    <div class="chose-skin">
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="skin">
+                            <label>
+                                <input type="checkbox">
+                                <div style="border-bottom-color: #00a4ff;">
+                                    <span class="price">4444</span>
+                                    <i class="checkbox">
+                                        <img class="icon" src="./assets/images/checked.png"
+                                            srcset="./assets/images/checked.png 1x, ./assets/images/checked@2x.png 2x, ./assets/images/checked@3x.png 3x">
+                                    </i>
+                                    <img src="./assets/images/gun.png" alt="">
+                                    <span class="name">M9 Bayonet</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- 报价等待 -->
+                    <div class="waiting" style="display: none;">
+                        <div>
+                            <p>我们已经向您steam账号发送报价，验证码<span class="c1">xxxxxx</span></p>
+                            您可以使用你的Steam令牌进行交易确认，或<a href="javascript:">点击到steam接受报价</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
