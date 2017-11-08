@@ -9,24 +9,24 @@
 {% endblock %}
 
 {% block content %}
-    <main class="skin-details">
+    <main class="trade-details">
         <div class="container-wrap">
             <div class="row skin-caption">
                 <div class="col s12 align-left">
                     <img class="icon" src="./assets/images/icon-history.png"
                         srcset="./assets/images/icon-history.png 1x, ./assets/images/icon-history@2x.png 2x, ./assets/images/icon-history@3x.png 3x">
-                    饰品充值记录
+                    交易明细
                 </div>
             </div>
             <div class="list-wrap">
                 <header>
                     <div class="row">
-                        <div class="col s12 m6">
+                        <div class="col s12 m9">
                             <div class="row">
-                                <div class="col s1 hide-on-small-only">
+                                <div class="col s1 m1 hide-on-small-only">
                                     时间：
                                 </div>
-                                <div class="col s7">
+                                <div class="col s7 m4">
                                     <div class="row">
                                         <!-- <div class="col s1"></div> -->
                                         <div class="col s5">
@@ -46,15 +46,32 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col s3 m2 s-ta-c">
-                                    <a href="javascript:">最近1个月</a>
+                                <div class="col s1 m1 s-ta-c">
+                                    <span class="hide-on-small-only">类型：</span>
                                 </div>
-                                <div class="col s2 s-ta-c">
-                                    <a href="javascript:">1个月前</a>
+                                <div class="col s4 m2">
+                                    <select name="" id="">
+                                        <option value="0">全部</option>
+                                        <option value="1">充值</option>
+                                        <option value="2">交易</option>
+                                        <option value="3">提现</option>
+                                    </select>
+                                </div>
+                                <div class="col s1 m1 s-ta-c hide-on-small-only">
+                                    <span>状态：</span>
+                                </div>
+                                <div class="col s2 m3 hide-on-small-only">
+                                    <select name="" id="">
+                                        <option value="0">全部</option>
+                                        <option value="1">存入中</option>
+                                        <option value="2">存入成功</option>
+                                        <option value="3">存入失败</option>
+                                        <option value="4">存入关闭</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="col s12 m6 s-ta-r">
+                        <div class="col s12 m3 s-ta-r">
                             <button class="btn">
                                 <span>查询</span>
                                 <img class="icon" src="./assets/images/button-arrow.png"
@@ -65,145 +82,150 @@
                 </header>
                 <div class="list-head hide-on-small-only">
                     <div class="row">
-                        <div class="col s3">
+                        <div class="col s2">
                             时间
                         </div>
-                        <div class="col s3 s-ta-c">
-                            饰品
+                        <div class="col s1 s-ta-c">
+                            类型
                         </div>
-                        <div class="col s3 s-ta-c">
+                        <div class="col s1 s-ta-c">
+                            商户
+                        </div>
+                        <div class="col s2 s-ta-c">
+                            流水
+                        </div>
+                        <div class="col s2 s-ta-c">
+                            渠道订单
+                        </div>
+                        <div class="col s1 s-ta-c">
+                            面值
+                        </div>
+                        <div class="col s1 s-ta-c">
+                            余额
+                        </div>
+                        <div class="col s1 s-ta-c">
                             状态
                         </div>
-                        <div class="col s3 s-ta-r">
+                        <div class="col s1 s-ta-r">
                             备注
                         </div>
                     </div>
                 </div>
                 <div class="list-data">
                     <div class="row">
-                        <div class="col s5 m3">
+                        <div class="col s4 m2">
                             2017-02-12 20:02
                         </div>
-                        <div class="col s4 m3 s-ta-c">
-                            封装的涂鸦 | 王 (黄褐)
+                        <div class="col s2 m1 s-ta-c">
+                            充值
                         </div>
-                        <div class="col s3 m3 s-ta-r m-ta-c">
-                            XXXX
+                        <div class="col s2 m1 s-ta-c">
+                            IGXE
                         </div>
-                        <div class="col s12 m3 s-ta-l m-ta-r">
-                            +33元余额
+                        <div class="col m2 s-ta-c hide-on-small-only">
+                            66666666
+                        </div>
+                        <div class="col m2 s-ta-c hide-on-small-only">
+                            88888888
+                        </div>
+                        <div class="col s2 m1 s-ta-r m-ta-c">
+                            <span class="c1">+44444</span>
+                        </div>
+                        <div class="col m1 s-ta-r m-ta-c hide-on-small-only">
+                            <span class="c2">555555</span>
+                        </div>
+                        <div class="col s2 m1 s-ta-r m-ta-c">
+                            <span class="waiting">待支付</span>
+                        </div>
+                        <div class="col m1 s-ta-l m-ta-r hide-on-small-only">
+                            XXXXX
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col s5 m3">
+                        <div class="col s4 m2">
                             2017-02-12 20:02
                         </div>
-                        <div class="col s4 m3 s-ta-c">
-                            封装的涂鸦 | 王 (黄褐)
+                        <div class="col s2 m1 s-ta-c">
+                            充值
                         </div>
-                        <div class="col s3 m3 s-ta-r m-ta-c">
-                            XXXX
+                        <div class="col s2 m1 s-ta-c">
+                            IGXE
                         </div>
-                        <div class="col s12 m3 s-ta-l m-ta-r">
-                            +33元余额
+                        <div class="col m2 s-ta-c hide-on-small-only">
+                            66666666
+                        </div>
+                        <div class="col m2 s-ta-c hide-on-small-only">
+                            88888888
+                        </div>
+                        <div class="col s2 m1 s-ta-r m-ta-c">
+                            <span class="c3">-66666</span>
+                        </div>
+                        <div class="col m1 s-ta-r m-ta-c hide-on-small-only">
+                            <span class="c2">555555</span>
+                        </div>
+                        <div class="col s2 m1 s-ta-r m-ta-c">
+                            <span class="success">支付成功</span>
+                        </div>
+                        <div class="col m1 s-ta-l m-ta-r hide-on-small-only">
+                            XXXXX
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col s5 m3">
+                        <div class="col s4 m2">
                             2017-02-12 20:02
                         </div>
-                        <div class="col s4 m3 s-ta-c">
-                            封装的涂鸦 | 王 (黄褐)
+                        <div class="col s2 m1 s-ta-c">
+                            充值
                         </div>
-                        <div class="col s3 m3 s-ta-r m-ta-c">
-                            XXXX
+                        <div class="col s2 m1 s-ta-c">
+                            IGXE
                         </div>
-                        <div class="col s12 m3 s-ta-l m-ta-r">
-                            +33元余额
+                        <div class="col m2 s-ta-c hide-on-small-only">
+                            66666666
+                        </div>
+                        <div class="col m2 s-ta-c hide-on-small-only">
+                            88888888
+                        </div>
+                        <div class="col s2 m1 s-ta-r m-ta-c">
+                            <span class="c3">-66666</span>
+                        </div>
+                        <div class="col m1 s-ta-r m-ta-c hide-on-small-only">
+                            <span class="c2">555555</span>
+                        </div>
+                        <div class="col s2 m1 s-ta-r m-ta-c">
+                            <span class="fail">支付失败</span>
+                        </div>
+                        <div class="col m1 s-ta-l m-ta-r hide-on-small-only">
+                            XXXXX
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col s5 m3">
+                        <div class="col s4 m2">
                             2017-02-12 20:02
                         </div>
-                        <div class="col s4 m3 s-ta-c">
-                            封装的涂鸦 | 王 (黄褐)
+                        <div class="col s2 m1 s-ta-c">
+                            充值
                         </div>
-                        <div class="col s3 m3 s-ta-r m-ta-c">
-                            XXXX
+                        <div class="col s2 m1 s-ta-c">
+                            IGXE
                         </div>
-                        <div class="col s12 m3 s-ta-l m-ta-r">
-                            +33元余额
+                        <div class="col m2 s-ta-c hide-on-small-only">
+                            66666666
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s5 m3">
-                            2017-02-12 20:02
+                        <div class="col m2 s-ta-c hide-on-small-only">
+                            88888888
                         </div>
-                        <div class="col s4 m3 s-ta-c">
-                            封装的涂鸦 | 王 (黄褐)
+                        <div class="col s2 m1 s-ta-r m-ta-c">
+                            <span class="c3">-66666</span>
                         </div>
-                        <div class="col s3 m3 s-ta-r m-ta-c">
-                            XXXX
+                        <div class="col m1 s-ta-r m-ta-c hide-on-small-only">
+                            <span class="c2">555555</span>
                         </div>
-                        <div class="col s12 m3 s-ta-l m-ta-r">
-                            +33元余额
+                        <div class="col s2 m1 s-ta-r m-ta-c">
+                            <span class="close">支付关闭</span>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s5 m3">
-                            2017-02-12 20:02
-                        </div>
-                        <div class="col s4 m3 s-ta-c">
-                            封装的涂鸦 | 王 (黄褐)
-                        </div>
-                        <div class="col s3 m3 s-ta-r m-ta-c">
-                            XXXX
-                        </div>
-                        <div class="col s12 m3 s-ta-l m-ta-r">
-                            +33元余额
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s5 m3">
-                            2017-02-12 20:02
-                        </div>
-                        <div class="col s4 m3 s-ta-c">
-                            封装的涂鸦 | 王 (黄褐)
-                        </div>
-                        <div class="col s3 m3 s-ta-r m-ta-c">
-                            XXXX
-                        </div>
-                        <div class="col s12 m3 s-ta-l m-ta-r">
-                            +33元余额
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s5 m3">
-                            2017-02-12 20:02
-                        </div>
-                        <div class="col s4 m3 s-ta-c">
-                            封装的涂鸦 | 王 (黄褐)
-                        </div>
-                        <div class="col s3 m3 s-ta-r m-ta-c">
-                            XXXX
-                        </div>
-                        <div class="col s12 m3 s-ta-l m-ta-r">
-                            +33元余额
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s5 m3">
-                            2017-02-12 20:02
-                        </div>
-                        <div class="col s4 m3 s-ta-c">
-                            封装的涂鸦 | 王 (黄褐)
-                        </div>
-                        <div class="col s3 m3 s-ta-r m-ta-c">
-                            XXXX
-                        </div>
-                        <div class="col s12 m3 s-ta-l m-ta-r">
-                            +33元余额
+                        <div class="col m1 s-ta-l m-ta-r hide-on-small-only">
+                            XXXXX
                         </div>
                     </div>
                     <div class="row s-ta-c hide-on-med-and-up">
