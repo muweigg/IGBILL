@@ -54,6 +54,22 @@ body {
         color: #fd7c7e;
     }
 
+    .success {
+        color: #00a4ff;
+    }
+
+    .fail {
+        color: #fd7c7e;
+    }
+
+    .waiting {
+        color: #29cb80;
+    }
+
+    .close {
+        color: #b2b2b2;
+    }
+
     @media #{$small-and-down} {
         padding: 0.9375rem .3125rem;
         flex: 1 0 auto;
