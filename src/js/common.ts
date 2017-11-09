@@ -19,19 +19,19 @@ $(() => {
         FastClick.attach(document.body);
 
         // 用户余额弹出菜单
-        // let userElem = document.querySelector('.main-header .user');
-        // let userDoc$ = Rx.Observable.fromEvent(document, 'click').skip(1), userDoc$$;
+        let userElem = document.querySelector('.main-header .user');
+        let userDoc$ = Rx.Observable.fromEvent(document, 'click').skip(1), userDoc$$;
 
-        // let toggleUserPopupState = () => {
-        //     let wrap = userElem.querySelector('.user-wrap');
-        //     wrap.classList.toggle('open');
-        //     // $(wrap).fadeToggle('fast');
-        //     if (wrap.classList.contains('open')) userDoc$$ = userDoc$.subscribe(toggleUserPopupState);
-        //     else if (userDoc$$) userDoc$$.unsubscribe();
-        // }
+        let toggleUserPopupState = () => {
+            let wrap = userElem.querySelector('.user-wrap');
+            wrap.classList.toggle('open');
+            // $(wrap).fadeToggle('fast');
+            if (wrap.classList.contains('open')) userDoc$$ = userDoc$.subscribe(toggleUserPopupState);
+            else if (userDoc$$) userDoc$$.unsubscribe();
+        }
             
-        // Rx.Observable.fromEvent(userElem, 'click')
-        //     .subscribe(toggleUserPopupState);
+        Rx.Observable.fromEvent(userElem, 'click')
+            .subscribe(toggleUserPopupState);
 
         // 主菜单
         let mainMenuElem = document.querySelector('.main-header nav');
