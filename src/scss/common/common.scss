@@ -72,12 +72,9 @@ i.icon {
     padding: 0;
     box-sizing: border-box;
     font-family: "Microsoft YaHei";
-    -webkit-overflow-scrolling: touch;
-}
-
-a, button, select {
     outline: none;
     text-decoration: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 a {
