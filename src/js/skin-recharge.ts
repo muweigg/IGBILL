@@ -13,8 +13,10 @@ $(() => {
     
     pay.click(function () {
         $(this).addClass('disabled').find('span').text('等待中...');
-        setTimeout(() => $('.waiting').show(), 1000);
+        setTimeout(() => {
+            $('.waiting').show();
+            setTimeout(() => window.dialog.open(() => alert('callback...')), 1000);
+        }, 1000);
     });
 
-    setTimeout(() => window.dialog.open(() => alert('callback...')), 2000);
 });
