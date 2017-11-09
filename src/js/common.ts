@@ -1,3 +1,4 @@
+
 window.isMobile = false;
 if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
     window.isMobile = true;
@@ -5,6 +6,7 @@ if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobi
 
 $(() => {
 
+    // 头部固定
     let fixed = Rx.Observable.fromEvent(document, 'scroll')
         // .debounceTime(20)
         .map(e => window.scrollY).subscribe(top => {
@@ -13,6 +15,26 @@ $(() => {
             if (top > 0 && !header.classList.contains('fixed')) header.classList.add('fixed');
             else header.classList.remove('fixed');
         });
+
+    // 对话框
+    window.dialog = {
+        el: document.querySelector('.load-steam-error'),
+        cb: null,
+        init: function () {
+            Rx.Observable.fromEvent(this.el.querySelector('.dialog-overlay'), 'click').subscribe(() => this.close());
+            Rx.Observable.fromEvent(this.el.querySelector('.dialog-close'), 'click').subscribe(() => this.close());
+            Rx.Observable.fromEvent(this.el.querySelector('.buttons button'), 'click').subscribe(() => this.close());
+        },
+        open: function (cb) {
+            this.el.classList.add('active');
+            this.cb = cb;
+        },
+        close: function () {
+            this.el.classList.remove('active');
+            if (typeof this.cb === 'function') this.cb();
+        }
+    };
+    window.dialog.init();
 
     // 移动端
     if (window.isMobile) {

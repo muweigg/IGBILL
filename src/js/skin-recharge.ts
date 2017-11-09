@@ -15,4 +15,6 @@ $(() => {
         $(this).addClass('disabled').find('span').text('等待中...');
         setTimeout(() => $('.waiting').show(), 1000);
     });
+
+    setTimeout(() => window.dialog.open(() => alert('callback...')), 2000);
 });
