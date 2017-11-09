@@ -257,11 +257,11 @@
 
         .dialog-overlay {
             opacity: .5;
-            z-index: 1;
+            z-index: 500;
         }
 
         .dialog-box {
-            z-index: 1;
+            z-index: 500;
             animation: bounceInCenter .5s;
             animation-fill-mode: both;
         }
