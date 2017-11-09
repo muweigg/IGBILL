@@ -164,22 +164,33 @@ body {
                 }
             }
 
+            .chart {
+
+                img {
+                    width: 4.5313rem;
+                    height: 2.0313rem;
+                    // max-width: 100%;
+                    transform: translate(0.1563rem, 0.7813rem);
+                }
+            }
+
             .recharge, .consumption {
                 margin-top: 0.9375rem;
 
                 strong {
                     display: block;
                     color: #f9a805;
-                    font-size: 24px;
-                    margin: 5px 0 10px;
+                    font-size: 0.375rem;
+                    margin: 0.1563rem 0 0.1563rem;
+                    font-weight: normal;
                 }
 
                 a {
                     display: inline-block;
-                    width: 82px;
-                    height: 32px;
-                    line-height: 30px;
-                    border-radius: 16px;
+                    width: 1.7188rem;
+                    height: 0.625rem;
+                    line-height: .59375rem;
+                    border-radius: 0.25rem;
                     border: 1px solid #e6e6e6;
                     color: #b2b2b2;
                     font-size: 12px;
@@ -352,6 +363,13 @@ body {
                             }
                         }
                     }
+                }
+            }
+
+            .chart {
+                
+                img {
+                    margin-top: 20px;
                 }
             }
 
