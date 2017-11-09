@@ -21,6 +21,8 @@ const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
 const inject = require('gulp-inject');
 const rename = require('gulp-rename');
+const prettify = require('gulp-html-prettify');
+const htmlmin = require('gulp-htmlmin');
 const tsCompiler = ts.createProject('./tsconfig.json');
 
 const del = require('del');
@@ -164,6 +166,8 @@ gulp.task('template:compile', () => {
     return gulp.src(paths.src.template)
         .pipe(f)
         .pipe(nunjucks.compile())
+        .pipe(isProd ? htmlmin() : empty())
+        .pipe(isProd ? prettify({indent_char: ' ', indent_size: 4}) : empty())
         .pipe(gulp.dest(paths.output.root));
 });
 
