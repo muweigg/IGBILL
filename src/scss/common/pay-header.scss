@@ -20,12 +20,73 @@ header.pay-header {
         height: $mob-pay-header-height;
         line-height: $mob-pay-header-height;
         padding: 0 0.7813rem;
+
+        ul {
+            position: absolute;
+            top: 50%;
+            right: 0.7813rem;
+            transform: translate(10%, -50%);
+            line-height: 1;
+            font-size: 0.1875rem;
+
+            li {
+                display: inline-block;
+                color: #fff;
+                text-align: right;
+                // transform: scale(.8);
+                margin-left: .15625rem;
+
+                a {
+                    color: #fff;
+                }
+
+                &:nth-last-of-type(1) {
+                    margin-top: .078125rem;
+
+                    span {
+                        color: #b2b2b2;
+                    }
+                }
+            }
+        }
     }
 
     @media #{$medium-and-up} {
         height: $pc-pay-header-height;
         line-height: $pc-pay-header-height;
         padding: 0 50px;
+
+        ul {
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+            line-height: 1;
+            font-size: 14px;
+
+            li {
+                display: inline-block;
+                color: #fff;
+                margin-left: 35px;
+                padding-left: 35px;
+
+                a {
+                    color: #fff;
+                }
+
+                img {
+                    vertical-align: sub;
+                }
+
+                &:nth-last-of-type(1) {
+                    border-left: 1px solid #393846;
+
+                    span {
+                        color: #b2b2b2;
+                    }
+                }
+            }
+        }
     }
 
 }
