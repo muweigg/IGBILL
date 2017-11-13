@@ -71,7 +71,19 @@ $(() => {
             .subscribe(toggleMainMenuState);
     } else {
         // PC 端
+
+        // logout
+        let logoutWrap = document.querySelector('.user .user-name a');
+        let logoutWrapDoc$ = Rx.Observable.fromEvent(document, 'click').skip(1), logoutWrapDoc$$;
         
+        let toggleLogoutPopupState = () => {
+            logoutWrap.classList.toggle('open');
+            if (logoutWrap.classList.contains('open')) logoutWrapDoc$$ = logoutWrapDoc$.subscribe(toggleLogoutPopupState);
+            else if (logoutWrapDoc$$) logoutWrapDoc$$.unsubscribe();
+        }
+        
+        Rx.Observable.fromEvent(logoutWrap, 'click')
+            .subscribe(toggleLogoutPopupState);
 
     }
 
