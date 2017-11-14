@@ -48,12 +48,6 @@ $(() => {
         }
     };
     window.dialog.init();
-    window.dialog.open({
-        msg: '纳尼！！',
-        title: '尼玛',
-        okCB: () => alert('ok...'),
-        cancelCB: () => alert('cancel...')
-    });
 
     // 移动端
     if (window.isMobile) {

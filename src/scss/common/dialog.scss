@@ -136,8 +136,8 @@
         
         button {
             width: 100%;
-            max-width: 190px;
-            height: 40px;
+            max-width: 148px;
+            height: 38px;
             border-radius: 20px;
             font-size: 16px;
             color: #fff;
@@ -149,6 +149,7 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             vertical-align: middle;
+            margin: 0 5px;
 
             span, img {
                 position: absolute;
@@ -214,7 +215,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             width: 8.4375rem;
-            height: 6.9375rem;
+            height: 4.6875rem;
             background-color: #fff;
             text-align: center;
             // 默认隐藏
@@ -254,6 +255,10 @@
                 line-height: 1.5625rem;
                 background-color: #f2f7fa;
                 text-align: center;
+
+                button:nth-last-of-type(1) {
+                    background-color: #29cb80;
+                }
             }
         }
     }
