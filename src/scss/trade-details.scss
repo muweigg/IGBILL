@@ -483,7 +483,7 @@ body {
                     }
                 }
 
-                &:hover, .selected, .active {
+                &:hover, &.selected, &.active {
                     color: #fff;
                     background-color: #00a4ff;
                     border-color: #00a4ff;
