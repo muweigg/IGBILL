@@ -1,13 +1,13 @@
-.load-steam-error {
+.common-dialog {
     color: #36373e;
 
     @media #{$medium-and-up} {
         
         button {
             width: 100%;
-            max-width: 190px;
-            height: 40px;
-            border-radius: 20px;
+            max-width: 148px;
+            height: 38px;
+            border-radius: 19px;
             font-size: 16px;
             color: #fff;
             background-color: #00a4ff;
@@ -18,6 +18,7 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             vertical-align: middle;
+            margin: 0 5px;
 
             span, img {
                 position: absolute;
@@ -83,7 +84,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             width: 450px;
-            height: 360px;
+            height: 250px;
             background-color: #fff;
             text-align: center;
             // 默认隐藏
@@ -102,7 +103,7 @@
             }
 
             .dialog-content {
-                margin-top: 40px;
+                margin-top: 60px;
 
                 p:nth-of-type(1) {
                     font-size: 22px;
@@ -123,6 +124,10 @@
                 line-height: 80px;
                 background-color: #f2f7fa;
                 text-align: center;
+
+                button:nth-last-of-type(1) {
+                    background-color: #29cb80;
+                }
             }
         }
     }
