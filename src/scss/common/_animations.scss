@@ -76,3 +76,9 @@
 .bounceInCenter {
   animation-name: bounceInCenter;
 }
+
+@keyframes moveSlideshow {
+    100% { 
+        transform: translateX(-100%);  
+    }
+}
