@@ -54,7 +54,7 @@ header.main-header {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            right: 2.6563rem;
+            right: 2.9688rem;
             
             .icon {
                 vertical-align: middle;
@@ -72,24 +72,18 @@ header.main-header {
             line-height: 1;
 
             button.login {
-                $width: 2.1875rem;
+                $width: 2.40625rem;
                 position: absolute;
-                left: $width / 2;
-                width: $width;
-                height: 0.625rem;
-                line-height: calc(0.625rem - 2px);
-                border: 1px solid #3c414b;
-                border-radius: .3125rem;
+                right: -($width / 2);
+                border: 0;
                 background-color: transparent;
-                position: relative;
                 color: #fff;
                 font-size: 0;
                 white-space: nowrap;
+                transform: translateY(calc(-50% + 0.0313rem));
 
                 img {
-                    width: 0.2969rem;
-                    height: 0.2969rem;
-                    transform: translateY(0.0313rem);
+                    width: 2.40625rem;
                 }
 
                 span {
@@ -290,15 +284,17 @@ header.main-header {
             z-index: 1;
 
             button.login {
-                width: 140px;
-                height: 40px;
-                line-height: 38px;
-                border: 1px solid #3c414b;
-                border-radius: 20px;
+                // width: 140px;
+                // height: 40px;
+                // line-height: 38px;
+                // border: 1px solid #3c414b;
+                // border-radius: 20px;
+                border: 0;
                 background-color: transparent;
                 color: #fff;
                 cursor: pointer;
                 position: relative;
+                vertical-align: middle;
 
                 img {
                     vertical-align: sub;
