@@ -77,8 +77,19 @@
   animation-name: bounceInCenter;
 }
 
+// 首页轮播
 @keyframes moveSlideshow {
     100% { 
         transform: translateX(-100%);  
+    }
+}
+
+// 饰品充值
+@keyframes anim-border {
+    from {
+        border-color: #dcdddd;
+    }
+    to {
+        border-color: #00a4ff;
     }
 }

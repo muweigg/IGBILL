@@ -71,6 +71,7 @@ body {
             border: 0;
             cursor: pointer;
             position: relative;
+            font-size: .375rem;
 
             em {
                 font-style: normal;
@@ -171,14 +172,71 @@ body {
 
                     .row:nth-last-of-type(1) {
 
-                        input {
-                            background-color: #f2f7fa;
-                            border: 1px solid #dcdddd;
-                            height: 0.7031rem;
-                            width: 100%;
-                            line-height: 1;
-                            padding: 0 0.1563rem;
-                            margin-top: .15625rem;
+                        div > span {
+                            position: relative;
+
+                            input {
+                                background-color: #f2f7fa;
+                                border: 1px solid #dcdddd;
+                                width: 100%;
+                                height: 0.7031rem;
+                                line-height: 1;
+                                padding: 0 1.7188rem 0 0.1563rem;
+                                margin-top: .15625rem;
+                            }
+
+                            a {
+                                display: inline-block;
+                                width: 1.5625rem;
+                                height: 0.7031rem;
+                                line-height: 0.7031rem;
+                                border-left: 1px solid #dcdddd;
+                                font-size: 0.2188rem;
+                                color: #00a4ff;
+                                position: absolute;
+                                top: -0.15625rem;
+                                right: -1px;
+                                text-align: center;
+                            }
+
+                            img {
+                                position: absolute;
+                                top: 50%;
+                                right: 0.2344rem;
+                                transform: translateY(-50%);
+                                transform: scale3d(0, 0, 0);
+                            }
+
+                            &.no-input {
+                                
+                                input, a {
+                                    animation: anim-border 1s linear infinite alternate;
+                                }
+                            }
+
+                            &.input {
+
+                                a {
+                                    color: #fff;
+                                    background-color: #00a4ff;
+                                }
+                            }
+
+                            &.success {
+
+                                input, a {
+                                    animation: none;
+                                }
+
+                                a {
+                                    display: none;
+                                }
+
+                                img {
+                                    animation: bounceInCenter .5s;
+                                    animation-fill-mode: both;
+                                }
+                            }
                         }
 
                         button {
@@ -571,13 +629,14 @@ body {
             width: 200px;
             // display: block;
             height: 45px;
-            line-height: 45px;
+            line-height: 44px;
             border-radius: 25px;
             background-color: #00a4ff;
             color: #fff;
             border: 0;
             cursor: pointer;
             position: relative;
+            font-size: 16px;
 
             em {
                 font-style: normal;
@@ -681,14 +740,72 @@ body {
                         height: 45px;
                         line-height: 45px;
 
-                        input {
-                            background-color: #f2f7fa;
-                            border: 1px solid #dcdddd;
-                            height: 45px;
-                            width: 935px;
-                            // width: 100%;
-                            line-height: 1;
-                            padding: 0 10px;
+                        div > span {
+                            position: absolute;
+
+                            input {
+                                background-color: #f2f7fa;
+                                border: 1px solid #dcdddd;
+                                height: 45px;
+                                width: 935px;
+                                // width: 100%;
+                                line-height: 1;
+                                padding: 0 10px;
+                                padding-right: 110px;
+                            }
+
+                            a {
+                                display: inline-block;
+                                width: 100px;
+                                height: 45px;
+                                line-height: 45px;
+                                border-left: 1px solid #dcdddd;
+                                font-size: 14px;
+                                color: #00a4ff;
+                                position: absolute;
+                                top: -1px;
+                                right: -1px;
+                                text-align: center;
+                            }
+
+                            img {
+                                position: absolute;
+                                top: 50%;
+                                right: 15px;
+                                transform: translateY(-50%);
+                                transform: scale3d(0, 0, 0);
+                            }
+
+                            &.no-input {
+                                
+                                input, a {
+                                    animation: anim-border 1s linear infinite alternate;
+                                }
+                            }
+
+                            &.input {
+
+                                a {
+                                    color: #fff;
+                                    background-color: #00a4ff;
+                                }
+                            }
+
+                            &.success {
+
+                                input, a {
+                                    animation: none;
+                                }
+
+                                a {
+                                    display: none;
+                                }
+
+                                img {
+                                    animation: bounceInCenter .5s;
+                                    animation-fill-mode: both;
+                                }
+                            }
                         }
 
                         button {

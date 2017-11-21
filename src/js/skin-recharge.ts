@@ -18,6 +18,19 @@ $(() => {
             setTimeout(() => loadErrorDialog.open(() => alert('callback...')), 1000);
         }, 1000);
     });
+
+    let tradeUrlWrapEl = document.querySelector('.chose-skins header .row:nth-last-of-type(1) > div > span');
+    let tradeUrlSaveEl = tradeUrlWrapEl.querySelector('a');
+    let tradeInput$ = Rx.Observable.fromEvent(tradeUrlWrapEl.querySelector('input'), 'input');
+    tradeInput$.map(e => e.target.value).subscribe(value => {
+        if (_.trim(value) === '')
+            $(tradeUrlWrapEl).removeClass('input').removeClass('success').addClass('no-input');
+        else
+            $(tradeUrlWrapEl).removeClass('no-input').addClass('input');
+    })
+    $(tradeUrlSaveEl).click(() => {
+        $(tradeUrlWrapEl).removeClass('input').addClass('success');
+    });
     
     // 对话框
     let loadErrorDialog = {
