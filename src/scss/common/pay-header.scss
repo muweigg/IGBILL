@@ -19,7 +19,13 @@ header.pay-header {
     @media #{$small-and-down} {
         height: $mob-pay-header-height;
         line-height: $mob-pay-header-height;
-        padding: 0 0.7813rem;
+        padding: 0 .3125rem;
+
+        .logo {
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
 
         ul {
             position: absolute;
@@ -55,6 +61,12 @@ header.pay-header {
         height: $pc-pay-header-height;
         line-height: $pc-pay-header-height;
         padding: 0 50px;
+
+        .logo {
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
 
         ul {
             position: absolute;
