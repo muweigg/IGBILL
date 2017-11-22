@@ -300,6 +300,65 @@ body {
             width: $pc-container-width;
             margin: 0 auto;
         }
+
+        .notice {
+            position: absolute;
+            top: calc(100% + 1px);
+            left: 0;
+            right: 0;
+            height: 50px;
+            line-height: 50px;
+            background-color: #1f2125;
+            padding: 0 50px;
+            display: none;
+
+            div {
+                position: absolute;
+                top: 0;
+                left: 50px + 25px;
+                right: 50px + 23px;
+                height: 50px;
+                line-height: 50px;
+                overflow: hidden;
+                white-space: nowrap;
+                color: #fff;
+                transform: translate3d(0, 0, 0);
+
+                span {
+                    display: inline-block;
+                    white-space: nowrap;
+                    padding-left: 100%;
+
+                    &.animation {
+                        animation: scroll 20s linear infinite;
+                    }
+
+                    @keyframes scroll {
+                        from {
+                            transform: translateX(0);
+                        }
+                        to {
+                            transform: translateX(-100%);
+                        }
+                    }
+                }
+            }
+
+            .icon-notice, .icon-notice-close {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .icon-notice {
+                left: 50px;
+            }
+
+            .icon-notice-close {
+                right: 50px;
+                cursor: pointer;
+            }
+        }
     }
 
     @media #{$small-and-down} {
@@ -308,5 +367,64 @@ body {
         background-size: auto 8.4375rem;
         display: flex;
         flex-flow: column nowrap;
+
+        .notice {
+            position: absolute;
+            top: calc(100% + 1px);
+            left: 0;
+            right: 0;
+            height: 0.7813rem;
+            line-height: 0.7813rem;
+            background-color: #1f2125;
+            padding: 0 .3125rem;
+            display: none;
+
+            div {
+                position: absolute;
+                top: 0;
+                left: 0.3125rem + 0.4688rem;
+                right: 0.3125rem + 0.4375rem;
+                height: 0.7813rem;
+                line-height: 0.7813rem;
+                overflow: hidden;
+                white-space: nowrap;
+                color: #fff;
+                transform: translate3d(0, 0, 0);
+
+                span {
+                    display: inline-block;
+                    white-space: nowrap;
+                    padding-left: 100%;
+
+                    &.animation {
+                        animation: scroll 20s linear infinite;
+                    }
+
+                    @keyframes scroll {
+                        from {
+                            transform: translateX(0);
+                        }
+                        to {
+                            transform: translateX(-100%);
+                        }
+                    }
+                }
+            }
+
+            .icon-notice, .icon-notice-close {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .icon-notice {
+                left: 0.3125rem;
+            }
+
+            .icon-notice-close {
+                right: 0.3125rem;
+                cursor: pointer;
+            }
+        }
     }
 }

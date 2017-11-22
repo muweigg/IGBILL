@@ -6,4 +6,5 @@ declare var Swiper: any;
 interface Window {
     isMobile: boolean;
     dialog: any;
+    notice: any;
 }
