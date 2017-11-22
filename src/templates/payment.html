@@ -28,11 +28,10 @@
                 <!-- 登录前 -->
                 <div class="login-igb">
                     <p>用<span>STEAM</span>账户登入<span>IGB</span>，完成支付</p>
-                    <button>
-                        <span>登录IGB</span>
-                        <img class="icon" src="./assets/images/button-arrow.png"
-                            srcset="./assets/images/button-arrow.png 1x, ./assets/images/button-arrow@2x.png 2x, ./assets/images/button-arrow@3x.png 3x">
-                    </button>
+                    <a href="javascript:">
+                        <img class="icon" src="./assets/images/login-from-steam-big.png"
+                            srcset="./assets/images/login-from-steam-big.png 1x, ./assets/images/login-from-steam-big@2x.png 2x, ./assets/images/login-from-steam-big@3x.png 3x">
+                    </a>
                 </div>
 
                 <!-- 登录后 -->
@@ -59,8 +58,16 @@
                     </div>
 
                     <div class="trade-url">
-                        交易前，确认您的Steam隐私已经设置为<span class="c1">"公开"</span>，并填入<span class="c1">Trade Url</span>：
-                        <input type="text">
+                        交易前，确认您的Steam隐私已经设置为<a class="c1" href="javascript:">公开</a>，并填入<a class="c1" href="javascript:">交易链接</a>：<span class="c4 hide-on-small-and-down">(点击链接前往设置)</span>
+                        <!-- 未输入: no-input -->
+                        <!-- 输入中: input -->
+                        <!-- 完成: success -->
+                        <span class="no-input">
+                            <input type="text" placeholder="请填写Steam交易链接(Trade Url)">
+                            <a href="javascript:">保存</a>
+                            <img class="icon" src="./assets/images/trade-url-success.png"
+                                srcset="./assets/images/trade-url-success.png 1x, ./assets/images/trade-url-success@2x.png 2x, ./assets/images/trade-url-success@3x.png 3x">
+                        </span>
                     </div>
 
                     <!-- 皮肤选择 -->

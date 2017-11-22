@@ -41,6 +41,10 @@ body {
         color: #808080;
     }
 
+    .c4 {
+        color: #b2b2b2;
+    }
+
     input {
         outline: none;
     }
@@ -223,6 +227,11 @@ body {
                             }
                         }
                     }
+                    
+                    a {
+                        display: inline-block;
+                        margin-top: 0.3906rem;
+                    }
 
                     button {
                         margin-top: 0.3906rem;
@@ -301,7 +310,77 @@ body {
                         font-size: 0.2969rem;
                         flex: 0 0 0;
 
-                        input {
+                        > span:nth-last-of-type(1) {
+                            display: block;
+                            position: relative;
+                            line-height: 1;
+
+                            input {
+                                // display: block;
+                                background-color: #f2f7fa;
+                                border: 0.0156rem solid #dcdddd;
+                                height: 0.7031rem;
+                                width: 100%;
+                                line-height: 1;
+                                padding: 0 0.1563rem;
+                                margin-top: 0.2344rem;
+                            }
+
+                            a {
+                                display: inline-block;
+                                width: 1.5625rem;
+                                height: 0.7031rem;
+                                line-height: 0.7031rem;
+                                border-left: 0.0156rem solid #dcdddd;
+                                font-size: 0.2188rem;
+                                color: #00a4ff;
+                                position: absolute;
+                                top: 0.2344rem;
+                                right: -1px;
+                                text-align: center;
+                            }
+
+                            img {
+                                position: absolute;
+                                top: calc(50% + 0.2344rem / 2);
+                                right: 0.2344rem;
+                                transform: translateY(-50%);
+                                transform: scale3d(0, 0, 0);
+                            }
+
+                            &.no-input {
+                                
+                                input, a {
+                                    animation: anim-border 1s linear infinite alternate;
+                                }
+                            }
+
+                            &.input {
+
+                                a {
+                                    color: #fff;
+                                    background-color: #00a4ff;
+                                }
+                            }
+
+                            &.success {
+
+                                input, a {
+                                    animation: none;
+                                }
+
+                                a {
+                                    display: none;
+                                }
+
+                                img {
+                                    animation: bounceInCenter .5s;
+                                    animation-fill-mode: both;
+                                }
+                            }
+                        }
+
+                        /* input {
                             display: block;
                             background-color: #f2f7fa;
                             border: 0.0156rem solid #dcdddd;
@@ -310,7 +389,7 @@ body {
                             line-height: 1;
                             padding: 0 0.1563rem;
                             margin-top: 0.2344rem;
-                        }
+                        } */
                     }
 
                     .skins {
@@ -850,6 +929,11 @@ body {
                         }
                     }
 
+                    a {
+                        display: inline-block;
+                        margin-top: 25px;
+                    }
+
                     button {
                         margin-top: 25px;
                         font-size: 18px;
@@ -903,14 +987,85 @@ body {
                         padding: 0 20px;
                         white-space: nowrap;
 
-                        input {
+                        > span:nth-last-of-type(1) {
+                            display: inline-block;
+                            position: relative;
+                            line-height: 1;
+
+                            input {
+                                background-color: #f2f7fa;
+                                border: 1px solid #dcdddd;
+                                height: 45px;
+                                width: 620px;
+                                // width: 100%;
+                                line-height: 1;
+                                padding: 0 110px 0 10px;
+                                margin-left: 10px;
+                            }
+
+                            a {
+                                display: inline-block;
+                                width: 100px;
+                                height: 45px;
+                                line-height: 45px;
+                                border-left: 1px solid #dcdddd;
+                                font-size: 14px;
+                                color: #00a4ff;
+                                position: absolute;
+                                top: -1px;
+                                right: -1px;
+                                text-align: center;
+                            }
+
+                            img {
+                                position: absolute;
+                                top: 50%;
+                                right: 15px;
+                                transform: translateY(-50%);
+                                transform: scale3d(0, 0, 0);
+                            }
+
+                            &.no-input {
+                                
+                                input, a {
+                                    animation: anim-border 1s linear infinite alternate;
+                                }
+                            }
+
+                            &.input {
+
+                                a {
+                                    color: #fff;
+                                    background-color: #00a4ff;
+                                }
+                            }
+
+                            &.success {
+
+                                input, a {
+                                    animation: none;
+                                }
+
+                                a {
+                                    display: none;
+                                }
+
+                                img {
+                                    animation: bounceInCenter .5s;
+                                    animation-fill-mode: both;
+                                }
+                            }
+                        }
+
+
+                        /* input {
                             background-color: #f2f7fa;
                             border: 1px solid #dcdddd;
                             height: 45px;
                             width: 730px;
                             line-height: 1;
                             padding: 0 10px;
-                        }
+                        } */
                     }
 
                     .skins {
