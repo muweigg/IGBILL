@@ -49,6 +49,10 @@ body {
         color: #808080;
     }
 
+    .c4 {
+        color: #b2b2b2;
+    }
+
     input {
         outline: none;
     }
@@ -155,6 +159,11 @@ body {
 
                         .col:nth-of-type(1) {
                             white-space: nowrap;
+                            text-align: left;
+
+                            a {
+                                text-decoration: underline;
+                            }
                         }
 
                         .col:nth-last-of-type(1) {
@@ -721,6 +730,10 @@ body {
                     .row:nth-of-type(1) {
                         height: 50px;
                         line-height: 50px;
+
+                        a {
+                            text-decoration: underline;
+                        }
 
                         .col:nth-last-of-type(1) {
 
