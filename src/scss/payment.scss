@@ -338,6 +338,7 @@ body {
                                 top: 0.2344rem;
                                 right: -1px;
                                 text-align: center;
+                                text-decoration: underline;
                             }
 
                             img {
@@ -986,6 +987,10 @@ body {
                         border-bottom: 1px solid #dcdddd;
                         padding: 0 20px;
                         white-space: nowrap;
+
+                        > a {
+                            text-decoration: underline;
+                        }
 
                         > span:nth-last-of-type(1) {
                             display: inline-block;
