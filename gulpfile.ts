@@ -31,7 +31,7 @@ let isProd = false;
 let svgs = null;
 
 const urlPattern = /(url\(['"]?)[/]?()/g;
-const exts = '{jpg,jpeg,png,svg,ttf,eot,woff,woff2}';
+const exts = '{jpg,jpeg,png,svg,ttf,eot,woff,woff2,gif}';
 
 const paths = {
     src: {

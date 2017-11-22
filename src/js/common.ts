@@ -38,7 +38,6 @@ $(() => {
             this.cancelCB = options.cancelCB;
         },
         ok: function () {
-            console.log(typeof this.okCB);
             if (typeof this.okCB === 'function') this.okCB();
             this.el.classList.remove('active');
         },
@@ -92,31 +91,35 @@ $(() => {
         let userElem = document.querySelector('.main-header .user');
         let userDoc$ = Rx.Observable.fromEvent(document, 'click').skip(1), userDoc$$;
 
-        let toggleUserPopupState = () => {
-            let wrap = userElem.querySelector('.user-wrap');
-            wrap.classList.toggle('open');
-            // $(wrap).fadeToggle('fast');
-            if (wrap.classList.contains('open')) userDoc$$ = userDoc$.subscribe(toggleUserPopupState);
-            else if (userDoc$$) userDoc$$.unsubscribe();
+        if (userElem) {
+            let toggleUserPopupState = () => {
+                let wrap = userElem.querySelector('.user-wrap');
+                wrap.classList.toggle('open');
+                // $(wrap).fadeToggle('fast');
+                if (wrap.classList.contains('open')) userDoc$$ = userDoc$.subscribe(toggleUserPopupState);
+                else if (userDoc$$) userDoc$$.unsubscribe();
+            }
+                
+            Rx.Observable.fromEvent(userElem, 'click')
+                .subscribe(toggleUserPopupState);
         }
-            
-        Rx.Observable.fromEvent(userElem, 'click')
-            .subscribe(toggleUserPopupState);
-
+        
         // 主菜单
         let mainMenuElem = document.querySelector('.main-header nav');
         let mainMenuBtn = document.querySelector('.main-header .main-menu'), mainMenuBtn$;
         let mainMenuDoc$ = Rx.Observable.fromEvent(document, 'click').skip(1), mainMenuDoc$$;
 
-        let toggleMainMenuState = () => {
-            mainMenuBtn.classList.toggle('open');
-            $(mainMenuElem).slideToggle('fast');
-            if (mainMenuBtn.classList.contains('open')) mainMenuDoc$$ = mainMenuDoc$.subscribe(toggleMainMenuState);
-            else if (mainMenuDoc$$) mainMenuDoc$$.unsubscribe();
+        if (mainMenuElem) {
+            let toggleMainMenuState = () => {
+                mainMenuBtn.classList.toggle('open');
+                $(mainMenuElem).slideToggle('fast');
+                if (mainMenuBtn.classList.contains('open')) mainMenuDoc$$ = mainMenuDoc$.subscribe(toggleMainMenuState);
+                else if (mainMenuDoc$$) mainMenuDoc$$.unsubscribe();
+            }
+            
+            mainMenuBtn$ = Rx.Observable.fromEvent(mainMenuBtn, 'click')
+                .subscribe(toggleMainMenuState);
         }
-        
-        mainMenuBtn$ = Rx.Observable.fromEvent(mainMenuBtn, 'click')
-            .subscribe(toggleMainMenuState);
     } else {
         // PC 端
 
