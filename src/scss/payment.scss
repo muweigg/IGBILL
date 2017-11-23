@@ -117,7 +117,7 @@ body {
         
         .container-wrap {
             flex: 1 0 auto;
-            border: 0.0156rem solid #dcdddd;
+            border: 1px solid #dcdddd;
             position: relative;
             display: flex;
             flex-flow: column nowrap;
@@ -134,15 +134,80 @@ body {
             }
 
             header {
-                flex: 0 0 0;
-                height: 0.7813rem * 2;
-                line-height: 0.5469rem;
+                flex: 0 0 1.5625rem;
+                height: 1.5625rem;
+                line-height: .625rem;
                 background-color: #f2f7fa;
                 border-bottom: 1px solid #dcdddd;
                 padding: .15625rem 0.3125rem 0 0.7813rem;
-                font-size: 0;
+                // font-size: 0;
 
-                span {
+                .col {
+                    position: relative;
+                        
+                    &:before, &:after {
+                        content: '';
+                        display: block;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    &:before {
+                        width: 9px;
+                        height: 9px;
+                        border: 1px solid #fd7c7e;
+                        left: -16px;
+                    }
+
+                    &:after {
+                        width: 5px;
+                        height: 5px;
+                        background-color: #fd7c7e;
+                        left: -13px;
+                    }
+
+                    &:nth-last-of-type(3), &:nth-last-of-type(1) {
+
+                        span {
+                            padding-right: 0;
+                        }
+                    }
+
+                    &:nth-last-of-type(1) {
+                        margin-top: -0.0313rem;
+
+                        sup {
+                            color: #00a4ff;
+                            vertical-align: middle;
+                            font-weight: bold;
+                        }
+
+                        em {
+                            color: #00a4ff;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+                        
+                        &:before, &:after {
+                            display: none;
+                        }
+                    }
+
+                    span {
+                        display: inline-block;
+                        vertical-align: middle;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 100%;
+                        padding-right: 0.625rem;
+                    }
+                }
+
+                /* span {
                     display: inline-block;
                     position: relative;
                     width: 50%;
@@ -174,28 +239,43 @@ body {
                         left: -13px;
                     }
 
-                    sup {
-                        color: #00a4ff;
-                        vertical-align: middle;
-                        font-weight: bold;
+                    em {
+                        font-style: normal;
                     }
 
-                    em {
-                        color: #00a4ff;
-                        font-style: normal;
-                        font-weight: bold;
-                        font-size: 18px;
+                    span {
+                        padding: 0;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+
+                        sup {
+                            color: #00a4ff;
+                            vertical-align: middle;
+                            font-weight: bold;
+                        }
+                        
+                        em {
+                            color: #00a4ff;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
                     }
 
                     &:nth-last-of-type(1) {
-                        float: right;
-                        margin-right: 0;
+                        // float: right;
+                        padding-right: 0;
+                        vertical-align: bottom;
+                    }
+
+                    &.pay-amount {
                         
-                        &:before, &:after {
-                            display: none;
+                        span {
+                            float: right;
                         }
                     }
-                }
+                } */
             }
 
             .content-wrap {
@@ -867,10 +947,8 @@ body {
                 border-bottom: 1px solid #dcdddd;
                 padding: 0 20px 0 35px;
 
-                span {
-                    display: inline-block;
+                .col {
                     position: relative;
-                    margin-right: 65px;
                         
                     &:before, &:after {
                         content: '';
@@ -895,26 +973,38 @@ body {
                         left: -13px;
                     }
 
-                    sup {
-                        color: #00a4ff;
-                        vertical-align: middle;
-                        font-weight: bold;
-                    }
-
-                    em {
-                        color: #00a4ff;
-                        font-style: normal;
-                        font-weight: bold;
-                        font-size: 18px;
-                    }
-
                     &:nth-last-of-type(1) {
-                        float: right;
-                        margin-right: 0;
+
+                        sup {
+                            color: #00a4ff;
+                            vertical-align: middle;
+                            font-weight: bold;
+                        }
+
+                        em {
+                            color: #00a4ff;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
                         
                         &:before, &:after {
                             display: none;
                         }
+
+                        span {
+                            padding-right: 0;
+                        }
+                    }
+
+                    span {
+                        display: inline-block;
+                        vertical-align: middle;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 100%;
+                        padding-right: 40px;
                     }
                 }
             }
