@@ -134,12 +134,12 @@ body {
             }
 
             header {
-                flex: 0 0 1.5625rem;
-                height: 1.5625rem;
-                line-height: .625rem;
+                flex: 0 0 3.4375rem;
+                // height: 3.9063rem;
+                line-height: 0.7813rem;
                 background-color: #f2f7fa;
                 border-bottom: 1px solid #dcdddd;
-                padding: .15625rem 0.3125rem 0 0.7813rem;
+                padding: .078125rem 0.3125rem 0 0.7813rem;
                 // font-size: 0;
 
                 .col {
@@ -203,7 +203,6 @@ body {
                         overflow: hidden;
                         text-overflow: ellipsis;
                         width: 100%;
-                        padding-right: 0.625rem;
                     }
                 }
 
