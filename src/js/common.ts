@@ -109,7 +109,7 @@ $(() => {
         let mainMenuBtn = document.querySelector('.main-header .main-menu'), mainMenuBtn$;
         let mainMenuDoc$ = Rx.Observable.fromEvent(document, 'click').skip(1), mainMenuDoc$$;
 
-        if (mainMenuElem) {
+        if (mainMenuBtn) {
             let toggleMainMenuState = () => {
                 mainMenuBtn.classList.toggle('open');
                 $(mainMenuElem).slideToggle('fast');
