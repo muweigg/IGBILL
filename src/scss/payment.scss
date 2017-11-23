@@ -390,6 +390,10 @@ body {
                         font-size: 0.2969rem;
                         flex: 0 0 0;
 
+                        > a {
+                            text-decoration: underline;
+                        }
+
                         > span:nth-last-of-type(1) {
                             display: block;
                             position: relative;
@@ -418,7 +422,6 @@ body {
                                 top: 0.2344rem;
                                 right: -1px;
                                 text-align: center;
-                                text-decoration: underline;
                             }
 
                             img {
