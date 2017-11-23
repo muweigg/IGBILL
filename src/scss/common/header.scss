@@ -50,6 +50,11 @@ header.main-header {
             display: inline-block;
             line-height: 1;
             vertical-align: middle;
+            transform: translateY(0.0313rem);
+
+            img {
+                width: 2.8125rem;
+            }
         }
 
         .language {
