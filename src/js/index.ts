@@ -20,11 +20,11 @@ $(() => {
             640: {
                 slidesPerView: 3,
                 slidesPerColumn: 2,
-                spaceBetween: 15,
+                spaceBetween: 10,
             },
             320: {
                 slidesPerView: 1,
-                spaceBetween: 10,
+                spaceBetween: 5,
             }
         }
     });
