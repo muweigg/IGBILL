@@ -1,0 +1,59 @@
+{% extends './common/base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/customer-service.css">
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+    <main class="customer-service">
+        <div class="container-wrap">
+            <div class="row skin-caption">
+                <div class="col s12 align-left">
+                    <img class="icon" src="./assets/images/icon-customer-service.png"
+                        srcset="./assets/images/icon-customer-service.png 1x, ./assets/images/icon-customer-service@2x.png 2x, ./assets/images/icon-customer-service@3x.png 3x">
+                    客服服务
+                </div>
+            </div>
+            <div class="customer-service-wrap">
+                <div class="contact-service">
+                    <div class="row">
+                        <figure class="col s12 m4">
+                            <div>
+                                <img class="icon" src="./assets/images/qq.png"
+                                    srcset="./assets/images/qq.png 1x, ./assets/images/qq@2x.png 2x, ./assets/images/qq@3x.png 3x">
+                            </div>
+                            <figcaption>
+                                <strong>在线QQ</strong>
+                                <span>2851820634</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="col s12 m4">
+                            <div>
+                                <img class="icon" src="./assets/images/phone.png"
+                                    srcset="./assets/images/phone.png 1x, ./assets/images/phone@2x.png 2x, ./assets/images/phone@3x.png 3x">
+                            </div>
+                            <figcaption>
+                                <strong>客服电话</strong>
+                                023-88105559-8065
+                            </figcaption>
+                        </figure>
+                        <figure class="col s12 m4">
+                            <div>
+                                <img class="icon" src="./assets/images/email.png"
+                                    srcset="./assets/images/email.png 1x, ./assets/images/email@2x.png 2x, ./assets/images/email@3x.png 3x">
+                            </div>
+                            <figcaption>
+                                <strong>客服邮箱</strong>
+                                <a href="javascript:">cs@igbill.com</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
