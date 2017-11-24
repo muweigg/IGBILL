@@ -1,0 +1,76 @@
+{% extends './common/base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/faq.css">
+{% endblock %}
+
+{% block scripts %}
+    <script src="./js/faq.js"></script>
+{% endblock %}
+
+{% block content %}
+    <main class="faq">
+        <div class="container-wrap">
+            <div class="row skin-caption">
+                <div class="col s12 align-left">
+                    <img class="icon" src="./assets/images/icon-faq.png"
+                        srcset="./assets/images/icon-faq.png 1x, ./assets/images/icon-faq@2x.png 2x, ./assets/images/icon-faq@3x.png 3x">
+                    常见问题
+                </div>
+            </div>
+            <div class="contact-us-wrap">
+                <section class="active">
+                    <header><span></span><strong>关于iGB</strong></header>
+                    <div>
+                        欢迎使用iGB饰品支付。iGB是新三板上市企业重庆软岛科技股份有限公司旗下品牌，软岛科技始于2004年，发展至今，十年有余，深耕互联网网行业，全球用户已超百万。iGB是一个专业的游戏装备支付体系，让玩家可以将自己的游戏装备作为交易货币使用。我们旨在为广大玩家快速链接游戏装备及游戏周边产品、赛事、直播等，确保您的交易安全，完善您的游戏体验。
+                    </div>
+                </section>
+                <section>
+                    <header><span></span><strong>如何使用iGB?</strong></header>
+                    <div>
+                        <dl><dt>1、</dt><dd>选择您要充值的皮肤。</dd></dl>
+                        <dl><dt>2、</dt><dd>订单完成后您将获得iGB余额。</dd></dl>
+                        <dl><dt>3、</dt><dd>iGB余额可用于IGXE.CN钱包充值以及其它合作网站的产品购买。</dd></dl>
+                    </div>
+                </section>
+                <section>
+                    <header><span></span><strong>您可以使用哪些皮肤进行充值?</strong></header>
+                    <div>
+                        <p>我们接受几乎所有价格超过0.3元的皮肤。不能接受部分在外部交易市场无人问津的皮肤。</p>
+                    </div>
+                </section>
+                <section>
+                    <header><span></span><strong>哪些情况会造成您无法交易？</strong></header>
+                    <div>
+                        <dl><dt>1、</dt><dd>Steam令牌未启用。</dd></dl>
+                        <dl><dt>2、</dt><dd>最近重置过Steam帐号密码或者改绑新的邮箱。</dd></dl>
+                        <dl><dt>3、</dt><dd>Steam帐号个人资料状态以及库存未设置为公开。</dd></dl>
+                        <dl><dt>4、</dt><dd>交易URL填写错误。</dd></dl>
+                        <dl><dt>5、</dt><dd>Steam帐号被VAC封禁或交易饰品的游戏被封禁。</dd></dl>
+                    </div>
+                </section>
+                <section>
+                    <header><span></span><strong>如何获取您的交易URL?</strong></header>
+                    <div>
+                        <dl><dt>1、</dt><dd>通过Steam登录www.igbill.com</dd></dl>
+                        <img src="./assets/images/faq/1.png" alt="">
+                        <dl><dt>2、</dt><dd>点击首页“饰品充值”</dd></dl>
+                        <dl><dt>3、</dt><dd>点击“交易链接”进入以下Steam个人页面，复制交易Url</dd></dl>
+                        <img src="./assets/images/faq/2.png" alt="">
+                        <dl><dt>4、</dt><dd>粘贴URL至iGB网站交易链接处</dd></dl>
+                    </div>
+                </section>
+                <section>
+                    <header><span></span><strong>如何设置您的Steam账户个人资料状态为“公开”</strong></header>
+                    <div>
+                        <p>首页“饰品充值”-“公开” </p>
+                        <img src="./assets/images/faq/3.png" alt="">
+                        <img src="./assets/images/faq/4.png" alt="">
+                        <p>任何其他问题或发现网站Bug，请联系在线客服 <span class="c2">QQ 2851820634</span>，或发送邮件至官方客服邮箱 <a href="javascript:">bd@igbill.com</a>。</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
