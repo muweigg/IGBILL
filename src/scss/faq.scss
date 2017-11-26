@@ -200,6 +200,7 @@ body {
             bottom: 65px;
             left: 50%;
             transform: translateX(-50%);
+            font-size: 14px;
 
             .contact-us-wrap {
                 // margin-top: 20px;
@@ -243,7 +244,6 @@ body {
                         border: 1px solid #dcdddd;
                         border-top: 0;
                         border-bottom: 0;
-                        font-size: 14px;
                         display: none;
 
                         dl {
