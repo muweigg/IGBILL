@@ -1,6 +1,6 @@
-@import './variables';
-@import './mixins';
-@import './icons.scss';
+@import './_/variables';
+@import './_/mixins';
+@import './_/icons.scss';
 
 header.main-header {
     position: fixed;

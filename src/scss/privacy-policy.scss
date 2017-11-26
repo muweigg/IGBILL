@@ -34,7 +34,7 @@ body {
     }
 }
 
-.contact-us {
+.privacy-policy {
     color: #36373e;
 
     .c1 {
@@ -89,7 +89,7 @@ body {
             display: flex;
             flex-flow: column nowrap;
 
-            .contact-us-wrap {
+            .privacy-policy-wrap {
                 margin-top: .3125rem;
                 // border: 1px solid #dcdddd;
                 // background-color: #fff;
@@ -120,6 +120,10 @@ body {
 
                         a {
                             text-decoration: underline;
+                        }
+
+                        p {
+                            text-indent: 0.5938rem;
                         }
                     }
 
@@ -160,7 +164,7 @@ body {
             left: 50%;
             transform: translateX(-50%);
 
-            .contact-us-wrap {
+            .privacy-policy-wrap {
                 // margin-top: 20px;
                 // border: 1px solid #dcdddd;
                 position: absolute;
@@ -190,6 +194,10 @@ body {
 
                         a {
                             text-decoration: underline;
+                        }
+
+                        p {
+                            text-indent: 24px;
                         }
                     }
 
