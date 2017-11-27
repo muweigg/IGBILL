@@ -93,3 +93,13 @@
         border-color: #00a4ff;
     }
 }
+
+// 刷新库存
+@keyframes anim-refreshing {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}

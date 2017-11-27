@@ -4,6 +4,7 @@ $(() => {
     let searchBar = $('.search-bar i');
     let sort = $('.skins .all-and-sort .sort');
     let pay = $('.balance button');
+    let refresh = $('.skins .all-and-sort .refresh');
 
     loginIGB.click(function () {
         $('.login-igb').hide();
@@ -29,6 +30,10 @@ $(() => {
                 $('.pay-results').show();
             }, 1000);
         }, 1000);
+    });
+    
+    refresh.click(function () {
+        $(this).toggleClass('refreshing');
     });
 
     sort.click(function () {

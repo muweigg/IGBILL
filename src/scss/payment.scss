@@ -581,6 +581,28 @@ body {
                                 }
                             }
 
+                            span.refresh {
+                                display: inline-block;
+                                cursor: pointer;
+                                position: relative;
+                                padding-left: 0.4375rem;
+
+                                img {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    width: 0.375rem;
+                                    transform: translateZ(0) translateY(-50%);
+                                }
+
+                                &.refreshing {
+
+                                    img {
+                                        animation: anim-refreshing 1s linear infinite;
+                                    }
+                                }
+                            }
+
                             span.sort {
                                 float: right;
                                 cursor: pointer;
@@ -1248,6 +1270,28 @@ body {
                                         img {
                                             transform: scale(.9);
                                         }
+                                    }
+                                }
+                            }
+
+                            span.refresh {
+                                display: inline-block;
+                                cursor: pointer;
+                                position: relative;
+                                padding-left: 23px;
+
+                                img {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    width: 18px;
+                                    transform: translateZ(0) translateY(-50%);
+                                }
+
+                                &.refreshing {
+
+                                    img {
+                                        animation: anim-refreshing 1s linear infinite;
                                     }
                                 }
                             }

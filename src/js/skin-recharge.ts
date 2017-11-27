@@ -2,6 +2,7 @@ $(() => {
     let searchBar = $('.search-bar i');
     let sort = $('.skins .all-and-sort .sort');
     let pay = $('.chose-skins header button');
+    let refresh = $('.skins .all-and-sort .refresh');
 
     searchBar.click(function () {
         $('.search-bar').toggleClass('open');
@@ -17,6 +18,10 @@ $(() => {
             $('.waiting').show();
             setTimeout(() => loadErrorDialog.open(() => alert('callback...')), 1000);
         }, 1000);
+    });
+
+    refresh.click(function () {
+        $(this).toggleClass('refreshing');
     });
 
     let tradeUrlWrapEl = document.querySelector('.chose-skins header .row:nth-last-of-type(1) > div > span');
