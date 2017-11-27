@@ -42,6 +42,7 @@ const paths = {
         sprites: [`src/sprites/icons/**/*.png`],
         template: ['src/templates/**/*.html'],
         svg: ['src/sprites/svg/**/*.svg'],
+        _: ['src/scss/**/_/*.scss'],
     },
     common: {
         js: [
@@ -243,13 +244,13 @@ gulp.task('watch:vendors:js',
     () => gulp.watch(paths.common.js, gulp.series('vendors:js', reload)));
 
 gulp.task('watch:vendors:css',
-    () => gulp.watch([...paths.common.css, 'src/scss/common/_/*'], gulp.series('vendors:css', reload)));
+    () => gulp.watch([...paths.common.css, ...paths.src._], gulp.series('vendors:css', reload)));
 
 gulp.task('watch:js',
     () => gulp.watch(paths.src.js, gulp.series('js', reload)));
 
 gulp.task('watch:scss',
-    () => gulp.watch([...paths.src.scss, , 'src/scss/common/_/*'], gulp.series('sass', reload)));
+    () => gulp.watch(paths.src.scss, gulp.series('sass', reload)));
 
 gulp.task('watch:template',
     () => gulp.watch(paths.src.template, gulp.series('template', reload)));
