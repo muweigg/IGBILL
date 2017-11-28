@@ -1,0 +1,26 @@
+{% extends './common/base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/status-error.css">
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+    <main class="status-error">
+        <div class="container-wrap">
+            <div class="status-error-wrap">
+                <img class="icon" src="./assets/images/error/404.png"
+                    srcset="./assets/images/error/404.png 1x, ./assets/images/error/404@2x.png 2x, ./assets/images/error/404@3x.png 3x">
+                <div>对不起找不到页面</div>
+                <button>
+                    <span>返回首页</span>
+                    <img class="icon" src="./assets/images/button-arrow.png"
+                        srcset="./assets/images/button-arrow.png 1x, ./assets/images/button-arrow@2x.png 2x, ./assets/images/button-arrow@3x.png 3x">
+                </button>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+

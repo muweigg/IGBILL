@@ -42,7 +42,7 @@ const paths = {
         sprites: [`src/sprites/icons/**/*.png`],
         template: ['src/templates/**/*.html'],
         svg: ['src/sprites/svg/**/*.svg'],
-        _: ['src/scss/**/_/*.scss'],
+        _: ['src/scss/**/_/**/*.scss'],
     },
     common: {
         js: [

@@ -125,16 +125,7 @@ body {
             }
         }
 
-        .skin-caption {
-            font-size: .28125rem;
-
-            img {
-                width: 0.375rem;
-                height: 0.375rem;
-                vertical-align: sub;
-                // vertical-align: middle;
-            }
-        }
+        @import './common/_/fragments/caption.m';
         
         .container-wrap {
             flex: 1 0 auto;
@@ -738,16 +729,7 @@ body {
             }
         }
 
-        .skin-caption {
-            font-size: 16px;
-
-            img {
-                width: 22px;
-                height: 22px;
-                vertical-align: sub;
-                // vertical-align: middle;
-            }
-        }
+        @import './common/_/fragments/caption';
         
         .container-wrap {
             position: absolute;

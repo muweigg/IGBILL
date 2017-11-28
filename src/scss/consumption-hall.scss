@@ -1,0 +1,257 @@
+@import './common/_/variables';
+@import './common/_/mixins';
+
+body {
+
+    @media #{$small-and-down} {
+        padding-top: $mob-header-height;
+        background-size: auto 8.4375rem;
+    }
+
+    @media #{$medium-and-up} {
+        padding-top: $pc-header-height;
+        background-size: auto 700px;
+    }
+}
+
+.main-header {
+    background-color: #1f2125;
+    border-color: #1f2125;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.45);
+}
+
+.main-footer {
+
+    @media #{$medium-and-up} {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .links {
+        display: none;
+    }
+}
+
+.contact-us {
+    color: #36373e;
+
+    .c1 {
+        color: #fd7c7e;
+    }
+
+    @media #{$small-and-down} {
+        font-size: 12px;
+        padding: 0.9375rem .3125rem .3125rem;
+        flex: 1 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: #f2f7fa;
+
+        @import './common/_/fragments/caption.m';
+        
+        .container-wrap {
+            flex: 1 0 auto;
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+
+            .contact-us-wrap {
+                margin-top: .3125rem;
+                flex: 1 0 auto;
+                flex-flow: column nowrap;
+                display: flex;
+
+                .halls {
+                    margin: -0.1563rem;
+
+                    .hall {
+                        height: 3.125rem;
+                        border: 1px solid #dcdddd;
+                        position: relative;
+                        margin: 0.1563rem;
+                        cursor: pointer;
+                        background-color: #fff;
+
+                        > img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, calc(-50% - 0.1563rem));
+                            max-width: 80%;
+                        }
+
+                        .overlay {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            transition: all .15s linear;
+
+                            img {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%) scale3d(0, 0, 0);
+                            }
+                        }
+
+                        .hall-name {
+                            position: absolute;
+                            left: 20px;
+                            right: 20px;
+                            bottom: 20px;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            text-align: center;
+                        }
+
+                        &:hover {
+
+                            .overlay {
+                                background-color: rgba(0,164,255,.8);
+
+                                img {
+                                    animation: bounceInCenter .5s;
+                                    animation-fill-mode: both;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .tip {
+                    margin-top: .625rem;
+                    background-color: #fff;
+                    border: 1px dashed #dcdddd;
+                    padding: 0.1563rem 0.3125rem;
+                    line-height: 1.8;
+
+                    h3 {
+                        font-size: 0.375rem;
+                    }
+
+                    p {
+                        color: #808080;
+                        font-size: 0.3438rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$medium-and-up} {
+        padding: 50px 0;
+        overflow-y: auto;
+        position: absolute;
+        top: $pc-header-height;
+        left: 0;
+        right: 0;
+        bottom: 65px;
+
+        @import './common/_/fragments/caption';
+        
+        .container-wrap {
+            position: absolute;
+            top: 50px;
+            bottom: 65px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+
+            .contact-us-wrap {
+                // margin-top: 20px;
+                // border: 1px solid #dcdddd;
+                position: absolute;
+                top: 42px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                .halls {
+                    margin: -10px;
+                    max-height: 480px;
+                    overflow-y: auto;
+
+                    .hall {
+                        height: 140px;
+                        border: 1px solid #dcdddd;
+                        position: relative;
+                        margin: 10px;
+                        cursor: pointer;
+
+                        > img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, calc(-50% - 10px));
+                            max-width: 80%;
+                        }
+
+                        .overlay {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            transition: all .15s linear;
+
+                            img {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%) scale3d(0, 0, 0);
+                            }
+                        }
+
+                        .hall-name {
+                            position: absolute;
+                            left: 20px;
+                            right: 20px;
+                            bottom: 20px;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            text-align: center;
+                        }
+
+                        &:hover {
+
+                            .overlay {
+                                background-color: rgba(0,164,255,.8);
+
+                                img {
+                                    animation: bounceInCenter .5s;
+                                    animation-fill-mode: both;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .tip {
+                    background-color: #f2f7fa;
+                    border: 1px dashed #dcdddd;
+                    height: 155px;
+                    padding: 10px 20px 0;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    line-height: 1.8;
+
+                    h3 {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        color: #808080;
+                    }
+                }
+            }
+        }
+    }
+}

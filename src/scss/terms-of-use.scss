@@ -73,15 +73,7 @@ body {
         flex-flow: column nowrap;
         background-color: #f2f7fa;
 
-        .skin-caption {
-            font-size: 0.2813rem;
-
-            img {
-                height: 0.375rem;
-                vertical-align: sub;
-                // vertical-align: middle;
-            }
-        }
+        @import './common/_/fragments/caption.m';
         
         .container-wrap {
             flex: 1 0 auto;
@@ -176,14 +168,7 @@ body {
         right: 0;
         bottom: 65px;
 
-        .skin-caption {
-            font-size: 16px;
-
-            img {
-                vertical-align: sub;
-                // vertical-align: middle;
-            }
-        }
+        @import './common/_/fragments/caption';
         
         .container-wrap {
             position: absolute;
