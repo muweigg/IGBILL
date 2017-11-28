@@ -90,6 +90,45 @@ body {
             display: flex;
             flex-flow: column nowrap;
 
+            header {
+                flex: 1 0 1.0938rem;
+                line-height: 1.5;
+                border-bottom: 1px solid #dcdddd;
+                padding: 0.125rem 0.3125rem 0;
+                background-color: #f2f7fa;
+
+                div {
+                    margin-left: 20px;
+                    position: relative;
+                    
+                        
+                    &:before, &:after {
+                        content: '';
+                        display: block;
+                        border-radius: 50%;
+                        position: absolute;
+                        // top: 50%;
+                        // transform: translateY(-50%);
+                    }
+
+                    &:before {
+                        width: 9px;
+                        height: 9px;
+                        border: 1px solid #fd7c7e;
+                        top: 4px;
+                        left: -20px;
+                    }
+
+                    &:after {
+                        width: 5px;
+                        height: 5px;
+                        background-color: #fd7c7e;
+                        top: 7px;
+                        left: -17px;
+                    }
+                }
+            }
+
             .customer-service-wrap {
                 margin-top: .3125rem;
                 border: 1px solid #dcdddd;
@@ -176,6 +215,43 @@ body {
             bottom: 65px;
             left: 50%;
             transform: translateX(-50%);
+
+            header {
+                height: 49px;
+                line-height: 48px;
+                border-bottom: 1px solid #dcdddd;
+                padding: 0 20px;
+                background-color: #f2f7fa;
+
+                div {
+                    margin-left: 20px;
+                    position: relative;
+                    
+                        
+                    &:before, &:after {
+                        content: '';
+                        display: block;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    &:before {
+                        width: 9px;
+                        height: 9px;
+                        border: 1px solid #fd7c7e;
+                        left: -20px;
+                    }
+
+                    &:after {
+                        width: 5px;
+                        height: 5px;
+                        background-color: #fd7c7e;
+                        left: -17px;
+                    }
+                }
+            }
 
             .customer-service-wrap {
                 // margin-top: 20px;
