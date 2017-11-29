@@ -458,7 +458,7 @@ body {
                         > div:nth-last-of-type(1) {
                             padding-left: 10px !important;
 
-                            .row.table {
+                            .table {
 
                                 .label {
                                     width: 90px;
@@ -558,12 +558,33 @@ body {
                                 &:hover {
 
                                     span {
-                                        transform: translate(-65px, -50%);
+                                        // transform: translate(-75px, -50%);
+                                        left: 15px;
+                                        transform: translate(0, -50%);
                                     }
                                     
                                     img {
                                         opacity: 1;
-                                        transform: translate(50px, -50%);
+                                        left: calc(100% - 40px);
+                                        // transform: translate(60px, -50%);
+                                        transform: translate(0, -50%);
+                                    }
+                                }
+
+                                &[disabled], &.disabled {
+                                    background-color: #e6e6e6;
+                                    color: #808080;
+
+                                    img {
+                                        display: none;
+                                    }
+
+                                    &:hover {
+
+                                        span {
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                        }
                                     }
                                 }
                             }
