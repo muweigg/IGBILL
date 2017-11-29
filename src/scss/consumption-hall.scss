@@ -172,15 +172,20 @@ body {
                 bottom: 0;
 
                 .halls {
-                    margin: -10px;
-                    max-height: 480px;
+                    margin: 0 -10px -20px;
+                    // max-height: 480px;
                     overflow-y: auto;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 190px;
 
                     .hall {
                         height: 140px;
                         border: 1px solid #dcdddd;
                         position: relative;
-                        margin: 10px;
+                        margin: 0 10px 20px;
                         cursor: pointer;
 
                         > img {

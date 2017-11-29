@@ -1,0 +1,164 @@
+{% extends './common/base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/consumption-history.css">
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+    <main class="skin-details">
+        <div class="container-wrap">
+            <div class="row skin-caption">
+                <div class="col s12 align-left">
+                    <img class="icon" src="./assets/images/icon-history.png"
+                        srcset="./assets/images/icon-history.png 1x, ./assets/images/icon-history@2x.png 2x, ./assets/images/icon-history@3x.png 3x">
+                    iGB消费大厅 - 消费历史
+                </div>
+            </div>
+            <div class="list-wrap">
+                <div class="list-head hide-on-small-only">
+                    <div class="row">
+                        <div class="col s3 m3">
+                            时间
+                        </div>
+                        <div class="col s2 m2 s-ta-c">
+                            订单号
+                        </div>
+                        <div class="col s2 m2 s-ta-c">
+                            金额
+                        </div>
+                        <div class="col s2 m2 s-ta-c">
+                            状态
+                        </div>
+                        <div class="col s3 m3 s-ta-r">
+                            购买信息
+                        </div>
+                    </div>
+                </div>
+                <div class="list-data">
+                    <div class="row">
+                        <div class="col s6 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s6 m2 s-ta-r m-ta-c">
+                            66666666
+                        </div>
+                        <div class="col s6 m2 s-ta-l m-ta-c">
+                            <span class="success">￥444</span>
+                        </div>
+                        <div class="col s6 m2 s-ta-r m-ta-c">
+                            <span class="waiting">等待发货</span>
+                        </div>
+                        <div class="col m3 m-ta-r hide-on-small-only">
+                            YY充值会员，会员3个月，1个
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s6 m2 s-ta-r m-ta-c">
+                            66666666
+                        </div>
+                        <div class="col s6 m2 s-ta-l m-ta-c">
+                            <span class="success">￥444</span>
+                        </div>
+                        <div class="col s6 m2 s-ta-r m-ta-c">
+                            <span class="waiting">等待支付</span>
+                        </div>
+                        <div class="col m3 m-ta-r hide-on-small-only">
+                            YY充值会员，会员3个月，1个
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s6 m2 s-ta-r m-ta-c">
+                            66666666
+                        </div>
+                        <div class="col s6 m2 s-ta-l m-ta-c">
+                            <span class="success">￥444</span>
+                        </div>
+                        <div class="col s6 m2 s-ta-r m-ta-c">
+                            <span class="fail">支付失败</span>
+                        </div>
+                        <div class="col m3 m-ta-r hide-on-small-only">
+                            YY充值会员，会员3个月，1个
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s6 m2 s-ta-r m-ta-c">
+                            66666666
+                        </div>
+                        <div class="col s6 m2 s-ta-l m-ta-c">
+                            <span class="success">￥444</span>
+                        </div>
+                        <div class="col s6 m2 s-ta-r m-ta-c">
+                            <span class="success">发货成功，交易成功</span>
+                        </div>
+                        <div class="col m3 m-ta-r hide-on-small-only">
+                            YY充值会员，会员3个月，1个
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s6 m2 s-ta-r m-ta-c">
+                            66666666
+                        </div>
+                        <div class="col s6 m2 s-ta-l m-ta-c">
+                            <span class="success">￥444</span>
+                        </div>
+                        <div class="col s6 m2 s-ta-r m-ta-c">
+                            <span class="fail">发货失败，交易退款</span>
+                        </div>
+                        <div class="col m3 m-ta-r hide-on-small-only">
+                            YY充值会员，会员3个月，1个
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 m3">
+                            2017-02-12 20:02
+                        </div>
+                        <div class="col s6 m2 s-ta-r m-ta-c">
+                            66666666
+                        </div>
+                        <div class="col s6 m2 s-ta-l m-ta-c">
+                            <span class="success">￥444</span>
+                        </div>
+                        <div class="col s6 m2 s-ta-r m-ta-c">
+                            <span class="success">发货成功，交易成功</span>
+                        </div>
+                        <div class="col m3 m-ta-r hide-on-small-only">
+                            YY充值会员，会员3个月，1个
+                        </div>
+                    </div>
+                    <div class="row s-ta-c hide-on-med-and-up">
+                        <span>加载更多</span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-paging hide-on-small-only">
+                <div class="row">
+                    <div class="col s12 s-ta-r">
+                        <a href="javascript:" class="prev">&nbsp;</a>
+                        <a href="javascript:">1</a>
+                        <a href="javascript:">2</a>
+                        <a href="javascript:">3</a>
+                        <span>…</span>
+                        <a href="javascript:">99</a>
+                        <a href="javascript:" class="next">&nbsp;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
