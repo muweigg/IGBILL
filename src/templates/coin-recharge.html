@@ -1,0 +1,203 @@
+{% extends './common/base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/coin-recharge.css">
+{% endblock %}
+
+{% block scripts %}
+    <script src="./js/coin-recharge.js"></script>
+{% endblock %}
+
+{% block content %}
+    <main class="coin-recharge">
+        <div class="container-wrap">
+            <div class="row skin-caption">
+                <div class="col s12 align-left">
+                    <img class="icon" src="./assets/images/icon-coin.png"
+                        srcset="./assets/images/icon-coin.png 1x, ./assets/images/icon-coin@2x.png 2x, ./assets/images/icon-coin@3x.png 3x">
+                    充值币
+                </div>
+            </div>
+            <div class="coin-recharge-wrap">
+
+                <div class="recharge-from">
+
+                    <div class="row">
+                        <div class="col s12 m4">
+                            <div class="recharge-target">
+                                <div>
+                                    <img class="icon" src="./assets/images/tmp-panda.tv.png">
+                                    <br>
+                                    <span>熊猫直播</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m8">
+                            <div class="row">
+                                <div class="col s4 m3">
+                                    <label class="amount">
+                                        <input type="radio" name="amount">
+                                        <div>300猫币</div>
+                                    </label>
+                                </div>
+                                <div class="col s4 m3">
+                                    <label class="amount">
+                                        <input type="radio" name="amount">
+                                        <div>300猫币</div>
+                                    </label>
+                                </div>
+                                <div class="col s4 m3">
+                                    <label class="amount">
+                                        <input type="radio" name="amount">
+                                        <div>300猫币</div>
+                                    </label>
+                                </div>
+                                <div class="col s4 m3">
+                                    <label class="amount">
+                                        <input type="radio" name="amount">
+                                        <div>300猫币</div>
+                                    </label>
+                                </div>
+                                <div class="col s4 m3">
+                                    <label class="amount">
+                                        <input type="radio" name="amount">
+                                        <div>300猫币</div>
+                                    </label>
+                                </div>
+                                <div class="col s4 m3">
+                                    <label class="amount">
+                                        <input type="radio" name="amount">
+                                        <div>300猫币</div>
+                                    </label>
+                                </div>
+                                <div class="col s4 m3">
+                                    <label class="amount">
+                                        <input type="radio" name="amount">
+                                        <div>300猫币</div>
+                                    </label>
+                                </div>
+                                <div class="col s4 m3">
+                                    <label class="amount">
+                                        <input type="radio" name="amount">
+                                        <div>300猫币</div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="quantity">
+                                        数量：
+                                        <span class="group">
+                                            <span data-method="decrement">-</span>
+                                            <input type="text" value="1" readonly>
+                                            <span data-method="increment">+</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row info">
+                        <div class="col s12 m6">
+                            <div class="row skin-caption">
+                                <div class="col s12">
+                                    <img class="icon" src="./assets/images/icon-history.png"
+                                        srcset="./assets/images/icon-history.png 1x, ./assets/images/icon-history@2x.png 2x, ./assets/images/icon-history@3x.png 3x">
+                                    递送信息
+                                </div>
+                            </div>
+
+                            <div class="table">
+                                <div class="tr">
+                                    <div class="td label">
+                                        支付宝账户：
+                                    </div>
+                                    <div class="td input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td label">
+                                        确认支付宝账户：
+                                    </div>
+                                    <div class="td input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td label">
+                                        支付宝姓名：
+                                    </div>
+                                    <div class="td input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6">
+                            <div class="row skin-caption">
+                                <div class="col s12">
+                                    <img class="icon" src="./assets/images/icon-history.png"
+                                        srcset="./assets/images/icon-history.png 1x, ./assets/images/icon-history@2x.png 2x, ./assets/images/icon-history@3x.png 3x">
+                                    联系方式
+                                </div>
+                            </div>
+                            
+                            <div class="table">
+                                <div class="tr">
+                                    <div class="td label">
+                                        姓名：
+                                    </div>
+                                    <div class="td input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td label">
+                                        邮箱：
+                                    </div>
+                                    <div class="td input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td label">
+                                        手机号码：
+                                    </div>
+                                    <div class="td input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row total">
+                        <div class="col s12 s-ta-c m-ta-r">
+                            总计：
+                            <span><sup>￥</sup><em>4444</em></span>
+                            <button>
+                                <span>立即购买</span>
+                                <img class="icon" src="./assets/images/button-arrow.png"
+                                    srcset="./assets/images/button-arrow.png 1x, ./assets/images/button-arrow@2x.png 2x, ./assets/images/button-arrow@3x.png 3x">
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="tip">
+                        <h3>温馨提示：</h3>
+                        <p>1、购买前请确认 <span class="c1">商品信息无误。</span></p>
+                        <p>2、所有产品 已经发货，<span class="c1">概不退款。</span></p>
+                        <p>3、点卡类商品收货后请尽快去对应的官方网站充值，<span class="c1">请不要随便在第三方提供的地址使用。</span></p>
+                        <p>4、请多次确认您的充值账号以及相关信息是否正确，<span class="c1">如因您充值账号输入错误但充值成功的，系统不予退款。</span></p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
