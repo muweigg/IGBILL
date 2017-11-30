@@ -227,6 +227,15 @@ body {
             }
         }
 
+        .list-tip {
+            color: #808080;
+            padding: 0.1563rem 0.3125rem;
+            line-height: 1.8;
+            background-color: #f2f7fa;
+            border: 1px solid #dcdddd;
+            border-top: 0;
+        }
+
         .picker {
             width: 6.25rem;
 
@@ -390,6 +399,15 @@ body {
                     }
                 }
             }
+        }
+
+        .list-tip {
+            color: #808080;
+            padding: 10px 20px;
+            line-height: 1.8;
+            background-color: #f2f7fa;
+            border: 1px solid #dcdddd;
+            border-top: 0;
         }
 
         .list-paging {
