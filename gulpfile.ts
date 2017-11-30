@@ -20,6 +20,7 @@ const svgmin = require('gulp-svgmin');
 const merge = require('merge-stream');
 const empty = require('gulp-empty');
 const tsCompiler = ts.createProject('./tsconfig.json');
+const tsCommonCompiler = ts.createProject('./tsconfig.json');
 const del = require('del');
 
 const dist = './dist';
@@ -50,6 +51,7 @@ const paths = {
             'src/js/common/**/jquery*.js',
             'src/js/common/**/pickadate.js/picker.js',
             'src/js/common/**/*.js',
+            'src/js/common/**/*.ts',
         ],
         css: [
             'src/css/common/**/normalize.css',
@@ -118,6 +120,7 @@ function serve(done) {
 
 gulp.task('vendors:js', () => {
     const task = gulp.src(paths.common.js)
+        .pipe(tsCommonCompiler())
         .pipe(concat('vendors.js'));
 
     if (!isProd) return task.pipe(mem.dest(paths.output.js));
