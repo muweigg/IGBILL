@@ -172,8 +172,8 @@ body {
         
         .container-wrap {
             position: absolute;
-            top: 50px;
-            bottom: 65px;
+            // top: 50px;
+            // bottom: 65px;
             left: 50%;
             transform: translateX(-50%);
             font-size: 14px;
@@ -181,11 +181,12 @@ body {
             .terms-of-use-wrap {
                 // margin-top: 20px;
                 // border: 1px solid #dcdddd;
-                position: absolute;
-                top: 42px;
-                left: 0;
-                right: 0;
-                bottom: 0;
+                // position: absolute;
+                // top: 42px;
+                // left: 0;
+                // right: 0;
+                // bottom: 0;
+                padding-bottom: 20px;
 
                 section {
                     background-color: #fff;
