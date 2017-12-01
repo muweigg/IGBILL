@@ -23,6 +23,10 @@
                             <img class="icon" src="./assets/images/user-default.png"
                                 srcset="./assets/images/user-default.png 1x, ./assets/images/user-default@2x.png 2x, ./assets/images/user-default@3x.png 3x">
                             <p>渣渣哇哇</p>
+                            <p class="valid">
+                                <span>未验证手机</span>
+                                <a href="javascript:">点击验证</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -204,5 +208,8 @@
             </div>
         </div>
     </main>
+    
+    {% include './common/phone-valid-dialog.html' %}
+
 {% endblock %}
 

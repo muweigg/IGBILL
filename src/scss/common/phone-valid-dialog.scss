@@ -1,6 +1,6 @@
 @import './_/variables';
 
-.terms-dialog {
+.phone-valid-dialog {
     color: #36373e;
 
     @media #{$medium-and-up} {
@@ -85,7 +85,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 1000px;
+            width: 530px;
             // height: 250px;
             background-color: #fff;
             text-align: center;
@@ -100,10 +100,6 @@
                 right: 20px;
             }
 
-            > img {
-                margin-top: 35px;
-            }
-
             .dialog-title {
                 height: 60px;
                 line-height: 59px;
@@ -114,37 +110,69 @@
 
             .dialog-content {
                 overflow-y: auto;
-                height: 380px;
                 text-align: left;
-                // margin: 0 20px;
-                padding-top: 30px;
+                margin: 0 20px;
                 font-size: 14px;
-                line-height: 2;
             }
 
             .buttons {
-                // position: absolute;
-                // left: 0;
-                // right: 0;
-                // bottom: 0;
                 height: 80px;
                 line-height: 80px;
                 background-color: #f2f7fa;
                 text-align: center;
+
+                button:nth-last-of-type(1) {
+                    background-color: #29cb80;
+                }
             }
         }
 
-        &.active {
+        .phone-valid-form {
+            padding: 25px 0 35px;
+            font-size: 16px;
+            text-align: center;
 
-            .dialog-overlay {
-                opacity: .5;
-                z-index: 500;
+            p {
+                line-height: 1.6;
+                text-align: center;
             }
 
-            .dialog-box {
-                z-index: 500;
-                animation: bounceInCenter .5s;
-                animation-fill-mode: both;
+            div {
+                margin-top: 20px;
+
+                input {
+                    background-color: #f2f7fa;
+                    border: 0;
+                    height: 46px;
+                    line-height: 1;
+                    padding: 0 10px;
+                }
+
+                a {
+                    display: inline-block;
+                    width: 120px;
+                    height: 46px;
+                    line-height: 46px;
+                    text-align: center;
+                    color: #fff;
+                    background-color: #00a4ff;
+                    vertical-align: bottom;
+                    margin-left: 5px;
+                }
+
+                &:nth-of-type(1) {
+
+                    input {
+                        width: 330px;
+                    }
+                }
+
+                &:nth-last-of-type(1) {
+
+                    input {
+                        width: 200px;
+                    }
+                }
             }
         }
     }
@@ -228,17 +256,13 @@
 
         .dialog-box {
             position: fixed;
-            top: $mob-header-height;
-            left: .3125rem;
-            right: .3125rem;
-            bottom: .3125rem;
-            // transform: translateX(-50%);
-            // width: 8.4375rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8.4375rem;
             // height: 4.6875rem;
             background-color: #fff;
             text-align: center;
-            display: flex;
-            flex-flow: column nowrap;
             // 默认隐藏
             opacity: 0;
             transform: scale3d(0, 0, 0);
@@ -248,10 +272,6 @@
                 position: absolute;
                 top: 20px;
                 right: 20px;
-            }
-
-            > img {
-                margin-top: 0.5469rem;
             }
 
             .dialog-title {
@@ -266,38 +286,84 @@
             .dialog-content {
                 flex: 1 0 auto;
                 overflow-y: auto;
-                height: 380px;
                 text-align: left;
                 margin: 0 0.3125rem;
                 font-size: 0.375rem;
-                line-height: 2;
             }
 
             .buttons {
-                flex: 0 0 1.5625rem;
-                // position: absolute;
-                // left: 0;
-                // right: 0;
-                // bottom: 0;
-                // height: 1.5625rem;
+                height: 1.5625rem;
                 line-height: 1.5625rem;
                 background-color: #f2f7fa;
                 text-align: center;
-            }
-        }
 
-        &.active {
-
-            .dialog-overlay {
-                opacity: .5;
-                z-index: 500;
-            }
-
-            .dialog-box {
-                z-index: 500;
-                animation: bounceIn .5s;
-                animation-fill-mode: both;
+                button:nth-last-of-type(1) {
+                    background-color: #29cb80;
+                }
             }
         }
     }
+
+    &.active {
+
+        .dialog-overlay {
+            opacity: .5;
+            z-index: 500;
+        }
+
+        .dialog-box {
+            z-index: 500;
+            animation: bounceInCenter .5s;
+            animation-fill-mode: both;
+        }
+    }
+
+        .phone-valid-form {
+            padding: 0.3906rem 0 0.5469rem;
+            font-size: 0.3125rem;
+            text-align: center;
+
+            p {
+                line-height: 1.6;
+                text-align: center;
+            }
+
+            div {
+                margin-top: 0.3125rem;
+
+                input {
+                    background-color: #f2f7fa;
+                    border: 0;
+                    height: 0.7188rem;
+                    line-height: 1;
+                    padding: 0 10px;
+                }
+
+                a {
+                    display: inline-block;
+                    width: 1.875rem;
+                    height: 0.7188rem;
+                    line-height: 0.7188rem;
+                    text-align: center;
+                    color: #fff;
+                    background-color: #00a4ff;
+                    vertical-align: bottom;
+                    margin-left: 0.0781rem;
+                }
+
+                &:nth-of-type(1) {
+
+                    input {
+                        width: 5.1563rem;
+                    }
+                }
+
+                &:nth-last-of-type(1) {
+
+                    input {
+                        width: 3.125rem;
+                    }
+                }
+            }
+        }
 }

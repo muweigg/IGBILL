@@ -84,10 +84,10 @@ body {
             background-color: #fff;
 
             img {
-                margin: 0.4688rem 0 .390625rem;
+                margin: 0.4688rem 0 0.2344rem;
                 border-radius: 50%;
-                max-width: 2.5rem;
-                max-height: 2.5rem;
+                max-width: 2.1875rem;
+                max-height: 2.1875rem;
             }
 
             p {
@@ -96,6 +96,16 @@ body {
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
+            }
+
+            p.valid {
+                margin-top: 0.2344rem;
+                font-size: 0.2813rem;
+                color: #29cb80;
+
+                * {
+                    margin: 0 0.0781rem;
+                }
             }
         }
 
@@ -288,10 +298,10 @@ body {
             background-color: #fff;
 
             img {
-                margin: 20px 0;
+                margin: 20px 0 10px;
                 border-radius: 50%;
-                max-width: 90px;
-                max-height: 90px;
+                max-width: 80px;
+                max-height: 80px;
             }
 
             p {
@@ -300,6 +310,16 @@ body {
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
+            }
+
+            p.valid {
+                margin-top: 10px;
+                font-size: 14px;
+                color: #29cb80;
+
+                * {
+                    margin: 0 5px;
+                }
             }
         }
 
