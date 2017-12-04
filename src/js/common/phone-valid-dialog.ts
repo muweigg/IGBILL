@@ -5,15 +5,15 @@ $(() => {
         window.phoneValidDialog = {
             el: phoneValidDialogEl,
             okCB: null,
-            cancelCB: null,
+            closeCB: null,
             init: function () {
-                Rx.Observable.fromEvent(this.el.querySelector('.dialog-close'), 'click').subscribe(() => this.cancel());
+                Rx.Observable.fromEvent(this.el.querySelector('.dialog-close'), 'click').subscribe(() => this.close());
                 Rx.Observable.fromEvent(this.el.querySelector('.buttons button:nth-of-type(1)'), 'click').subscribe(() => this.ok());
             },
-            open: function (options = { okCB: null, cancelCB: null }) {
+            open: function (okCB, closeCB) {
                 this.el.classList.add('active');
-                this.okCB = options.okCB;
-                this.cancelCB = options.cancelCB;
+                this.okCB = okCB;
+                this.closeCB = closeCB;
             },
             ok: function () {
                 let subject = null, subject$;
@@ -26,8 +26,8 @@ $(() => {
                     if (subject$) subject$.unsubscribe();
                 }
             },
-            cancel: function () {
-                if (typeof this.cancelCB === 'function') this.cancelCB();
+            close: function () {
+                if (typeof this.closeCB === 'function') this.closeCB();
                 this.el.classList.remove('active');
             }
         };
