@@ -7,10 +7,8 @@ $(() => {
             okCB: null,
             cancelCB: null,
             init: function () {
-                // Rx.Observable.fromEvent(this.el.querySelector('.dialog-overlay'), 'click').subscribe(() => this.cancel());
                 Rx.Observable.fromEvent(this.el.querySelector('.dialog-close'), 'click').subscribe(() => this.cancel());
                 Rx.Observable.fromEvent(this.el.querySelector('.buttons button:nth-of-type(1)'), 'click').subscribe(() => this.ok());
-                Rx.Observable.fromEvent(this.el.querySelector('.buttons button:nth-last-of-type(1)'), 'click').subscribe(() => this.cancel());
             },
             open: function (options = { okCB: null, cancelCB: null }) {
                 this.el.classList.add('active');
