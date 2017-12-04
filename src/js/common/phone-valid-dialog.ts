@@ -18,8 +18,15 @@ $(() => {
                 this.cancelCB = options.cancelCB;
             },
             ok: function () {
-                if (typeof this.okCB === 'function') this.okCB();
-                this.el.classList.remove('active');
+                let subject = null, subject$;
+                if (typeof this.okCB === 'function') subject = this.okCB();
+
+                if (subject && typeof subject === 'object') {
+                    subject$ = subject.subscribe(valid => valid ? this.el.classList.remove('active') : '')
+                } else {
+                    this.el.classList.remove('active');
+                    if (subject$) subject$.unsubscribe();
+                }
             },
             cancel: function () {
                 if (typeof this.cancelCB === 'function') this.cancelCB();
