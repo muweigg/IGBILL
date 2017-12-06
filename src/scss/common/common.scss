@@ -432,4 +432,18 @@ body {
             }
         }
     }
+
+    &.notice-open {
+        @media #{$large-and-up} {
+
+            main {
+                top: $pc-header-height + 50px;
+            }
+        }
+        @media #{$medium-and-down} {
+
+            padding-top: $mob-header-height + 0.7813rem;
+
+        }
+    }
 }

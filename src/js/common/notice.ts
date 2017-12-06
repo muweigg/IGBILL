@@ -10,7 +10,7 @@ $(() => {
             init: function () {
                 this.divEl = this.el.querySelector('div');
                 this.txtEl = this.divEl.querySelector('span');
-                Rx.Observable.fromEvent(this.el.querySelector('.icon-notice-close'), 'click').subscribe(() => $(this.el).fadeOut(300));
+                Rx.Observable.fromEvent(this.el.querySelector('.icon-notice-close'), 'click').subscribe(() => this.close());
             },
             calcDuration: function () {
                 let sW = this.txtEl.getClientRects()[0].width;
@@ -23,6 +23,7 @@ $(() => {
             },
             open: function (msg: '') {
                 $(this.txtEl).text(msg).addClass('animation');
+                $('body').addClass('notice-open')
                 $(this.el).fadeIn(300);
                 this.calcDuration();
                 this.resize$$ = Rx.Observable.fromEvent(window, 'resize')
@@ -30,6 +31,7 @@ $(() => {
                     .subscribe(() => this.calcDuration());
             },
             close: function () {
+                $('body').removeClass('notice-open');
                 $(this.el).fadeOut(300);
                 this.resize$$.unsubscribe();
             }
