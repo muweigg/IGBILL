@@ -3,6 +3,7 @@
 
 body {
     background: #1e1d2b url('../assets/images/bg.png') top center no-repeat;
+    padding-top: 1.0938rem !important;
 
     @media #{$medium-and-down} {
         padding-top: $mob-pay-header-height;
