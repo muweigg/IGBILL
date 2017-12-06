@@ -2,7 +2,7 @@
 @import './common/_/mixins';
 
 body {
-    background: #1e1d2b url('../assets/images/bg.jpg') top center no-repeat;
+    background: #1e1d2b url('../assets/images/bg.png') top center no-repeat;
 
     @media #{$medium-and-down} {
         padding-top: $mob-pay-header-height;
@@ -25,10 +25,18 @@ body {
             text-align: center;
             padding: 0.9375rem 0 0;
             height: 7.0625rem;
+            position: relative;
+
+            .header-wrap {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
 
             img {
-                width: 7.9531rem;
-                height: 2.8438rem;
+                width: 6.25rem;
+                transform: translateX(0.1563rem);
             }
 
             button {
@@ -72,7 +80,7 @@ body {
             }
 
             .games {
-                margin-top: 0.8438rem;
+                margin-top: .3125rem;
                 color: #fff;
 
                 span {
@@ -414,12 +422,21 @@ body {
         header {
             text-align: center;
             padding: 150px 0 0;
-            height: 630px;
+            height: 620px;
             // min-width: $pc-container-width;
+            position: relative;
+
+            .header-wrap {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
 
             img {
                 display: block;
                 margin: 0 auto;
+                transform: translateX(10px);
             }
 
             button {
@@ -461,7 +478,7 @@ body {
             }
 
             .games {
-                margin-top: 60px;
+                margin-top: 20px;
                 color: #fff;
 
                 span {
