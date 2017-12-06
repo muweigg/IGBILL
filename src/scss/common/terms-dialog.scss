@@ -3,7 +3,7 @@
 .terms-dialog {
     color: #36373e;
 
-    @media #{$medium-and-up} {
+    @media #{$large-and-up} {
         
         button {
             width: 100%;
@@ -149,7 +149,7 @@
         }
     }
 
-    @media #{$small-and-down} {
+    @media #{$medium-and-down} {
         
         button {
             width: 100%;

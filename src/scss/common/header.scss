@@ -17,7 +17,7 @@ header.main-header {
         box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.45);
     }
 
-    @media #{$small-and-down} {
+    @media #{$medium-and-down} {
         height: $mob-header-height;
         line-height: $mob-header-height;
         border-bottom: .015625rem solid $header-border-color;
@@ -215,7 +215,7 @@ header.main-header {
         }
     }
 
-    @media #{$medium-and-up} {
+    @media #{$large-and-up} {
         height: $pc-header-height;
         line-height: $pc-header-height - 1px;
         border-bottom: 1px solid $header-border-color;

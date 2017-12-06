@@ -16,7 +16,7 @@ header.pay-header {
         vertical-align: sub;
     }
 
-    @media #{$small-and-down} {
+    @media #{$medium-and-down} {
         height: $mob-pay-header-height;
         line-height: $mob-pay-header-height;
         padding: 0 .3125rem;
@@ -62,7 +62,7 @@ header.pay-header {
         }
     }
 
-    @media #{$medium-and-up} {
+    @media #{$large-and-up} {
         height: $pc-pay-header-height;
         line-height: $pc-pay-header-height;
         padding: 0 50px;

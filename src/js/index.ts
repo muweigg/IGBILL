@@ -17,7 +17,7 @@ $(() => {
                 slidesPerView: 4,
                 spaceBetween: 20,
             },
-            640: {
+            993: {
                 slidesPerView: 3,
                 slidesPerColumn: 2,
                 spaceBetween: 10,

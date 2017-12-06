@@ -3,18 +3,18 @@
 
 body {
 
-    @media #{$small-and-down} {
+    @media #{$medium-and-down} {
         padding-top: $mob-pay-header-height;
     }
 
-    @media #{$medium-and-up} {
+    @media #{$large-and-up} {
         padding-top: $pc-pay-header-height;
     }
 }
 
 .main-footer {
 
-    @media #{$medium-and-up} {
+    @media #{$large-and-up} {
         position: absolute;
         left: 0;
         right: 0;
@@ -49,7 +49,7 @@ body {
         outline: none;
     }
     
-    @media #{$small-and-down} {
+    @media #{$medium-and-down} {
         font-size: 12px;
         padding: 0.9375rem .3125rem .3125rem;
         flex: 1 0 auto;
@@ -212,6 +212,7 @@ body {
                 display: flex;
                 flex-flow: column nowrap;
                 position: relative;
+                padding: .3125rem 0 ;
 
                 .login-igb, .confirm-pay {
                     flex: 1 0 auto;
@@ -807,7 +808,7 @@ body {
         }
     }
 
-    @media #{$medium-and-up} {
+    @media #{$large-and-up} {
         position: fixed;
         left: 0;
         right: 0;

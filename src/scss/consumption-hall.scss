@@ -3,12 +3,12 @@
 
 body {
 
-    @media #{$small-and-down} {
+    @media #{$medium-and-down} {
         padding-top: $mob-header-height;
         background-size: auto 8.4375rem;
     }
 
-    @media #{$medium-and-up} {
+    @media #{$large-and-up} {
         padding-top: $pc-header-height;
         background-size: auto 700px;
     }
@@ -22,7 +22,7 @@ body {
 
 .main-footer {
 
-    @media #{$medium-and-up} {
+    @media #{$large-and-up} {
         position: absolute;
         left: 0;
         right: 0;
@@ -41,7 +41,7 @@ body {
         color: #fd7c7e;
     }
 
-    @media #{$small-and-down} {
+    @media #{$medium-and-down} {
         font-size: 12px;
         padding: 0.9375rem .3125rem .3125rem;
         flex: 1 0 auto;
@@ -143,7 +143,7 @@ body {
         }
     }
 
-    @media #{$medium-and-up} {
+    @media #{$large-and-up} {
         padding: 50px 0;
         overflow-y: auto;
         position: absolute;

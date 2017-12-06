@@ -4,7 +4,7 @@ footer.main-footer {
     background-color: #1e1d2b;
     color: #b2b2b2;
 
-    @media #{$small-and-down} {
+    @media #{$medium-and-down} {
         // display: none;
         padding: 0 .3125rem;
         flex: 0 0 0;
@@ -51,7 +51,7 @@ footer.main-footer {
 
     }
 
-    @media #{$medium-and-up} {
+    @media #{$large-and-up} {
 
         .links {
             text-align: center;

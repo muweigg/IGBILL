@@ -4,12 +4,12 @@
 body {
     background: #1e1d2b url('../assets/images/bg.jpg') top center no-repeat;
 
-    @media #{$small-and-down} {
+    @media #{$medium-and-down} {
         padding-top: $mob-pay-header-height;
         background-size: auto 8.4375rem;
     }
 
-    @media #{$medium-and-up} {
+    @media #{$large-and-up} {
         padding-top: $pc-pay-header-height;
         background-size: auto 700px;
     }
@@ -19,7 +19,7 @@ body {
 
     color: #36373e;
     
-    @media #{$small-and-down} {
+    @media #{$medium-and-down} {
 
         header {
             text-align: center;
@@ -409,7 +409,7 @@ body {
         }
     }
 
-    @media #{$medium-and-up} {
+    @media #{$large-and-up} {
 
         header {
             text-align: center;
