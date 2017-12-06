@@ -82,10 +82,12 @@ body {
             flex-flow: column nowrap;
 
             header {
-                flex: 1 0 1.0938rem;
+                flex: 1 0 auto;
                 line-height: 1.5;
+                // max-height: 1.0938rem;
+                width: 100%;
                 border-bottom: 1px solid #dcdddd;
-                padding: 0.125rem 0.3125rem 0;
+                padding: 0.125rem 0.3125rem;
                 background-color: #f2f7fa;
 
                 div {

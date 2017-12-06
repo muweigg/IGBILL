@@ -221,7 +221,7 @@ body {
                         position: relative;
                         // transform: translateY(0);
                         
-                        @include cssarrow(22px, 20px, 3px, #fff, #808080, bottom);
+                        @include cssarrowrem(0.625rem, 0.4688rem, 0.0781rem, #fff, #808080, bottom);
                     }
                 }
             }
