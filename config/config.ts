@@ -4,28 +4,44 @@ export const exts = '{jpg,jpeg,png,svg,ttf,eot,woff,woff2,gif}';
 
 export const paths = {
     src: {
+        js: [
+            'src/js/**/*.ts',
+            '!src/js/common/**/*',
+            '!**/*.d.ts',
+        ],
+        scss: [
+            'src/scss/**/*.scss',
+            '!src/scss/common/**/*',
+        ],
+        assets: [`src/assets/**/*.${exts}`],
+        sprites: [`src/sprites/icons/**/*.png`],
+        template: [
+            'src/templates/**/*.html',
+            '!src/templates/common/**/*.html',
+        ],
+        common: {
+            js: ['src/js/common/vendors.ts'],
+            css: ['src/scss/common/vendors.scss'],
+        },
+        svg: ['src/sprites/svg/**/*.svg'],
+    },
+    watch: {
         js: ['src/js/**/*.ts'],
-        css: ['src/css/**/*.css'],
-        scss: ['src/scss/**/*.scss'],
+        scss: [
+            'src/scss/**/*.scss',
+            '!src/scss/common/**/*',
+        ],
         assets: [`src/assets/**/*.${exts}`],
         sprites: [`src/sprites/icons/**/*.png`],
         template: ['src/templates/**/*.html'],
-        svg: ['src/sprites/svg/**/*.svg'],
-        _: ['src/scss/**/_/**/*.scss'],
-    },
-    common: {
-        js: [
-            'src/js/common/vendors.ts'
-        ],
-        css: [
-            'src/scss/common/vendors.scss',
-        ],
-    },
-    filter: {
-        js: ['**', '!src/js/common/**/*', '!**/*.d.ts'],
-        css: ['**', '!src/css/common/**/*.css'],
-        scss: ['**', '!src/scss/common/**/*.scss'],
-        template: ['**', '!src/templates/common/**/*.html'],
+        common: {
+            js: ['src/js/common/**/*.{ts,js}'],
+            css: [
+                'src/scss/common/**/*',
+                '!src/scss/common/_',
+            ],
+            _: ['src/scss/common/_/**/*'],
+        }
     },
     output: {
         root: `${dist}`,

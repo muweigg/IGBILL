@@ -68,7 +68,7 @@ function serve(done) {
 }
 
 gulp.task('vendors:js', () => {
-    const task = gulp.src(paths.common.js)
+    const task = gulp.src(paths.src.common.js)
         .pipe(named())
         .pipe(ws(require('./config/webpack.config.js'), webpack))
         .pipe(concat('vendors.js'));
@@ -83,7 +83,7 @@ gulp.task('vendors:js', () => {
 });
 
 gulp.task('vendors:css', () => {
-    const task = gulp.src(paths.common.css)
+    const task = gulp.src(paths.src.common.css)
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('vendors.css'))
         .pipe(prefixer({
@@ -102,9 +102,7 @@ gulp.task('vendors:css', () => {
 });
 
 gulp.task('js', () => {
-    const f = filter(paths.filter.js);
     const task =  gulp.src(paths.src.js)
-        .pipe(f)
         .pipe(named())
         .pipe(ws(require('./config/webpack.config.js'), webpack));
     
@@ -117,10 +115,8 @@ gulp.task('js', () => {
         .pipe(gulp.dest(paths.output.rev));
 });
 
-gulp.task('sass', () => {
-    const f = filter(paths.filter.scss);
+gulp.task('scss', () => {
     const task = gulp.src(paths.src.scss)
-        .pipe(f)
         .pipe(sass().on('error', sass.logError))
         .pipe(prefixer({
             browsers: ['> 5%', 'ie >= 9', 'ff >= 28', 'Chrome >= 21'],
@@ -138,9 +134,7 @@ gulp.task('sass', () => {
 });
 
 gulp.task('template', () => {
-    const f = filter(paths.filter.template);
     const task = gulp.src(paths.src.template)
-        .pipe(f)
         .pipe(nunjucks.compile());
 
     if (!isProd) return task.pipe(mem.dest(paths.output.root));
@@ -189,31 +183,35 @@ gulp.task('process', () => {
 });
 
 gulp.task('watch:assets',
-    () => gulp.watch(paths.src.assets, gulp.series('assets', reload)));
+    () => gulp.watch(paths.watch.assets, gulp.series('assets', reload)));
 
 gulp.task('watch:sprites',
-    () => gulp.watch(paths.src.sprites, gulp.series('sprites', gulp.parallel('assets', 'vendors:css'), reload)));
+    () => gulp.watch(paths.watch.sprites, gulp.series('sprites', gulp.parallel('assets', 'vendors:css'), reload)));
 
 gulp.task('watch:vendors:js',
-    () => gulp.watch(paths.common.js, gulp.series('vendors:js', reload)));
+    () => gulp.watch(paths.watch.common.js, gulp.series('vendors:js', reload)));
 
 gulp.task('watch:vendors:css',
-    () => gulp.watch('src/scss/common/**/*', gulp.series('vendors:css', reload)));
+    () => gulp.watch(paths.watch.common.css, gulp.series('vendors:css', reload)));
+    
+gulp.task('watch:vendors:_',
+    () => gulp.watch(paths.watch.common._, gulp.series(gulp.parallel('vendors:css', 'scss'), reload)));
 
 gulp.task('watch:js',
-    () => gulp.watch(paths.src.js, gulp.series('js', reload)));
+    () => gulp.watch(paths.watch.js, gulp.series('js', reload)));
 
 gulp.task('watch:scss',
-    () => gulp.watch(paths.src.scss, gulp.series('sass', reload)));
+    () => gulp.watch(paths.watch.scss, gulp.series('scss', reload)));
 
 gulp.task('watch:template',
-    () => gulp.watch(paths.src.template, gulp.series('template', reload)));
+    () => gulp.watch(paths.watch.template, gulp.series('template', reload)));
 
 gulp.task('watch', gulp.parallel([
     'watch:assets',
     'watch:sprites',
     'watch:vendors:js',
     'watch:vendors:css',
+    'watch:vendors:_',
     'watch:template',
     'watch:js',
     'watch:scss'
@@ -243,7 +241,7 @@ gulp.task('dev',
             'vendors:js',
             'vendors:css',
             'js',
-            'sass',
+            'scss',
             'template',
         ]),
         gulp.parallel([
@@ -261,7 +259,7 @@ gulp.task('prod',
             'vendors:js',
             'vendors:css',
             'js',
-            'sass',
+            'scss',
             'template',
         ]),
         'process'
