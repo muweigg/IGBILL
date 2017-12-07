@@ -273,6 +273,7 @@
         }
 
         .dialog-box {
+            opacity: 1;
             z-index: 1000;
             animation: bounceInCenter .5s;
             animation-fill-mode: both;

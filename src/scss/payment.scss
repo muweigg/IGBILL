@@ -976,6 +976,7 @@ body {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, calc(-50% + -20px));
+                    transform: translate(-50%, -50%)\0/IE9;
                     font-size: 24px;
                     text-align: center;
 
@@ -1090,6 +1091,7 @@ body {
                                 right: 15px;
                                 transform: translateY(-50%);
                                 transform: scale3d(0, 0, 0);
+                                opacity: 0;
                             }
 
                             &.no-input {
@@ -1118,6 +1120,7 @@ body {
                                 }
 
                                 img {
+                                    opacity: 1;
                                     animation: bounceInCenter .5s;
                                     animation-fill-mode: both;
                                 }
@@ -1395,7 +1398,8 @@ body {
                                             position: absolute;
                                             top: 50%;
                                             left: 50%;
-                                            transform: translateZ(0) translate(-50%, -50%);
+                                            transform: translate(-50%, -50%) translateZ(0);
+                                            transform: translate(-50%, -50%)\0/IE9;
                                         }
 
                                         .name {

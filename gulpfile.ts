@@ -1,7 +1,7 @@
+import { paths, dist } from './config/config';
 const gulp = require('gulp');
 const server = require('browser-sync').create();
 const Mem = require('gulp-mem');
-const ts = require('gulp-typescript');
 const prefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const filter = require('gulp-filter');
@@ -19,67 +19,16 @@ const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
 const merge = require('merge-stream');
 const empty = require('gulp-empty');
-const tsCompiler = ts.createProject('./tsconfig.json');
-const tsCommonCompiler = ts.createProject('./tsconfig.json');
+const webpack = require('webpack');
+const ws = require('webpack-stream');
+const named = require('vinyl-named');
 const del = require('del');
-
-const dist = './dist';
 
 const mem = new Mem();
 mem.serveBasePath = dist;
 
 let isProd = false;
 let svgs = null;
-
-const urlPattern = /(url\(['"]?)[/]?()/g;
-const exts = '{jpg,jpeg,png,svg,ttf,eot,woff,woff2,gif}';
-
-const paths = {
-    src: {
-        js: ['src/js/**/*.ts'],
-        css: ['src/css/**/*.css'],
-        scss: ['src/scss/**/*.scss'],
-        assets: [`src/assets/**/*.${exts}`],
-        sprites: [`src/sprites/icons/**/*.png`],
-        template: ['src/templates/**/*.html'],
-        svg: ['src/sprites/svg/**/*.svg'],
-        _: ['src/scss/**/_/**/*.scss'],
-    },
-    common: {
-        js: [
-            'src/js/common/**/vue.js',
-            'src/js/common/**/jquery*.js',
-            'src/js/common/**/pickadate.js/picker.js',
-            'src/js/common/**/*.js',
-            'src/js/common/**/*.ts',
-        ],
-        css: [
-            'src/css/common/**/normalize.css',
-            'src/scss/common/**/common.scss',
-            'src/css/common/**/*.css',
-            'src/scss/common/*.scss',
-        ],
-    },
-    filter: {
-        js: ['**', '!src/js/common/**/*.js'],
-        css: ['**', '!src/css/common/**/*.css'],
-        scss: ['**', '!src/scss/common/**/*.scss'],
-        template: ['**', '!src/templates/common/**/*.html'],
-    },
-    output: {
-        root: `${dist}`,
-        rev: `${dist}/rev`,
-        js: `${dist}/js`,
-        css: `${dist}/css`,
-        assets: `${dist}/assets`,
-        sprites: {
-            scss: 'src/scss/common/_',
-            images: 'src/assets/images',
-        }
-    },
-    process: [`${dist}/rev/**/*.json`, `${dist}/**/*.css`, `${dist}/**/*.html`],
-    rebaseTo: 'src/dist/'
-};
 
 gulp.task('svg',
     () => svgs = gulp.src(paths.src.svg, { base: 'src/sprites/svg' })
@@ -120,7 +69,8 @@ function serve(done) {
 
 gulp.task('vendors:js', () => {
     const task = gulp.src(paths.common.js)
-        .pipe(tsCommonCompiler())
+        .pipe(named())
+        .pipe(ws(require('./config/webpack.config.js'), webpack))
         .pipe(concat('vendors.js'));
 
     if (!isProd) return task.pipe(mem.dest(paths.output.js));
@@ -155,7 +105,8 @@ gulp.task('js', () => {
     const f = filter(paths.filter.js);
     const task =  gulp.src(paths.src.js)
         .pipe(f)
-        .pipe(tsCompiler());
+        .pipe(named())
+        .pipe(ws(require('./config/webpack.config.js'), webpack));
     
     if (!isProd) return task.pipe(mem.dest(paths.output.js));
 
@@ -247,7 +198,7 @@ gulp.task('watch:vendors:js',
     () => gulp.watch(paths.common.js, gulp.series('vendors:js', reload)));
 
 gulp.task('watch:vendors:css',
-    () => gulp.watch([...paths.common.css, ...paths.src._], gulp.series('vendors:css', reload)));
+    () => gulp.watch('src/scss/common/**/*', gulp.series('vendors:css', reload)));
 
 gulp.task('watch:js',
     () => gulp.watch(paths.src.js, gulp.series('js', reload)));
@@ -271,12 +222,14 @@ gulp.task('watch', gulp.parallel([
 gulp.task('webserver',gulp.series(serve));
 
 gulp.task('prodMode', () => {
+    process.env.NODE_ENV = "production";
     isProd = true;
     del.sync(dist);
     return gulp.src('src');
 });
 
 gulp.task('devMode', () => {
+    process.env.NODE_ENV = 'development';
     isProd = false;
     return gulp.src('src');
 });

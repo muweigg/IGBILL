@@ -314,30 +314,14 @@ body {
         @import './common/_/fragments/caption';
         
         .container-wrap {
-            position: absolute;
-            top: 50px;
-            bottom: 65px;
-            left: 50%;
-            transform: translateX(-50%);
             font-size: 14px;
 
             .coin-recharge-wrap {
-                // margin-top: 20px;
-                // border: 1px solid #dcdddd;
-                position: absolute;
-                top: 42px;
-                left: 0;
-                right: 0;
-                bottom: 0;
+                margin-top: 20px;
+                padding-bottom: 50px;
 
                 .recharge-from {
                     margin: 0 -10px;
-                    overflow-y: auto;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
 
                     .recharge-target {
                         height: 200px;
@@ -420,13 +404,15 @@ body {
                                 border: 1px solid #dcdddd;
                                 position: absolute;
                                 top: 0;
-                                left: 0;
                                 cursor: pointer;
                                 transition: all .1s linear;
                                 user-select: none;
 
+                                &:nth-of-type(1) {
+                                    left: 0;
+                                }
+
                                 &:nth-last-of-type(1) {
-                                    left: initial;
                                     right: 0;
                                 }
 

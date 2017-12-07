@@ -143,6 +143,7 @@
 
             .dialog-box {
                 z-index: 500;
+                opacity: 1;
                 animation: bounceInCenter .5s;
                 animation-fill-mode: both;
             }
@@ -295,6 +296,7 @@
 
             .dialog-box {
                 z-index: 500;
+                opacity: 1;
                 animation: bounceIn .5s;
                 animation-fill-mode: both;
             }

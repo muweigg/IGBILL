@@ -133,6 +133,7 @@ body {
 
     @media #{$large-and-up} {
         padding: 50px 0;
+        overflow-x: hidden;
         overflow-y: auto;
         position: absolute;
         top: $pc-header-height;
@@ -143,21 +144,11 @@ body {
         @import './common/_/fragments/caption';
         
         .container-wrap {
-            position: absolute;
-            top: 50px;
-            bottom: 65px;
-            left: 50%;
-            transform: translateX(-50%);
             font-size: 14px;
 
             .privacy-policy-wrap {
-                // margin-top: 20px;
-                // border: 1px solid #dcdddd;
-                position: absolute;
-                top: 42px;
-                left: 0;
-                right: 0;
-                bottom: 0;
+                margin-top: 20px;
+                padding-bottom: 50px\0/IE9;
 
                 section {
                     background-color: #fff;

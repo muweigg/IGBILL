@@ -810,6 +810,7 @@ body {
                                 right: 15px;
                                 transform: translateY(-50%);
                                 transform: scale3d(0, 0, 0);
+                                opacity: 0;
                             }
 
                             &.no-input {
@@ -838,6 +839,7 @@ body {
                                 }
 
                                 img {
+                                    opacity: 1;
                                     animation: bounceInCenter .5s;
                                     animation-fill-mode: both;
                                 }
@@ -1111,6 +1113,7 @@ body {
                                         top: 50%;
                                         left: 50%;
                                         transform: translateZ(0) translate(-50%, -50%);
+                                        transform: translate(-50%, -50%)\0/IE9;
                                     }
 
                                     .name {

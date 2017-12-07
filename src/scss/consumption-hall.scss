@@ -34,7 +34,7 @@ body {
     }
 }
 
-.contact-us {
+.consumption-hall {
     color: #36373e;
 
     .c1 {
@@ -57,7 +57,7 @@ body {
             display: flex;
             flex-flow: column nowrap;
 
-            .contact-us-wrap {
+            .consumption-hall-wrap {
                 margin-top: .3125rem;
                 flex: 1 0 auto;
                 flex-flow: column nowrap;
@@ -145,6 +145,7 @@ body {
 
     @media #{$large-and-up} {
         padding: 50px 0;
+        overflow-x: hidden;
         overflow-y: auto;
         position: absolute;
         top: $pc-header-height;
@@ -155,31 +156,15 @@ body {
         @import './common/_/fragments/caption';
         
         .container-wrap {
-            position: absolute;
-            top: 50px;
-            bottom: 65px;
-            left: 50%;
-            transform: translateX(-50%);
             font-size: 14px;
 
-            .contact-us-wrap {
-                // margin-top: 20px;
-                // border: 1px solid #dcdddd;
-                position: absolute;
-                top: 42px;
-                left: 0;
-                right: 0;
-                bottom: 0;
+            .consumption-hall-wrap {
+                margin-top: 20px;
+                padding-bottom: 50px\0/IE9;
 
                 .halls {
                     margin: 0 -10px -20px;
                     // max-height: 480px;
-                    overflow-y: auto;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 189px;
 
                     .hall {
                         height: 140px;
@@ -193,6 +178,7 @@ body {
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, calc(-50% - 10px));
+                            transform: translate(-50%, -60%)\0/IE9;
                             max-width: 80%;
                         }
 
@@ -208,7 +194,9 @@ body {
                                 position: absolute;
                                 top: 50%;
                                 left: 50%;
-                                transform: translate(-50%, -50%) scale3d(0, 0, 0);
+                                transform: translate(-50%, -50%);
+                                transform: scale3d(0, 0, 0);
+                                opacity: 0;
                             }
                         }
 
@@ -229,6 +217,7 @@ body {
                                 background-color: rgba(0,164,255,.8);
 
                                 img {
+                                    opacity: 1;
                                     animation: bounceInCenter .5s;
                                     animation-fill-mode: both;
                                 }
@@ -242,11 +231,8 @@ body {
                     border: 1px dashed #dcdddd;
                     height: 155px;
                     padding: 10px 20px 0;
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
                     line-height: 1.8;
+                    margin-top: 20px;
 
                     h3 {
                         font-size: 16px;

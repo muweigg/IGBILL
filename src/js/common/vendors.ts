@@ -1,7 +1,24 @@
+import 'script-loader!babel-loader!./third-party/Rx';
+import 'script-loader!babel-loader!lodash/lodash';
+import 'script-loader!babel-loader!vue/dist/vue';
+import 'script-loader!babel-loader!axios/dist/axios';
+import 'script-loader!babel-loader!jquery/dist/jquery';
+import 'script-loader!babel-loader!classList.js';
+
+import 'script-loader!babel-loader!./third-party/fastclick';
+import 'script-loader!babel-loader!./third-party/flexible';
+import 'script-loader!babel-loader!./third-party/pickadate.js/picker';
+import 'script-loader!babel-loader!./third-party/pickadate.js/picker.date';
+import 'script-loader!babel-loader!./third-party/pickadate.js/picker.time';
 
 window.isMobile = false;
 if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
     window.isMobile = true;
+}
+
+window.isIE = () => {
+    var match = navigator.userAgent.match(/(?:MSIE |Trident\/.*; rv:)(\d+)/);
+    return match ? parseInt(match[1]) : undefined;
 }
 
 $(() => {
@@ -9,7 +26,7 @@ $(() => {
     // 头部固定
     let fixed = Rx.Observable.fromEvent(document, 'scroll')
         // .debounceTime(20)
-        .map(e => window.scrollY).subscribe(top => {
+        .map(e => isIE() ? document.documentElement.scrollTop : window.scrollY).subscribe(top => {
             let header = document.querySelector('.main-header');
             if (top > 0 && header.classList.contains('fixed')) return;
             if (top > 0 && !header.classList.contains('fixed')) header.classList.add('fixed');
@@ -75,3 +92,8 @@ $(() => {
     }
 
 });
+
+import 'script-loader!babel-loader!./common-dialog.ts';
+import 'script-loader!babel-loader!./notice.ts';
+import 'script-loader!babel-loader!./terms-dialog.ts';
+import 'script-loader!babel-loader!./phone-valid-dialog.ts';

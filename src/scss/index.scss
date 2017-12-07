@@ -341,16 +341,26 @@ body {
                         height: 1.5313rem;
                         text-align: center;
                         // font-size: 0.2813rem;
-                        border: 0.0156rem solid #3c414b;
+                        // border: 0.0156rem solid #3c414b;
                         position: relative;
                         overflow: hidden;
 
-                        > img {
-                            width: 100%;
+                        .block {
+                            border: 1px solid #3c414b;
                             position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
+                            top: 0.15625rem;
+                            left: 0.1563rem;
+                            right: 0.1563rem;
+                            bottom: 0.15625rem;
+                            overflow: hidden;
+
+                            > img {
+                                width: 100%;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
                         }
 
                         .overlay {
@@ -732,22 +742,34 @@ body {
                 .swiper-container {
                     width: 100%;
                     margin-top: 20px;
+                    white-space: nowrap;
+                    // height: 98px;
                 
                     .swiper-slide {
                         width: 182px;
                         height: 98px;
                         text-align: center;
                         font-size: 18px;
-                        border: 1px solid #3c414b;
+                        // border: 1px solid #3c414b;
                         position: relative;
                         overflow: hidden;
 
-                        > img {
-                            width: 100%;
+                        .block {
+                            border: 1px solid #3c414b;
                             position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
+                            top: 0;
+                            left: 10px;
+                            right: 10px;
+                            bottom: 0;
+                            overflow: hidden;
+
+                            > img {
+                                width: 100%;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
                         }
 
                         .overlay {
@@ -765,7 +787,8 @@ body {
                             position: absolute;
                             top: 50%;
                             left: 50%;
-                            transform: translate(-50%, -50%) translateZ(0);
+                            transform: translateZ(0);
+                            transform: translate(-50%, -50%);
                             font-size: 16px;
                             color: #fff;
                             white-space: nowrap;

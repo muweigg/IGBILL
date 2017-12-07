@@ -279,9 +279,6 @@ header.main-header {
                 vertical-align: sub;
                 margin-right: 10px;
             }
-
-            &:focus {
-            }
         }
 
         .user {
@@ -372,12 +369,14 @@ header.main-header {
                                 top: 50%;
                                 left: 20px;
                                 transform: translateY(calc(-50% - 1px));
+                                transform: translateY(-50%)\0/IE9;
                             }
                         }
 
                         &.open {
 
                             button {
+                                opacity: 1;
                                 animation: bounceIn .5s;
                                 animation-fill-mode: both;
                             }

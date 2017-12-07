@@ -309,6 +309,10 @@ body {
         right: 0;
         bottom: 65px;
 
+        .container-wrap {
+            padding-bottom: 50px\0/IE9;
+        }
+
         .user {
             text-align: center;
             height: 170px + 45px;

@@ -2,6 +2,11 @@
 @import './_/animations';
 @import './_/icons.scss';
 
+@import '../../css/common/normalize';
+@import '../../css/common/pickadate.js/themes/classic';
+@import '../../css/common/pickadate.js/themes/classic.date';
+@import '../../css/common/pickadate.js/themes/classic.time';
+
 /*********************
 Media Query Classes
 **********************/
@@ -333,6 +338,7 @@ body {
                     display: inline-block;
                     white-space: nowrap;
                     padding-left: 100%;
+                    padding-left: 0\0/IE9;
 
                     &.animation {
                         animation: scroll 20s linear infinite;
@@ -447,3 +453,11 @@ body {
         }
     }
 }
+
+@import './header';
+@import './pay-header';
+@import './footer';
+@import './common-dialog';
+@import './terms-dialog';
+@import './phone-valid-dialog';
+// @import './third-party/materialize/materialize';
