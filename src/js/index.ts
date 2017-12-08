@@ -1,6 +1,4 @@
-
-$(() => {
-
+!function () {
     if (isIE() > 9 || !isIE()) {
         require('../../node_modules/swiper/dist/css/swiper.css');
         let Swiper = require('babel-loader!swiper/dist/js/swiper');
@@ -48,4 +46,4 @@ $(() => {
             mySwiper.swipeNext()
         })
     }
-});
+}()
