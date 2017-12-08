@@ -1,6 +1,6 @@
 import 'script-loader!babel-loader!./third-party/Rx';
 import 'script-loader!babel-loader!lodash/lodash';
-import 'script-loader!babel-loader!vue/dist/vue';
+import 'script-loader!babel-loader!vue/dist/vue.runtime';
 import 'script-loader!babel-loader!axios/dist/axios';
 import 'script-loader!babel-loader!jquery/dist/jquery';
 import 'script-loader!babel-loader!classList.js';
@@ -10,6 +10,10 @@ import 'script-loader!babel-loader!./third-party/flexible';
 import 'script-loader!babel-loader!./third-party/pickadate.js/picker';
 import 'script-loader!babel-loader!./third-party/pickadate.js/picker.date';
 import 'script-loader!babel-loader!./third-party/pickadate.js/picker.time';
+
+import 'script-loader!babel-loader!vee-validate/dist/vee-validate';
+
+Vue.use(VeeValidate);
 
 window.isMobile = false;
 if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
