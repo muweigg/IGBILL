@@ -1,6 +1,6 @@
 import 'script-loader!babel-loader!./third-party/Rx';
 import 'script-loader!babel-loader!lodash/lodash';
-import 'script-loader!babel-loader!vue/dist/vue.runtime';
+import 'script-loader!babel-loader!vue/dist/vue.min';
 import 'script-loader!babel-loader!axios/dist/axios';
 import 'script-loader!babel-loader!jquery/dist/jquery';
 import 'script-loader!babel-loader!classList.js';
