@@ -403,10 +403,17 @@ body {
 
                 .contact-service {
                     position: absolute;
-                    top: 50%;
-                    left: 100px;
-                    right: 100px;
-                    transform: translateY(-50%);
+                    top: 49px;;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    // transform: translateY(-50%);
+                    overflow-x: hidden;
+                    overflow-y: auto;
+
+                    .row {
+                        margin: 80px 100px 0;
+                    }
 
                     table {
                         margin-top: 20px;
