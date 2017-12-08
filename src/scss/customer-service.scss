@@ -412,7 +412,10 @@ body {
                     overflow-y: auto;
 
                     .row {
-                        margin: 80px 100px 0;
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        margin: 0 100px;
                     }
 
                     table {
