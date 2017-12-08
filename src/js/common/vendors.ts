@@ -25,17 +25,21 @@ window.isIE = () => {
     return match ? parseInt(match[1]) : undefined;
 }
 
+const fixedHeader = top => {
+    let header = document.querySelector('.main-header');
+    if (top > 0 && header.classList.contains('fixed')) return;
+    if (top > 0 && !header.classList.contains('fixed')) header.classList.add('fixed');
+    else header.classList.remove('fixed');
+}
+
 $(() => {
 
     // 头部固定
     let fixed = Rx.Observable.fromEvent(document, 'scroll')
-        // .debounceTime(20)
-        .map(e => isIE() ? document.documentElement.scrollTop : window.scrollY).subscribe(top => {
-            let header = document.querySelector('.main-header');
-            if (top > 0 && header.classList.contains('fixed')) return;
-            if (top > 0 && !header.classList.contains('fixed')) header.classList.add('fixed');
-            else header.classList.remove('fixed');
-        });
+        .debounceTime(20)
+        .map(e => isIE() ? document.documentElement.scrollTop : window.scrollY).subscribe(fixedHeader);
+
+    fixedHeader(isIE() ? document.documentElement.scrollTop : window.scrollY);
 
     // 移动端
     if (window.isMobile) {
