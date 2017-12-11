@@ -12,19 +12,7 @@ body {
     }
 }
 
-.main-footer {
-
-    @media #{$large-and-up} {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-
-    .links {
-        display: none;
-    }
-}
+@import './common/_/fragments/main-footer-overwrite';
 
 .payment {
     color: #36373e;

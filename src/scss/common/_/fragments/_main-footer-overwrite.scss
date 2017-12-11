@@ -1,0 +1,11 @@
+@import '../animations';
+
+.main-footer {
+
+    @media #{$large-and-up} {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
