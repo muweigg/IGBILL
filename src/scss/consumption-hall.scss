@@ -53,21 +53,29 @@ body {
 
                 .halls {
                     margin: -0.1563rem;
+                    font-size: 0;
+                    text-align: center;
 
                     .hall {
-                        height: 3.125rem;
+                        width: 2.4063rem;
+                        height: 2.8125rem;
                         border: 1px solid #dcdddd;
                         position: relative;
                         margin: 0.1563rem;
                         cursor: pointer;
                         background-color: #fff;
+                        padding: 0.3125rem 0.3125rem 0;
+                        display: inline-block;
+                        font-size: .28125rem;
 
                         > img {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, calc(-50% - 0.1563rem));
-                            max-width: 80%;
+                            // position: absolute;
+                            // top: 50%;
+                            // left: 50%;
+                            // transform: translate(-50%, calc(-50% - 0.1563rem));
+                            // max-width: 80%;
+                            width: 1.78125rem;
+                            height: 1.78125rem;
                         }
 
                         .overlay {
@@ -88,9 +96,9 @@ body {
 
                         .hall-name {
                             position: absolute;
-                            left: 20px;
-                            right: 20px;
-                            bottom: 20px;
+                            left: 0.3125rem;
+                            right: 0.3125rem;
+                            bottom: .234375rem;
                             white-space: nowrap;
                             text-overflow: ellipsis;
                             overflow: hidden;
@@ -100,7 +108,7 @@ body {
                         &:hover {
 
                             .overlay {
-                                background-color: rgba(0,164,255,.8);
+                                background-color: rgba(0,164,255,.5);
 
                                 img {
                                     animation: bounceInCenter .5s;
@@ -112,7 +120,7 @@ body {
                 }
 
                 .tip {
-                    margin-top: .625rem;
+                    margin-top: 0.3125rem;
                     background-color: #fff;
                     border: 1px dashed #dcdddd;
                     padding: 0.1563rem 0.3125rem;
@@ -153,21 +161,28 @@ body {
                 .halls {
                     margin: 0 -10px -20px;
                     // max-height: 480px;
+                    font-size: 0;
 
                     .hall {
-                        height: 140px;
+                        width: 154px;
+                        height: 180px;
                         border: 1px solid #dcdddd;
                         position: relative;
                         margin: 0 10px 20px;
                         cursor: pointer;
+                        padding: 20px 20px 0;
+                        display: inline-block;
+                        font-size: 14px;
 
                         > img {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, calc(-50% - 10px));
-                            transform: translate(-50%, -60%)\0/IE9;
-                            max-width: 80%;
+                            // position: absolute;
+                            // top: 50%;
+                            // left: 50%;
+                            // transform: translate(-50%, calc(-50% - 10px));
+                            // transform: translate(-50%, -60%)\0/IE9;
+                            width: 114px;
+                            height: 114px;
+                            // max-width: 80%;
                         }
 
                         .overlay {
@@ -192,7 +207,7 @@ body {
                             position: absolute;
                             left: 20px;
                             right: 20px;
-                            bottom: 20px;
+                            bottom: 15px;
                             white-space: nowrap;
                             text-overflow: ellipsis;
                             overflow: hidden;
@@ -202,7 +217,7 @@ body {
                         &:hover {
 
                             .overlay {
-                                background-color: rgba(0,164,255,.8);
+                                background-color: rgba(0,164,255,.5);
 
                                 img {
                                     opacity: 1;
