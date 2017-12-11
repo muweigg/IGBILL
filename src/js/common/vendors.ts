@@ -29,6 +29,7 @@ window.isIE = () => {
 
 const fixedHeader = top => {
     let header = document.querySelector('.main-header');
+    if (!header) return;
     if (top > 0 && header.classList.contains('fixed')) return;
     if (top > 0 && !header.classList.contains('fixed')) header.classList.add('fixed');
     else header.classList.remove('fixed');
