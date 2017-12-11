@@ -43,6 +43,23 @@ $(() => {
         .map(e => isIE() ? document.documentElement.scrollTop : window.scrollY).subscribe(fixedHeader);
 
     fixedHeader(isIE() ? document.documentElement.scrollTop : window.scrollY);
+    
+    // 主菜单
+    let mainMenuElem = document.querySelector('.main-header nav');
+    let mainMenuBtn = document.querySelector('.main-header .main-menu'), mainMenuBtn$;
+    let mainMenuDoc$ = Rx.Observable.fromEvent(document, 'click').skip(1), mainMenuDoc$$;
+
+    if (mainMenuBtn) {
+        let toggleMainMenuState = () => {
+            mainMenuBtn.classList.toggle('open');
+            $(mainMenuElem).slideToggle('fast');
+            if (mainMenuBtn.classList.contains('open')) mainMenuDoc$$ = mainMenuDoc$.subscribe(toggleMainMenuState);
+            else if (mainMenuDoc$$) mainMenuDoc$$.unsubscribe();
+        }
+        
+        mainMenuBtn$ = Rx.Observable.fromEvent(mainMenuBtn, 'click')
+            .subscribe(toggleMainMenuState);
+    }
 
     // 移动端
     if (window.isMobile) {
@@ -63,23 +80,6 @@ $(() => {
                 
             Rx.Observable.fromEvent(userElem, 'click')
                 .subscribe(toggleUserPopupState);
-        }
-        
-        // 主菜单
-        let mainMenuElem = document.querySelector('.main-header nav');
-        let mainMenuBtn = document.querySelector('.main-header .main-menu'), mainMenuBtn$;
-        let mainMenuDoc$ = Rx.Observable.fromEvent(document, 'click').skip(1), mainMenuDoc$$;
-
-        if (mainMenuBtn) {
-            let toggleMainMenuState = () => {
-                mainMenuBtn.classList.toggle('open');
-                $(mainMenuElem).slideToggle('fast');
-                if (mainMenuBtn.classList.contains('open')) mainMenuDoc$$ = mainMenuDoc$.subscribe(toggleMainMenuState);
-                else if (mainMenuDoc$$) mainMenuDoc$$.unsubscribe();
-            }
-            
-            mainMenuBtn$ = Rx.Observable.fromEvent(mainMenuBtn, 'click')
-                .subscribe(toggleMainMenuState);
         }
     } else {
         // PC 端
