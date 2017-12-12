@@ -360,6 +360,13 @@ body {
                     &:nth-child(odd) {
                         background-color: #f2f7fa;
                     }
+
+                    div:nth-last-of-type(1) {
+                        white-space: normal;
+                        line-height: 1.8;
+                        padding-top: 13px !important;
+                        padding-bottom: 13px !important;
+                    }
                 }
             }
         }
