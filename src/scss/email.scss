@@ -13,15 +13,18 @@ html, body {
     margin: 0 auto;
     width: 700px;
 
-    header {
-        height: 78px;
-        line-height: 90px;
-        font-size: 12px;
-        position: relative;
-        padding: 0 25px;
+    thead {
+
+        td {
+            height: 78px;
+            font-size: 12px;
+            padding: 0 25px;
+            position: relative;
+        }
 
         span {
             position: absolute;
+            top: 40px;
             right: 25px;
 
             a {
@@ -35,12 +38,12 @@ html, body {
         }
     }
 
-    footer {
-        padding: 20px 0 0;
+    tfoot {
 
         .links {
             text-align: center;
             font-size: 14px;
+            padding: 20px 0 0;
 
             a {
                 color: #374053;
@@ -71,7 +74,7 @@ html, body {
         }
 
         .contact {
-            margin-top: 20px;
+            padding-top: 20px;
             text-align: center;
             font-size: 14px;
             padding-bottom: 20px;
@@ -82,6 +85,10 @@ html, body {
                 img {
                     margin-right: 5px;
                     vertical-align: text-bottom;
+                }
+
+                span {
+                    margin: 0 !important;
                 }
             }
         }
@@ -103,5 +110,4 @@ html, body {
             }
         }
     }
-    
 }
