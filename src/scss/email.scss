@@ -1,0 +1,107 @@
+html, body {
+    width: 100%;
+    height: 100%;
+
+    * {
+        margin: 0;
+        padding: 0;
+        color: #36373e;
+    }
+}
+
+.email {
+    margin: 0 auto;
+    width: 700px;
+
+    header {
+        height: 78px;
+        line-height: 90px;
+        font-size: 12px;
+        position: relative;
+        padding: 0 25px;
+
+        span {
+            position: absolute;
+            right: 25px;
+
+            a {
+                color: #00a4ff;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    footer {
+        padding: 20px 0 0;
+
+        .links {
+            text-align: center;
+            font-size: 14px;
+
+            a {
+                color: #374053;
+                position: relative;
+                margin: 0 15px;
+                text-decoration: none;
+
+                &:hover {
+                    color: #00a4ff;
+                }
+
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    width: 1px;
+                    height: 8px;
+                    background-color: #3c414b;
+                    position: absolute;
+                    top: 50%;
+                    left: calc(100% + 15px);
+                    transform: translateY(-50%);
+                }
+
+                &:nth-last-of-type(1):after {
+                    display: none;
+                }
+            }
+        }
+
+        .contact {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            padding-bottom: 20px;
+
+            span {
+                margin: 0 10px;
+
+                img {
+                    margin-right: 5px;
+                    vertical-align: text-bottom;
+                }
+            }
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 15px 0 20px;
+            line-height: 1.6;
+            font-size: 12px;
+            border-top: 1px solid #e8f2f7;
+
+            a {
+                color: #00a4ff;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+}
