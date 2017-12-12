@@ -180,6 +180,11 @@ body {
                         overflow: hidden;
                         white-space: nowrap;
                     }
+
+                    div:nth-last-of-type(1) {
+                        white-space: normal;
+                        line-height: 1.8;
+                    }
                 }
 
                 .hide-on-med-and-up {
