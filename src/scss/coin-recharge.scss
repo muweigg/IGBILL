@@ -85,6 +85,10 @@ body {
                         }
                     }
 
+                    .row.t {
+                        padding: 0 0.1563rem;
+                    }
+
                     label.amount {
 
                         input[type=radio] {
@@ -342,6 +346,10 @@ body {
                         }
                     }
 
+                    .row.t {
+                        padding: 0 10px;
+                    }
+
                     label.amount {
 
                         input[type=radio] {
@@ -375,7 +383,7 @@ body {
                     }
 
                     div.quantity {
-                        margin: 37px 10px 0;
+                        margin: 21px 10px 0;
 
                         span {
                             display: inline-block;
