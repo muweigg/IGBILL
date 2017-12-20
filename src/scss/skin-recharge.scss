@@ -1101,7 +1101,9 @@ body {
                                         top: 50%;
                                         left: 50%;
                                         transform: translateZ(0) translate(-50%, -50%);
-                                        transform: translate(-50%, -50%)\0/IE9;
+                                        @media screen and (min-width:0\0) and (min-resolution:.001dpcm) {
+                                            transform: translate(-50%, -50%);
+                                        }
                                     }
 
                                     .name {

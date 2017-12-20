@@ -369,7 +369,9 @@ header.main-header {
                                 top: 50%;
                                 left: 20px;
                                 transform: translateY(calc(-50% - 1px));
-                                transform: translateY(-50%)\0/IE9;
+                                @media screen and (min-width:0\0) and (min-resolution:.001dpcm) {
+                                    transform: translateY(-50%);
+                                }
                             }
                         }
 

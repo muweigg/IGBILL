@@ -13,13 +13,21 @@ $(() => {
                 Rx.Observable.fromEvent(this.el.querySelector('.icon-notice-close'), 'click').subscribe(() => this.close());
             },
             calcDuration: function () {
-                let sW = this.txtEl.getClientRects()[0].width;
-                $(this.txtEl).css({
+                let sW:any = this.txtEl.getClientRects()[0].width;
+                /* $(this.txtEl).css({
                     '-o-animation-duration': (sW * 20) + 'ms',
                     '-moz-animation-duration': (sW * 20) + 'ms',
                     '-webkit-animation-duration': (sW * 20) + 'ms',
                     'animation-duration': (sW * 20) + 'ms',
-                });
+                }); */
+                $(this.txtEl).removeAttr('style').attr('style', 
+                    `
+                        -o-animation: scroll ${(sW * 20)}ms linear infinite;
+                        -moz-animation: scroll ${(sW * 20)}ms linear infinite;
+                        -webkit-animation: scroll ${(sW * 20)}ms linear infinite;
+                        animation: scroll ${(sW * 20)}ms linear infinite;
+                    `
+                );
             },
             open: function (msg: '') {
                 $(this.txtEl).text(msg).addClass('animation');

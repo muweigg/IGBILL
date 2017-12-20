@@ -964,7 +964,9 @@ body {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, calc(-50% + -20px));
-                    transform: translate(-50%, -50%)\0/IE9;
+                    @media screen and (min-width:0\0) and (min-resolution:.001dpcm) {
+                        transform: translate(-50%, -50%);
+                    }
                     font-size: 24px;
                     text-align: center;
 
@@ -1387,7 +1389,9 @@ body {
                                             top: 50%;
                                             left: 50%;
                                             transform: translate(-50%, -50%) translateZ(0);
-                                            transform: translate(-50%, -50%)\0/IE9;
+                                            @media screen and (min-width:0\0) and (min-resolution:.001dpcm) {
+                                                transform: translate(-50%, -50%);
+                                            }
                                         }
 
                                         .name {

@@ -103,3 +103,13 @@
         transform: translateY(-50%) rotate(360deg);
     }
 }
+
+// 公告滚动 PC 端
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

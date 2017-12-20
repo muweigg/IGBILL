@@ -338,19 +338,12 @@ body {
                     display: inline-block;
                     white-space: nowrap;
                     padding-left: 100%;
-                    padding-left: 0\0/IE9;
-
-                    &.animation {
-                        animation: scroll 20s linear infinite;
+                    @media screen and (min-width:0\0) and (min-resolution:.001dpcm) {
+                        padding-left: 0;
                     }
 
-                    @keyframes scroll {
-                        from {
-                            transform: translateX(0);
-                        }
-                        to {
-                            transform: translateX(-100%);
-                        }
+                    &.animation {
+                        // animation: scroll 20s linear infinite;
                     }
                 }
             }

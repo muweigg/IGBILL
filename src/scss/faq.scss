@@ -172,7 +172,9 @@ body {
 
             .contact-us-wrap {
                 margin-top: 20px;
-                padding-bottom: 50px\0/IE9;
+                @media screen and (min-width:0\0) and (min-resolution:.001dpcm) {
+                    padding-bottom: 50px;
+                }
 
                 section {
                     background-color: #fff;
