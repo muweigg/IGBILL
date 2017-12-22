@@ -39,7 +39,7 @@ $(() => {
 
     // 头部固定
     let fixed = Rx.Observable.fromEvent(document, 'scroll')
-        .debounceTime(20)
+        // .debounceTime(20)
         .map(e => isIE() ? document.documentElement.scrollTop : window.scrollY).subscribe(fixedHeader);
 
     fixedHeader(isIE() ? document.documentElement.scrollTop : window.scrollY);
@@ -108,3 +108,4 @@ import 'script-loader!babel-loader!./common-dialog.ts';
 import 'script-loader!babel-loader!./notice.ts';
 import 'script-loader!babel-loader!./terms-dialog.ts';
 import 'script-loader!babel-loader!./phone-valid-dialog.ts';
+import 'script-loader!babel-loader!./toast.ts';

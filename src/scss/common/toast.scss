@@ -1,0 +1,109 @@
+@import './_/variables';
+
+.toast-container {
+    color: #36373e;
+    position: fixed;
+
+    @media #{$large-and-up} {
+        right: 10px;
+        bottom: 97px;
+        width: 300px;
+
+        .toast-message {
+            margin-top: 5px;
+            text-align: right;
+            position: relative;
+
+            span {
+                display: inline-block;
+                color: #fff;
+                background-color: #1f2125;
+                border-color: #1f2125;
+                box-shadow: 0 1px 10px 0 rgba(0,0,0,.45);
+                border-radius: 5px;
+                padding: 5px 20px 5px 10px;
+                position: relative;
+                line-height: 1.5;
+
+                a {
+                    color: #fff;
+                    font-size: 18px;
+                    position: absolute;
+                    top: 0;
+                    right: 4px;
+                    opacity: .8;
+                    transition: opacity .1s linear;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &.error {
+                
+                span {
+                    background-color: #ebcccc;
+                    color: #a94442;
+                    box-shadow: 0 1px 10px 0 rgba(235,204,204,.3);
+
+                    a {
+                        color: #a94442;
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$medium-and-down} {
+        left: 50%;
+        bottom: .15625rem;
+        transform: translateX(-50%);
+        max-width: 80%;
+        font-size: .28125rem;
+
+        .toast-message {
+            margin-top: 0.0781rem;
+            text-align: center;
+
+            span {
+                display: inline-block;
+                color: #fff;
+                background-color: #1f2125;
+                border-color: #1f2125;
+                box-shadow: 0 1px 10px 0 rgba(0,0,0,.45);
+                border-radius: 0.0781rem;
+                padding: 0.125rem .546875rem 0.125rem 0.2344rem;
+                position: relative;
+                line-height: 1.5;
+
+                a {
+                    color: #fff;
+                    font-size: 0.4688rem;
+                    position: absolute;
+                    top: -0.0469rem;
+                    right: 0.125rem;
+                    opacity: .8;
+                    transition: opacity .1s linear;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &.error {
+                
+                span {
+                    background-color: #ebcccc;
+                    color: #a94442;
+                    box-shadow: 0 1px 10px 0 rgba(235,204,204,.3);
+
+                    a {
+                        color: #a94442;
+                    }
+                }
+            }
+        }
+    }
+}

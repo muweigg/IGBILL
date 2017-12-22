@@ -12,4 +12,5 @@ interface Window {
     notice: any;
     phoneValidDialog: any;
     isIE: any;
+    toast: any;
 }
