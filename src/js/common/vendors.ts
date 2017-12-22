@@ -109,3 +109,4 @@ import 'script-loader!babel-loader!./notice.ts';
 import 'script-loader!babel-loader!./terms-dialog.ts';
 import 'script-loader!babel-loader!./phone-valid-dialog.ts';
 import 'script-loader!babel-loader!./toast.ts';
+import 'script-loader!babel-loader!./tips.ts';

@@ -11,14 +11,11 @@ $(() => {
                         opacity: 0,
                         left: '100%'
                     }, 300, () => message.remove());
-                    /* message.fadeOut(300, function(){
-                        message.remove();
-                    }); */
                 });
             },
-            addToast: function(msg: string = '', classes: string = '') {
+            addToast: function(msg: string = '', options: any = { duration: 3000, classes: '' }) {
                 let html = $(`
-                    <div class="toast-message ${classes}">
+                    <div class="toast-message ${options.classes}">
                         <span>${msg}<a href="javascript:" class="toast-close">×</a></span>
                     </div>
                 `).css({left: '100%', opacity: 0});
@@ -26,7 +23,7 @@ $(() => {
                 html.animate({
                     opacity: 1,
                     left: '0'
-                }).delay(5000).animate({
+                }).delay(options.duration).animate({
                     opacity: 0,
                     left: '100%'
                 }, 300, () => html.remove());
