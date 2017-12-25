@@ -2,8 +2,8 @@
 $(() => {
     window.tips = {
         el: null,
-        open: function(msg: string = '', duration: number = 3000) {
-            if (this.el) this.el.remove();
+        open: function(msg: string = '', duration: number = 3000, callback = () => {}) {
+            if (this.el) this.el.stop().remove();
             this.el = $(`
                 <div class="tips-message">
                     <span>${msg}</span>
@@ -12,7 +12,10 @@ $(() => {
             $('body').append(this.el);
             this.el.animate({ opacity: 1, })
                 .delay(duration)
-                .animate({ opacity: 0, }, 300, () => this.el.remove());
+                .animate({ opacity: 0, }, 300, () => {
+                    this.el.remove();
+                    callback();
+                });
         }
     }
 });
