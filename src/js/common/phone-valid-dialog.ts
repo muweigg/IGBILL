@@ -45,13 +45,12 @@ $(() => {
                 this.box.removeAttribute("style");
             },
             HDText: function () {
-                let isWidthOdd = false, isHeightOdd = false;
                 if (this.el.classList.contains('active')) {
                     let { width, height } = this.box.getBoundingClientRect();
-                    isWidthOdd = width % 2 === 1 ? true : false;
-                    isHeightOdd = height % 2 === 1 ? true : false;
-                    if (isWidthOdd) width += 1;
-                    if (isHeightOdd) height += 1;
+                    width = parseInt(width);
+                    height = parseInt(height);
+                    if (width % 2 === 1) width = width + 1;
+                    if (height % 2 === 1) height = height + 1;
                     this.box.style.minWidth = `${width}px`;
                     this.box.style.minHeight = `${height}px`;
                 }

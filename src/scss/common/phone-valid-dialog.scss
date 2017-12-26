@@ -84,14 +84,13 @@
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            width: 531px;
-            height: 481px;
+            width: 530px;
+            // height: 250px;
             background-color: #fff;
             text-align: center;
             // 默认隐藏
             opacity: 0;
-            transform: scale3d(0, 0, 0);
+            transform: translate(-50%, -50%) scale3d(0, 0, 0);
             z-index: -1;
 
             .dialog-close {
@@ -113,7 +112,9 @@
                 text-align: left;
                 margin: 0 20px;
                 font-size: 14px;
-                // zoom: 1.005;
+                // transform: scale(2);
+                zoom: 1.005;
+                // filter: blur(0);
             }
 
             .buttons {
@@ -135,7 +136,6 @@
 
             p {
                 line-height: 1.6;
-                text-align: center;
             }
 
             div {
