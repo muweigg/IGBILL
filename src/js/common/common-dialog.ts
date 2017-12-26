@@ -40,6 +40,7 @@ $(() => {
                 this.box.removeAttribute("style");
             },
             HDText: function () {
+                if (window.isMobile) return;
                 if (this.el.classList.contains('active')) {
                     let { width, height } = this.box.getBoundingClientRect();
                     width = parseInt(width);
