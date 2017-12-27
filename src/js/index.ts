@@ -37,6 +37,7 @@
             },
             autoplay: {
                 delay: 8000,
+                disableOnInteraction: false,
             },
         });
     } else {
