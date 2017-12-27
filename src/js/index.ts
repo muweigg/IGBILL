@@ -68,6 +68,7 @@
             pagination: '.swiper-banner-wrapper .swiper-pagination',
             paginationClickable: true,
             autoplay: 8000,
+            autoplayDisableOnInteraction: false,
         });
     }
 })()
