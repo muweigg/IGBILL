@@ -14,6 +14,7 @@ import 'script-loader!babel-loader!./third-party/pickadate.js/picker.time';
 import 'script-loader!babel-loader!vee-validate/dist/vee-validate';
 
 import 'core-js/es6/promise';
+import 'core-js/es6/object';
 
 Vue.use(VeeValidate);
 
