@@ -1,8 +1,8 @@
 (() => {
-    if (isIE() > 9 || !isIE()) {
+    if (isIE() > 10 || !isIE()) {
         require('../../node_modules/swiper/dist/css/swiper.css');
         let Swiper = require('babel-loader!swiper/dist/js/swiper');
-        let swiper = new Swiper('.swiper-container', {
+        let swiper = new Swiper('.swiper-custom-wrapper .swiper-container', {
             slidesPerView: 6,
             // spaceBetween: 20,
             freeMode: true,
@@ -27,10 +27,22 @@
                 }
             }
         });
+        
+        let banner = new Swiper('.swiper-banner-wrapper .swiper-container', {
+            slidesPerView: 1,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 8000,
+            },
+        });
     } else {
         require('../css/common/idangerous.swiper/idangerous.swiper.css');
         let Swiper = require('../js/common/third-party/idangerous.swiper/idangerous.swiper.js');
-        var mySwiper = new Swiper('.swiper-container', {
+        var mySwiper = new Swiper('.swiper-custom-wrapper .swiper-container', {
             slidesPerView: 6,
             autoResize: true,
             calculateHeight: true,
@@ -38,12 +50,23 @@
         });
         
         $('.swiper-btn-prev').on('click', function(e){
-            e.preventDefault()
-            mySwiper.swipePrev()
-        })
+            e.preventDefault();
+            mySwiper.swipePrev();
+        });
         $('.swiper-btn-next').on('click', function(e){
-            e.preventDefault()
-            mySwiper.swipeNext()
-        })
+            e.preventDefault();
+            mySwiper.swipeNext();
+        });
+
+        let banner = new Swiper('.swiper-banner-wrapper .swiper-container', {
+            slidesPerView: 1,
+            loop: true,
+            autoResize: true,
+            calculateHeight: true,
+            resizeReInit: true,
+            pagination: '.swiper-banner-wrapper .swiper-pagination',
+            paginationClickable: true,
+            autoplay: 8000,
+        });
     }
 })()
