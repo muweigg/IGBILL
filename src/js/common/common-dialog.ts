@@ -9,6 +9,7 @@ $(() => {
             contentEl: null,
             okCB: null,
             cancelCB: null,
+            default: { msg: '', title: '信息提示', okCB: null, cancelCB: null },
             init: function () {
                 this.box = this.el.querySelector('.dialog-box');
                 this.titleEl = $(this.el.querySelector('.dialog-content p:nth-of-type(1)'));
@@ -19,12 +20,13 @@ $(() => {
                 Rx.Observable.fromEvent(this.el.querySelector('.buttons button:nth-last-of-type(1)'), 'click').subscribe(() => this.cancel());
                 Rx.Observable.fromEvent(this.el, 'animationend').subscribe(() => this.HDText());
             },
-            open: function (options = { msg: '', title: '信息提示', okCB: null, cancelCB: null }) {
+            open: function (options = {}) {
+                let opt = Object.assign({}, this.default, options);
                 this.el.classList.add('active');
-                this.titleEl.text(options.title);
-                this.contentEl.text(options.msg);
-                this.okCB = options.okCB;
-                this.cancelCB = options.cancelCB;
+                this.titleEl.text(opt.title);
+                this.contentEl.text(opt.msg);
+                this.okCB = opt.okCB;
+                this.cancelCB = opt.cancelCB;
             },
             ok: function () {
                 if (typeof this.okCB === 'function') this.okCB();

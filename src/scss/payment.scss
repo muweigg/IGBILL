@@ -1641,3 +1641,274 @@ body {
         }
     }
 }
+
+.load-steam-error {
+    color: #36373e;
+
+    @media #{$large-and-up} {
+        
+        button {
+            width: 100%;
+            max-width: 190px;
+            height: 40px;
+            border-radius: 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #00a4ff;
+            border: 0;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: middle;
+
+            span, img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all .15s linear;
+            }
+
+            img {
+                opacity: 0;
+            }
+
+            &:hover {
+
+                span {
+                    // transform: translate(-75px, -50%);
+                    left: 15px;
+                    transform: translate(0, -50%);
+                }
+                
+                img {
+                    opacity: 1;
+                    left: calc(100% - 30px);
+                    // transform: translate(60px, -50%);
+                    transform: translate(0, -50%);
+                }
+            }
+
+            &[disabled], &.disabled {
+                background-color: #e6e6e6;
+                color: #808080;
+
+                img {
+                    display: none;
+                }
+
+                &:hover {
+
+                    span {
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        .dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #000;
+            opacity: 0;
+            transition: all .1s linear;
+            z-index: -1;
+        }
+
+        .dialog-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            height: 360px;
+            background-color: #fff;
+            text-align: center;
+            // 默认隐藏
+            opacity: 0;
+            transform: scale3d(0, 0, 0);
+            z-index: -1;
+
+            .dialog-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+
+            > img {
+                margin-top: 35px;
+            }
+
+            .dialog-content {
+                margin-top: 40px;
+
+                p:nth-of-type(1) {
+                    font-size: 22px;
+                }
+
+                p:nth-of-type(2) {
+                    font-size: 16px;
+                    margin-top: 15px;
+                }
+            }
+
+            .buttons {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 80px;
+                line-height: 80px;
+                background-color: #f2f7fa;
+                text-align: center;
+            }
+        }
+    }
+
+    @media #{$medium-and-down} {
+        
+        button {
+            width: 100%;
+            max-width: 190px;
+            height: 40px;
+            border-radius: 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #00a4ff;
+            border: 0;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: middle;
+
+            span, img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all .15s linear;
+            }
+
+            img {
+                opacity: 0;
+            }
+
+            &:hover {
+
+                span {
+                    // transform: translate(-75px, -50%);
+                    left: 15px;
+                    transform: translate(0, -50%);
+                }
+                
+                img {
+                    opacity: 1;
+                    left: calc(100% - 30px);
+                    // transform: translate(60px, -50%);
+                    transform: translate(0, -50%);
+                }
+            }
+
+            &[disabled], &.disabled {
+                background-color: #e6e6e6;
+                color: #808080;
+
+                img {
+                    display: none;
+                }
+
+                &:hover {
+
+                    span {
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        .dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #000;
+            opacity: 0;
+            transition: all .1s linear;
+            z-index: -1;
+        }
+
+        .dialog-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8.4375rem;
+            height: 6.9375rem;
+            background-color: #fff;
+            text-align: center;
+            // 默认隐藏
+            opacity: 0;
+            transform: scale3d(0, 0, 0);
+            z-index: -1;
+
+            .dialog-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+
+            > img {
+                margin-top: 0.5469rem;
+            }
+
+            .dialog-content {
+                margin-top: 0.625rem;
+
+                p:nth-of-type(1) {
+                    font-size: 0.375rem;
+                }
+
+                p:nth-of-type(2) {
+                    font-size: 0.2813rem;
+                    margin-top: 0.2344rem;
+                }
+            }
+
+            .buttons {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 1.5625rem;
+                line-height: 1.5625rem;
+                background-color: #f2f7fa;
+                text-align: center;
+            }
+        }
+    }
+
+    &.active {
+
+        .dialog-overlay {
+            opacity: .5;
+            z-index: 500;
+        }
+
+        .dialog-box {
+            opacity: 1;
+            z-index: 500;
+            animation: bounceInCenter .5s;
+            animation-fill-mode: both;
+        }
+    }
+}
