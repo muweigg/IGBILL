@@ -39,11 +39,26 @@
                             <!-- 未输入: no-input -->
                             <!-- 输入中: input -->
                             <!-- 完成: success -->
+                            <!-- 验证成功: valid -->
+                            <!-- 验证失败: invalid -->
                             <span class="no-input">
                                 <input type="text" placeholder="请填写Steam交易链接(Trade Url)">
                                 <a href="javascript:">保存</a>
-                                <img class="icon" src="./assets/images/trade-url-success.png"
-                                    srcset="./assets/images/trade-url-success.png 1x, ./assets/images/trade-url-success@2x.png 2x, ./assets/images/trade-url-success@3x.png 3x">
+                                <em>
+                                    <img class="icon" src="./assets/images/trade-url-success.png"
+                                        srcset="./assets/images/trade-url-success.png 1x, ./assets/images/trade-url-success@2x.png 2x, ./assets/images/trade-url-success@3x.png 3x">
+                                    保存成功
+                                </em>
+                                <em>
+                                    <img class="icon" src="./assets/images/trade-url-success.png"
+                                        srcset="./assets/images/trade-url-success.png 1x, ./assets/images/trade-url-success@2x.png 2x, ./assets/images/trade-url-success@3x.png 3x">
+                                    验证成功
+                                </em>
+                                <em>
+                                    <img class="icon" src="./assets/images/trade-url-fail.png"
+                                        srcset="./assets/images/trade-url-fail.png 1x, ./assets/images/trade-url-fail@2x.png 2x, ./assets/images/trade-url-fail@3x.png 3x">
+                                    验证失败
+                                </em>
                             </span>
                             <button>
                                 <span>立即充值</span>
@@ -132,6 +147,15 @@
                     </div>
 
                     <div class="chose-skin">
+                        <div class="skin lock">
+                            <label>
+                                <div>
+                                    <img class="icon" src="./assets/images/cannot-display-lock.png"
+                                        srcset="./assets/images/cannot-display-lock.png 1x, ./assets/images/cannot-display-lock@2x.png 2x, ./assets/images/cannot-display-lock@3x.png 3x">
+                                    <span class="name">2件饰品无法显示</span>
+                                </div>
+                            </label>
+                        </div>
                         <div class="skin">
                             <label>
                                 <input type="checkbox">

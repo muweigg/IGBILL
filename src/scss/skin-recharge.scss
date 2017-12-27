@@ -164,6 +164,7 @@ body {
                             display: inline-block;
                             position: relative;
                             width: 100%;
+                            margin-top: .15625rem;
 
                             input {
                                 background-color: #f2f7fa;
@@ -172,7 +173,6 @@ body {
                                 height: 0.7031rem;
                                 line-height: 1;
                                 padding: 0 1.7188rem 0 0.1563rem;
-                                margin-top: .15625rem;
                             }
 
                             a {
@@ -181,20 +181,38 @@ body {
                                 height: 0.7031rem;
                                 line-height: 0.7031rem;
                                 border-left: 1px solid #dcdddd;
-                                font-size: 0.2188rem;
+                                font-size: 0.2813rem;
                                 color: #00a4ff;
                                 position: absolute;
-                                top: .15625rem;
+                                top: 0;
                                 right: -1px;
                                 text-align: center;
+                                z-index: 10;
                             }
 
-                            img {
+                            em {
+                                display: inline-block;
+                                font-style: normal;
+                                width: 1.875rem;
+                                height: 0.7031rem;
+                                line-height: 0.7031rem;
                                 position: absolute;
-                                top: calc(50% + .15625rem / 2);
-                                right: 0.2344rem;
+                                top: 50%;
+                                right: 0;
                                 transform: translateY(-50%);
-                                transform: scale3d(0, 0, 0);
+                                opacity: 0;
+                                z-index: 0;
+                                text-align: center;
+                                padding-left: 0.3125rem;
+                                font-size: 0.2813rem;
+                                
+                                img {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0.2344rem;
+                                    transform: translateY(-50%) scale3d(0, 0, 0);
+                                    opacity: 0;
+                                }
                             }
 
                             &.no-input {
@@ -212,8 +230,7 @@ body {
                                 }
                             }
 
-                            &.success {
-
+                            &.success, &.valid, &.invalid {
                                 input, a {
                                     animation: none;
                                 }
@@ -221,10 +238,47 @@ body {
                                 a {
                                     display: none;
                                 }
+                            }
 
-                                img {
-                                    animation: bounceInCenter .5s;
-                                    animation-fill-mode: both;
+                            &.success {
+                                
+                                em:nth-of-type(1) {
+                                    color: #00a4ff;
+                                    opacity: 1;
+
+                                    img {
+                                        opacity: 1;
+                                        animation: bounceInCenter .5s;
+                                        animation-fill-mode: both;
+                                    }
+                                }
+                            }
+
+                            &.valid {
+
+                                em:nth-of-type(2) {
+                                    color: #00a4ff;
+                                    opacity: 1;
+
+                                    img {
+                                        opacity: 1;
+                                        animation: bounceInCenter .5s;
+                                        animation-fill-mode: both;
+                                    }
+                                }
+                            }
+
+                            &.invalid {
+
+                                em:nth-of-type(3) {
+                                    color: #fd7c7e;
+                                    opacity: 1;
+
+                                    img {
+                                        opacity: 1;
+                                        animation: bounceInCenter .5s;
+                                        animation-fill-mode: both;
+                                    }
                                 }
                             }
                         }
@@ -566,6 +620,26 @@ body {
                                     }
                                 }
                             }
+                            
+                            &.lock {
+
+                                label {
+                                    cursor: default;
+                                    
+                                    div {
+                                        border-bottom: 1px solid #dcdddd;
+
+                                        > img {
+                                            // max-width: 80%;
+                                            max-height: 50%;
+                                            position: absolute;
+                                            top: 0.3125rem;
+                                            left: 50%;
+                                            transform: translateZ(0) translateX(-50%);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
 
@@ -790,15 +864,34 @@ body {
                                 top: 0;
                                 right: -1px;
                                 text-align: center;
+                                z-index: 10;
                             }
 
-                            img {
+                            em {
+                                display: inline-block;
+                                font-style: normal;
+                                width: 100px;
                                 position: absolute;
                                 top: 50%;
-                                right: 15px;
+                                right: 0;
                                 transform: translateY(-50%);
-                                transform: scale3d(0, 0, 0);
                                 opacity: 0;
+                                z-index: 0;
+                                text-align: center;
+                                padding-left: 20px;
+                                line-height: 44px;
+                                
+                                img {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 15px;
+                                    transform: translateY(-50%) scale3d(0, 0, 0);
+                                    @media screen and (min-width:0\0) and (min-resolution:.001dpcm) {
+                                        left: 5px;
+                                        transform: translateY(-50%);
+                                    }
+                                    opacity: 0;
+                                }
                             }
 
                             &.no-input {
@@ -816,8 +909,7 @@ body {
                                 }
                             }
 
-                            &.success {
-
+                            &.success, &.valid, &.invalid {
                                 input, a {
                                     animation: none;
                                 }
@@ -825,11 +917,47 @@ body {
                                 a {
                                     display: none;
                                 }
+                            }
 
-                                img {
+                            &.success {
+                                
+                                em:nth-of-type(1) {
+                                    color: #00a4ff;
                                     opacity: 1;
-                                    animation: bounceInCenter .5s;
-                                    animation-fill-mode: both;
+
+                                    img {
+                                        opacity: 1;
+                                        animation: bounceInCenter .5s;
+                                        animation-fill-mode: both;
+                                    }
+                                }
+                            }
+
+                            &.valid {
+
+                                em:nth-of-type(2) {
+                                    color: #00a4ff;
+                                    opacity: 1;
+
+                                    img {
+                                        opacity: 1;
+                                        animation: bounceInCenter .5s;
+                                        animation-fill-mode: both;
+                                    }
+                                }
+                            }
+
+                            &.invalid {
+
+                                em:nth-of-type(3) {
+                                    color: #fd7c7e;
+                                    opacity: 1;
+
+                                    img {
+                                        opacity: 1;
+                                        animation: bounceInCenter .5s;
+                                        animation-fill-mode: both;
+                                    }
                                 }
                             }
                         }
@@ -992,6 +1120,9 @@ body {
                                 left: 0;
                                 width: 18px;
                                 transform: translateZ(0) translateY(-50%);
+                                @media screen and (min-width:0\0) and (min-resolution:.001dpcm) {
+                                    transform: translateY(-50%);
+                                }
                             }
 
                             &.refreshing {
@@ -1128,6 +1259,27 @@ body {
 
                                         img {
                                             transform: scale(.9);
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            &.lock {
+
+                                label {
+                                    cursor: default;
+                                    
+                                    div {
+                                        border-bottom: 1px solid #dcdddd;
+
+                                        > img {
+                                            position: absolute;
+                                            top: 20px;
+                                            left: 50%;
+                                            transform: translateZ(0) translateX(-50%);
+                                            @media screen and (min-width:0\0) and (min-resolution:.001dpcm) {
+                                                transform: translateX(-50%);
+                                            }
                                         }
                                     }
                                 }
