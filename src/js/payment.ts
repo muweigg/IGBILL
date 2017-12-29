@@ -25,10 +25,10 @@ $(() => {
         setTimeout(() => {
             $('.waiting').show();
 
-            setTimeout(() => {
-                $('.container-wrap').eq(0).hide();
-                $('.pay-results').show();
-            }, 1000);
+            // setTimeout(() => {
+            //     $('.container-wrap').eq(0).hide();
+            //     $('.pay-results').show();
+            // }, 1000);
         }, 1000);
     });
     
