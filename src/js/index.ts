@@ -30,15 +30,16 @@
         
         let banner = new Swiper('.swiper-banner-wrapper .swiper-container', {
             slidesPerView: 1,
-            loop: true,
+            // loop: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
-            autoplay: {
+            simulateTouch: false,
+            /* autoplay: {
                 delay: 8000,
                 disableOnInteraction: false,
-            },
+            }, */
         });
     } else {
         require('../css/common/idangerous.swiper/idangerous.swiper.css');
@@ -61,14 +62,15 @@
 
         let banner = new Swiper('.swiper-banner-wrapper .swiper-container', {
             slidesPerView: 1,
-            loop: true,
+            // loop: true,
             autoResize: true,
             calculateHeight: true,
             resizeReInit: true,
             pagination: '.swiper-banner-wrapper .swiper-pagination',
             paginationClickable: true,
-            autoplay: 8000,
-            autoplayDisableOnInteraction: false,
+            simulateTouch: false,
+            // autoplay: 8000,
+            // autoplayDisableOnInteraction: false,
         });
     }
 })()
