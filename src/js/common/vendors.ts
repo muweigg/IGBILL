@@ -4,6 +4,7 @@ import 'script-loader!babel-loader!vue/dist/vue.min';
 import 'script-loader!babel-loader!axios/dist/axios';
 import 'script-loader!babel-loader!jquery/dist/jquery';
 import 'script-loader!babel-loader!classList.js';
+import 'script-loader!babel-loader!./third-party/dentist.js';
 
 import 'script-loader!babel-loader!./third-party/fastclick';
 import 'script-loader!babel-loader!./third-party/flexible';

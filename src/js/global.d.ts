@@ -15,3 +15,7 @@ interface Window {
     toast: any;
     tips: any;
 }
+
+interface String {
+    extract (): any;
+}
