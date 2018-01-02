@@ -326,6 +326,7 @@ body {
                         border-top: 0;
                         border-bottom: 0;
                         font-size: 0.2813rem;
+                        overflow: hidden;
                         display: none;
 
                         img {
@@ -669,8 +670,9 @@ body {
                         border: 1px solid #dcdddd;
                         border-top: 0;
                         border-bottom: 0;
-                        display: none;
                         font-size: 14px;
+                        overflow: hidden;
+                        display: none;
 
                         img {
                             max-width: 100%;
