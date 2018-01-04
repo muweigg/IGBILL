@@ -30,7 +30,7 @@ $(() => {
                 );
             },
             open: function (msg: '') {
-                $(this.txtEl).text(msg).addClass('animation');
+                $(this.txtEl).html(msg).addClass('animation');
                 $('body').addClass('notice-open')
                 $(this.el).fadeIn(300);
                 this.calcDuration();
