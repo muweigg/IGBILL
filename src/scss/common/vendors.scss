@@ -345,6 +345,16 @@ body {
                     &.animation {
                         // animation: scroll 20s linear infinite;
                     }
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #00a4ff;
+                            text-decoration: underline;
+                        }
+                    }
                 }
             }
 
@@ -410,6 +420,16 @@ body {
                         }
                         to {
                             transform: translateX(-100%);
+                        }
+                    }
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #00a4ff;
+                            text-decoration: underline;
                         }
                     }
                 }
