@@ -9,8 +9,9 @@ interface Window {
     isMobile: boolean;
     dialog: any;
     termsDialog: any;
-    notice: any;
     phoneValidDialog: any;
+    tradeDetailDialog: any;
+    notice: any;
     isIE: any;
     toast: any;
     tips: any;

@@ -118,13 +118,13 @@ body {
         .user-info {
             // height: 170px;
             border: 1px solid #dcdddd;
-            font-size: 0.2813rem;
+            font-size: 0.3125rem;
             background-color: #fff;
-            padding: 0 0 .625rem;
+            padding: 0 0 0.3125rem;
             margin-top: .3125rem;
 
             .balance {
-                margin-top: 20px;
+                margin-top: 0.3125rem;
 
                 strong {
                     display: block;
@@ -199,9 +199,10 @@ body {
             .go-to-wallet {
 
                 img {
-                    height: 2.0313rem;
+                    margin-top: 0.3125rem;
+                    height: 2.1875rem;
                     // max-width: 100%;
-                    transform: translate(0.1563rem, 0.7813rem);
+                    // transform: translate(0.1563rem, 0.7813rem);
                 }
             }
 
@@ -304,34 +305,49 @@ body {
         }
 
         .user {
-            text-align: center;
-            height: 170px + 45px;
+            // text-align: center;
+            height: 115px + 45px;
             border: 1px solid #dcdddd;
             background-color: #fff;
             position: relative;
 
-            img {
-                margin: 20px 0 10px;
-                border-radius: 50%;
-                max-width: 80px;
-                max-height: 80px;
-            }
+            .user-wrap {
+                position: absolute;
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
 
-            p {
-                font-size: 16px;
-                padding: 0 20px;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-            }
+                img {
+                    // margin: 20px 0 10px;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    max-width: 80px;
+                    max-height: 80px;
+                    float: left;
+                }
 
-            p.valid {
-                margin-top: 10px;
-                font-size: 14px;
-                color: #29cb80;
+                div {
+                    overflow: hidden;
 
-                * {
-                    margin: 0 5px;
+                    p {
+                        font-size: 16px;
+                        // padding: 0 20px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        margin-top: 20px;
+                    }
+
+                    p.valid {
+                        margin-top: 10px;
+                        font-size: 14px;
+                        color: #29cb80;
+
+                        * {
+                            margin: 0 10px 0 0;
+                        }
+                    }
                 }
             }
 
@@ -354,8 +370,8 @@ body {
         }
 
         .user-info {
-            $mt: 40px;
-            height: 170px + 45px;
+            $mt: 20px;
+            height: 115px + 45px;
             border: 1px solid #dcdddd;
             font-size: 16px;
             background-color: #fff;

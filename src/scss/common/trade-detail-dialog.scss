@@ -1,0 +1,444 @@
+@import './_/variables';
+
+.trade-detail-dialog {
+    color: #36373e;
+
+    .c1 {
+        color: #00a4ff;
+    }
+
+    @media #{$large-and-up} {
+        
+        button {
+            width: 100%;
+            max-width: 148px;
+            height: 38px;
+            border-radius: 19px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #00a4ff;
+            border: 0;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: middle;
+            margin: 0 5px;
+
+            span, img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all .15s linear;
+            }
+
+            img {
+                opacity: 0;
+            }
+
+            &:hover {
+
+                span {
+                    // transform: translate(-75px, -50%);
+                    left: 15px;
+                    transform: translate(0, -50%);
+                }
+                
+                img {
+                    opacity: 1;
+                    left: calc(100% - 30px);
+                    // transform: translate(60px, -50%);
+                    transform: translate(0, -50%);
+                }
+            }
+
+            &[disabled], &.disabled {
+                background-color: #e6e6e6;
+                color: #808080;
+
+                img {
+                    display: none;
+                }
+
+                &:hover {
+
+                    span {
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        .dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #000;
+            opacity: 0;
+            transition: all .1s linear;
+            z-index: -1;
+        }
+
+        .dialog-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 540px;
+            // height: 250px;
+            max-height: 80%;
+            background-color: #fff;
+            text-align: center;
+            // 默认隐藏
+            opacity: 0;
+            transform: scale3d(0, 0, 0);
+            z-index: -1;
+
+            .dialog-close {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+            }
+
+            > img {
+                margin-top: 35px;
+            }
+
+            .dialog-title {
+                height: 60px;
+                line-height: 59px;
+                border-bottom: 1px solid #dcdddd;
+                margin: 0 30px;
+                font-size: 20px;
+            }
+
+            .dialog-content {
+                // overflow-y: auto;
+                text-align: left;
+                margin: 0 30px;
+                font-size: 14px;
+                line-height: 2;
+
+                .trade-detail-content {
+                    padding-bottom: 20px;
+
+                    > div {
+                        padding: 5px 0;
+
+                        h4 {
+                            font-weight: normal;
+                            margin: 5px 0 10px;
+                        }
+
+                        &:nth-of-type(2), &:nth-of-type(3) {
+                            border-top: 1px solid #dcdddd;
+                        }
+
+                        &:nth-of-type(3) {
+
+                            .row {
+                                overflow-x: hidden;
+                                overflow-y: auto;
+                                max-height: 202px;
+                            }
+                        }
+
+                        table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            border: 1px solid #dcdddd;
+                            table-layout: fixed;
+
+                            th, td {
+                                height: 40px;
+                                border: 1px solid #dcdddd;
+                                border-left: 0;
+                                border-right: 0;
+                                padding: 0 20px;
+                                text-align: center;
+                                font-size: 12px;
+                                width: 20%;
+                                font-weight: normal;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+
+                                &:nth-of-type(1) {
+                                    text-align: left;
+                                    width: 50%;
+                                }
+
+                                &:nth-last-of-type(1) {
+                                    text-align: right;
+                                    width: 30%;
+                                }
+                            }
+
+                            th {
+                                color: #808080;
+                            }
+                        }
+
+                        &.tips {
+                            height: 110px;
+                            margin: 30px -30px -20px;
+                            padding: 5px 30px;
+                            color: #808080;
+                            background-color: #f2f7fa;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            .buttons {
+                // position: absolute;
+                // left: 0;
+                // right: 0;
+                // bottom: 0;
+                height: 80px;
+                line-height: 80px;
+                background-color: #f2f7fa;
+                text-align: center;
+            }
+        }
+
+        &.active {
+
+            .dialog-overlay {
+                opacity: .5;
+                z-index: 500;
+            }
+
+            .dialog-box {
+                z-index: 500;
+                opacity: 1;
+                animation: bounceInCenter .5s;
+                animation-fill-mode: both;
+            }
+        }
+    }
+
+    @media #{$medium-and-down} {
+        
+        button {
+            width: 100%;
+            max-width: 148px;
+            height: 38px;
+            border-radius: 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #00a4ff;
+            border: 0;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: middle;
+            margin: 0 5px;
+
+            span, img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all .15s linear;
+            }
+
+            img {
+                opacity: 0;
+            }
+
+            &:hover {
+
+                span {
+                    // transform: translate(-75px, -50%);
+                    left: 15px;
+                    transform: translate(0, -50%);
+                }
+                
+                img {
+                    opacity: 1;
+                    left: calc(100% - 30px);
+                    // transform: translate(60px, -50%);
+                    transform: translate(0, -50%);
+                }
+            }
+
+            &[disabled], &.disabled {
+                background-color: #e6e6e6;
+                color: #808080;
+
+                img {
+                    display: none;
+                }
+
+                &:hover {
+
+                    span {
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        .dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #000;
+            opacity: 0;
+            transition: all .1s linear;
+            z-index: -1;
+        }
+
+        .dialog-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            background-color: #fff;
+            text-align: center;
+            display: flex;
+            flex-flow: column nowrap;
+            // 默认隐藏
+            opacity: 0;
+            transform: scale3d(0, 0, 0);
+            z-index: -1;
+
+            .dialog-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+
+            > img {
+                margin-top: 0.5469rem;
+            }
+
+            .dialog-title {
+                flex: 0 0 1.0938rem;
+                // height: 1.0938rem;
+                line-height: 1.0938rem;
+                border-bottom: 1px solid #dcdddd;
+                margin: 0 0.3125rem;
+                font-size: 0.4375rem;
+            }
+
+            .dialog-content {
+                flex: 1 0 auto;
+                // overflow-y: auto;
+                text-align: left;
+                margin: 0 0.3125rem;
+                font-size: 0.2813rem;
+                line-height: 2;
+
+                .trade-detail-content {
+                    padding-bottom: 0.3125rem;
+
+                    > div {
+                        padding: 0.0781rem 0;
+
+                        h4 {
+                            font-weight: normal;
+                            margin: 0.0781rem 0 0.1563rem;
+                        }
+
+                        &:nth-of-type(2), &:nth-of-type(3) {
+                            border-top: 1px solid #dcdddd;
+                        }
+
+                        &:nth-of-type(3) {
+
+                            .row {
+                                overflow-x: hidden;
+                                overflow-y: auto;
+                                max-height: 121px;
+                            }
+                        }
+
+                        table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            border: 1px solid #dcdddd;
+                            table-layout: fixed;
+
+                            th, td {
+                                height: 30px;
+                                border-bottom: 1px solid #dcdddd;
+                                padding: 0 0.3125rem;
+                                text-align: center;
+                                font-size: .28125rem;
+                                width: 20%;
+                                font-weight: normal;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+
+                                &:nth-of-type(1) {
+                                    text-align: left;
+                                    width: 50%;
+                                }
+
+                                &:nth-last-of-type(1) {
+                                    text-align: right;
+                                    width: 30%;
+                                }
+                            }
+
+                            th {
+                                color: #808080;
+                            }
+                        }
+
+                        &.tips {
+                            height: 3.125rem;
+                            margin: 0.4688rem -.3125rem -0.3125rem;
+                            padding: 0.0781rem 0.4688rem;
+                            color: #808080;
+                            background-color: #f2f7fa;
+                            font-size: 0.2813rem;
+                        }
+                    }
+                }
+            }
+
+            .buttons {
+                flex: 0 0 1.5625rem;
+                // position: absolute;
+                // left: 0;
+                // right: 0;
+                // bottom: 0;
+                // height: 1.5625rem;
+                line-height: 1.5625rem;
+                background-color: #f2f7fa;
+                text-align: center;
+            }
+        }
+
+        &.active {
+
+            .dialog-overlay {
+                opacity: .5;
+                z-index: 500;
+            }
+
+            .dialog-box {
+                z-index: 500;
+                opacity: 1;
+                animation: bounceInCenter .5s;
+                animation-fill-mode: both;
+            }
+        }
+    }
+}
