@@ -296,7 +296,7 @@ body {
         top: $pc-header-height;
         left: 0;
         right: 0;
-        bottom: 65px;
+        bottom: $pc-footer-height;
 
         .container-wrap {
             @media screen and (min-width:0\0) and (min-resolution:.001dpcm) {
