@@ -74,7 +74,7 @@ $(() => {
                     data.skins.map(skin => {
                         skins += `
                             <tr>
-                                <td>${skin.name}</td>
+                                <td title="${skin.name}">${skin.name}</td>
                                 <td><span class="c1">￥${skin.money}</span></td>
                                 <td>${skin.status}</td>
                             </tr>
