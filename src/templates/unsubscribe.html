@@ -1,0 +1,71 @@
+{% extends './common/base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/unsubscribe.css">
+{% endblock %}
+
+{% block scripts %}
+    <script src="./js/unsubscribe.js"></script>
+{% endblock %}
+
+{% block content %}
+    <main class="unsubscribe">
+        <div class="container-wrap">
+            <div class="row skin-caption">
+                <div class="col s12 align-left">
+                    <img class="icon" src="./assets/images/icon-unsubscribe.png"
+                        srcset="./assets/images/icon-unsubscribe.png 1x, ./assets/images/icon-unsubscribe@2x.png 2x, ./assets/images/icon-unsubscribe@3x.png 3x">
+                    退订邮件
+                </div>
+            </div>
+            <div class="unsubscribe-wrap">
+                <header>
+                    <div>非常感谢您使用<span class="c2">iGB</span>，我们希望邮件能给您更多有用的信息。如果您方便，可以告诉我们，您为什么要退订邮件。</div>
+                </header>
+                <div class="unsubscribe-service">
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="s-ta-r">请输入您的 EMAIL 地址：</td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td class="s-ta-r t" rowspan="3">请选择退订原因：</td>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="" id="">
+                                        邮件太多，打搅我了。
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="" id="">
+                                        我对邮件内容不感兴趣。
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="" id="">
+                                        没原因。
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="buttons s-ta-c">
+                            <button>
+                                <span>取消退订</span>
+                                <img class="icon" src="./assets/images/button-arrow.png"
+                                    srcset="./assets/images/button-arrow.png 1x, ./assets/images/button-arrow@2x.png 2x, ./assets/images/button-arrow@3x.png 3x">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
