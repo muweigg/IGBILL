@@ -1,0 +1,16 @@
+@import './common/_/variables';
+@import './common/_/mixins';
+
+.main-header {
+    background-color: #1f2125;
+    border-color: #1f2125;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.45);
+}
+
+.business-cooperation {
+    
+    @media #{$medium-and-down} {}
+    
+    @media #{$large-and-up} {}
+    
+}
