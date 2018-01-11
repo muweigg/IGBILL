@@ -1,0 +1,395 @@
+{% extends './common/base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/personally-recommend.css">
+{% endblock %}
+
+{% block scripts %}
+    <script src="./js/personally-recommend.js"></script>
+{% endblock %}
+
+{% block content %}
+    <main class="personally-recommend">
+        <div class="container-wrap">
+            <div class="tabs">
+                <a href="javascript:" class="active">个人推荐</a>
+                <a href="javascript:">推荐明细</a>
+            </div>
+            <div class="tab-content" style="display: none;">
+                <div class="personally-recommend-wrap">
+                    <div class="row">
+                        <div class="col s12 m9">
+
+                        </div>
+                        <div class="col s12 m3">
+                            <div class="ranking-list">
+                                <header>
+                                    <img class="icon" src="./assets/images/personally-recommend/icon-ranking-list.png"
+                                        srcset="./assets/images/personally-recommend/icon-ranking-list.png 1x, ./assets/images/personally-recommend/icon-ranking-list@2x.png 2x, ./assets/images/personally-recommend/icon-ranking-list@3x.png 3x">
+                                    排行榜
+                                </header>
+                                <div class="red">
+                                    <span class="person">
+                                        <img src="./assets/images/user-default.png" alt="">
+                                        <em class="badge">1</em>
+                                    </span>
+                                    <span class="person-name">
+                                        Memories
+                                    </span>
+                                    <span class="money">
+                                        <sup>￥</sup>1999999
+                                    </span>
+                                </div>
+                                <div class="green">
+                                    <span class="person">
+                                        <img src="./assets/images/user-default.png" alt="">
+                                        <em class="badge">2</em>
+                                    </span>
+                                    <span class="person-name">
+                                        Memories
+                                    </span>
+                                    <span class="money">
+                                        <sup>￥</sup>1999999
+                                    </span>
+                                </div>
+                                <div class="blue">
+                                    <span class="person">
+                                        <img src="./assets/images/user-default.png" alt="">
+                                        <em class="badge">3</em>
+                                    </span>
+                                    <span class="person-name">
+                                        Memories
+                                    </span>
+                                    <span class="money">
+                                        <sup>￥</sup>1999999
+                                    </span>
+                                </div>
+                                <div class="gray">
+                                    <span class="person">
+                                        <img src="./assets/images/user-default.png" alt="">
+                                        <em class="badge ">4</em>
+                                    </span>
+                                    <span class="person-name">
+                                        Memories
+                                    </span>
+                                    <span class="money">
+                                        <sup>￥</sup>1999999
+                                    </span>
+                                </div>
+                                <div class="gray">
+                                    <span class="person">
+                                        <img src="./assets/images/user-default.png" alt="">
+                                        <em class="badge ">5</em>
+                                    </span>
+                                    <span class="person-name">
+                                        Memories
+                                    </span>
+                                    <span class="money">
+                                        <sup>￥</sup>1999999
+                                    </span>
+                                </div>
+                                <div class="gray">
+                                    <span class="person">
+                                        <img src="./assets/images/user-default.png" alt="">
+                                        <em class="badge ">6</em>
+                                    </span>
+                                    <span class="person-name">
+                                        Memories
+                                    </span>
+                                    <span class="money">
+                                        <sup>￥</sup>1999999
+                                    </span>
+                                </div>
+                                <div class="gray">
+                                    <span class="person">
+                                        <img src="./assets/images/user-default.png" alt="">
+                                        <em class="badge ">7</em>
+                                    </span>
+                                    <span class="person-name">
+                                        Memories
+                                    </span>
+                                    <span class="money">
+                                        <sup>￥</sup>1999999
+                                    </span>
+                                </div>
+                                <div class="gray">
+                                    <span class="person">
+                                        <img src="./assets/images/user-default.png" alt="">
+                                        <em class="badge ">8</em>
+                                    </span>
+                                    <span class="person-name">
+                                        Memories
+                                    </span>
+                                    <span class="money">
+                                        <sup>￥</sup>1999999
+                                    </span>
+                                </div>
+                                <div class="gray">
+                                    <span class="person">
+                                        <img src="./assets/images/user-default.png" alt="">
+                                        <em class="badge ">9</em>
+                                    </span>
+                                    <span class="person-name">
+                                        Memories
+                                    </span>
+                                    <span class="money">
+                                        <sup>￥</sup>1999999
+                                    </span>
+                                </div>
+                                <div class="gray">
+                                    <span class="person">
+                                        <img src="./assets/images/user-default.png" alt="">
+                                        <em class="badge ">10</em>
+                                    </span>
+                                    <span class="person-name">
+                                        Memories
+                                    </span>
+                                    <span class="money">
+                                        <sup>￥</sup>1999999
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" style="display: none;">
+                <div class="recommend-detail">
+
+                    <div class="list-wrap">
+                        <header>
+                            <div class="row">
+                                <div class="col s12 m9">
+                                    <div class="row">
+                                        <div class="col s1 m1 hide-on-small-only">
+                                            时间：
+                                        </div>
+                                        <div class="col s7 m5">
+                                            <div class="row">
+                                                <!-- <div class="col s1"></div> -->
+                                                <div class="col s5">
+                                                    <div class="date-from-wrap">
+                                                        <img class="icon" src="./assets/images/icon-date.png"
+                                                            srcset="./assets/images/icon-date.png 1x, ./assets/images/icon-date@2x.png 2x, ./assets/images/icon-date@3x.png 3x">
+                                                        <input type="text" class="date-from" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col s2 s-ta-c"> - </div>
+                                                <div class="col s5">
+                                                    <div class="date-to-wrap">
+                                                        <img class="icon" src="./assets/images/icon-date.png"
+                                                            srcset="./assets/images/icon-date.png 1x, ./assets/images/icon-date@2x.png 2x, ./assets/images/icon-date@3x.png 3x">
+                                                        <input type="text" class="date-to" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col s1 m1 s-ta-c">
+                                        </div>
+                                        <div class="col s12 m3">
+                                            <button class="btn">
+                                                <span>查询</span>
+                                                <img class="icon" src="./assets/images/button-s-arrow.png"
+                                                    srcset="./assets/images/button-s-arrow.png 1x, ./assets/images/button-s-arrow@2x.png 2x, ./assets/images/button-s-arrow@3x.png 3x">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="list-head hide-on-small-only">
+                            <div class="row">
+                                <div class="col s1">
+                                    序号
+                                </div>
+                                <div class="col s2 s-ta-c">
+                                    昵称
+                                </div>
+                                <div class="col s2 s-ta-c">
+                                    交易金额
+                                </div>
+                                <div class="col s2 s-ta-c">
+                                    交易时间
+                                </div>
+                                <div class="col s2 s-ta-c">
+                                    奖励金比例
+                                </div>
+                                <div class="col s2 s-ta-c">
+                                    奖励金状态
+                                </div>
+                                <div class="col s1 s-ta-r">
+                                    奖励金额
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-data">
+
+                            <div class="row">
+                                <div class="col m1 hide-on-small-only">
+                                    001
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    封装的涂鸦 | 王 (黄褐)
+                                </div>
+                                <div class="col s6 m2 s-ta-r m-ta-c">
+                                    <span class="c2">￥500</span>
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    2017-02-12
+                                </div>
+                                <div class="col s6 m2 s-ta-r m-ta-c">
+                                    <span class="c1">1%</span>
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    <span class="waiting">未发放</span>
+                                </div>
+                                <div class="col s6 m1 s-ta-r">
+                                    <span class="c2">+500</span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col m1 hide-on-small-only">
+                                    001
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    封装的涂鸦 | 王 (黄褐)
+                                </div>
+                                <div class="col s6 m2 s-ta-r m-ta-c">
+                                    <span class="c2">￥500</span>
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    2017-02-12
+                                </div>
+                                <div class="col s6 m2 s-ta-r m-ta-c">
+                                    <span class="c1">1%</span>
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    <span class="success">已发放</span>
+                                </div>
+                                <div class="col s6 m1 s-ta-r">
+                                    <span class="c2">+500</span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col m1 hide-on-small-only">
+                                    001
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    封装的涂鸦 | 王 (黄褐)
+                                </div>
+                                <div class="col s6 m2 s-ta-r m-ta-c">
+                                    <span class="c2">￥500</span>
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    2017-02-12
+                                </div>
+                                <div class="col s6 m2 s-ta-r m-ta-c">
+                                    <span class="c1">1%</span>
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    <span class="waiting">未发放</span>
+                                </div>
+                                <div class="col s6 m1 s-ta-r">
+                                    <span class="c2">+500</span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col m1 hide-on-small-only">
+                                    001
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    封装的涂鸦 | 王 (黄褐)
+                                </div>
+                                <div class="col s6 m2 s-ta-r m-ta-c">
+                                    <span class="c2">￥500</span>
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    2017-02-12
+                                </div>
+                                <div class="col s6 m2 s-ta-r m-ta-c">
+                                    <span class="c1">1%</span>
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    <span class="success">已发放</span>
+                                </div>
+                                <div class="col s6 m1 s-ta-r">
+                                    <span class="c2">+500</span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col m1 hide-on-small-only">
+                                    001
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    封装的涂鸦 | 王 (黄褐)
+                                </div>
+                                <div class="col s6 m2 s-ta-r m-ta-c">
+                                    <span class="c2">￥500</span>
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    2017-02-12
+                                </div>
+                                <div class="col s6 m2 s-ta-r m-ta-c">
+                                    <span class="c1">1%</span>
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    <span class="waiting">未发放</span>
+                                </div>
+                                <div class="col s6 m1 s-ta-r">
+                                    <span class="c2">+500</span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col m1 hide-on-small-only">
+                                    001
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    封装的涂鸦 | 王 (黄褐)
+                                </div>
+                                <div class="col s6 m2 s-ta-r m-ta-c">
+                                    <span class="c2">￥500</span>
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    2017-02-12
+                                </div>
+                                <div class="col s6 m2 s-ta-r m-ta-c">
+                                    <span class="c1">1%</span>
+                                </div>
+                                <div class="col s6 m2 s-ta-l m-ta-c">
+                                    <span class="success">已发放</span>
+                                </div>
+                                <div class="col s6 m1 s-ta-r">
+                                    <span class="c2">+500</span>
+                                </div>
+                            </div>
+
+                            <div class="row s-ta-c hide-on-med-and-up">
+                                <span>加载更多</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-paging hide-on-small-only">
+                        <div class="row">
+                            <div class="col s12 s-ta-r">
+                                <a href="javascript:" class="prev">&nbsp;</a>
+                                <a href="javascript:">1</a>
+                                <a href="javascript:">2</a>
+                                <a href="javascript:">3</a>
+                                <span>…</span>
+                                <a href="javascript:">99</a>
+                                <a href="javascript:" class="next">&nbsp;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
