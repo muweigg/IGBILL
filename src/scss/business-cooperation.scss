@@ -1,6 +1,17 @@
 @import './common/_/variables';
 @import './common/_/mixins';
 
+body {
+
+    @media #{$medium-and-down} {
+        padding-top: $mob-header-height;
+    }
+
+    @media #{$large-and-up} {
+        padding-top: $pc-header-height;
+    }
+}
+
 .main-header {
     background-color: #1f2125;
     border-color: #1f2125;
@@ -8,9 +19,1205 @@
 }
 
 .business-cooperation {
+    color: #36373e;
+
+    .c1 {
+        color: #00a4ff;
+    }
+
+    .c2 {
+        color: #b2b2b2;
+    }
     
-    @media #{$medium-and-down} {}
+    @media #{$medium-and-down} {
+        font-size: .375rem;
+        flex: 1 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: #fff;
+
+        button {
+            width: 3.75rem;
+            height: 0.9375rem;
+            line-height: 0.9375rem;
+            border-radius: 0.5156rem;
+            background-color: #00a4ff;
+            color: #fff;
+            border: 0;
+            cursor: pointer;
+            position: relative;
+            font-size: .375rem;
+
+            em {
+                font-style: normal;
+            }
+
+            span, img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all .15s linear;
+            }
+
+            img {
+                opacity: 0;
+            }
+
+            &:hover {
+
+                span {
+                    left: 0.5469rem;
+                    transform: translate(0, -50%);
+                }
+                
+                img {
+                    opacity: 1;
+                    left: calc(100% - 0.9375rem);
+                    transform: translate(0, -50%);
+                }
+            }
+
+            &[disabled], &.disabled {
+                background-color: #e6e6e6;
+                color: #808080;
+
+                img {
+                    display: none;
+                }
+
+                &:hover {
+
+                    span {
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        .cooperation {
+            text-align: center;
+
+            .content {
+                padding: 0 .3125rem 1.25rem;
+
+                &:after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+
+                .right {
+                    text-align: left;
+
+                    h3 {
+                        margin-top: 0.625rem;
+                        font-size: .5rem;
+                        font-weight: normal;
+                    }
+
+                    sub {
+                        display: inline-block;
+                        font-size: 0.2813rem;
+                        margin-top: 0.1563rem;
+                    }
+
+                    p {
+                        margin-top: 0.625rem;
+                        line-height: 2.2;
+                    }
+
+                    .count {
+
+                        .g, .u {
+                            font-size: 0.3438rem;
+                            margin-top: 0.9375rem;
+                            position: relative;
+
+                            span {
+                                display: inline-block;
+                                font-size: 0.875rem;
+                                font-weight: bold;
+                                margin-bottom: 0.3125rem;
+                            }
+
+                            em {
+                                display: inline-block;
+                                font-size: 0.875rem;
+                                font-weight: bold;
+                                font-style: normal;
+                            }
+                        }
+
+                        .g {
+
+                            &:after {
+                                content: '';
+                                display: block;
+                                width: 1px;
+                                height: 1.0156rem;
+                                position: absolute;
+                                top: 0.1563rem;
+                                right: 0.7813rem;
+                                background-color: #e1e1e1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .what-is-igb {
+            // height: 7.8438rem;
+            background: transparent url('../assets/images/business-cooperation/2.png') top center/cover no-repeat;
+            text-align: center;
+            padding-top: 1.4844rem;
+
+            h3 {
+                font-size: .5rem;
+                color: #fff;
+                font-weight: normal;
+            }
+
+            sub {
+                display: inline-block;
+                font-size: 0.1875rem;
+                margin-top: 0.2344rem;
+                color: #dcdddd;
+            }
+
+            .row {
+                padding-bottom: 1.5625rem;
+                
+                .col {
+                    text-align: left;
+                    padding: 0 30px !important;
+                    margin-top: 1.328125rem;
+
+                    h4 {
+                        font-size: .40625rem;
+                        color: #fff;
+                        margin-top: 0.3125rem;
+                    }
+
+                    p {
+                        color: #fff;
+                        margin-top: 0.3125rem;
+                    }
+                }
+            }
+        }
+
+        .market-analysis {
+            text-align: center;
+
+            .content {
+                position: relative;
+                padding: .9375rem .3125rem 9.375rem;
+
+                &:after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+
+                .left {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 1.25rem;
+
+                    img {
+                        width: 6.40625rem;
+                    }
+
+                    span {
+                        display: block;
+                        margin-top: 0.3906rem;
+                        font-size: .40625rem;
+                    }
+                }
+
+                .right {
+                    text-align: left;
+
+                    h3 {
+                        font-size: 0.5rem;
+                        font-weight: normal;
+                    }
+
+                    sub {
+                        display: inline-block;
+                        font-size: 0.2813rem;
+                        margin-top: 0.1563rem;
+                    }
+
+                    img {
+                        display: block;
+                        margin-top: 1.0938rem;
+                        width: 100%;
+                    }
+
+                    p {
+                        margin-top: 0.9375rem;
+                        line-height: 2;
+                    }
+
+                    ul {
+                        margin-top: 0.9375rem;
+
+                        li {
+                            margin-bottom: 0.3125rem;
+                            position: relative;
+                            line-height: 2;
+
+                            &:before {
+                                content: '';
+                                background-color: #b2b2b2;
+                                width: 0.125rem;
+                                height: 0.125rem;
+                                display: inline-block;
+                                margin-right: 0.1563rem;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .the-benefits-of-igb {
+            background: transparent url('../assets/images/business-cooperation/4.png') top center/cover no-repeat;
+            text-align: center;
+            padding-top: 1.4063rem;
+            padding-bottom: .9375rem;
+
+            h3 {
+                font-size: 0.5rem;
+                font-weight: normal;
+            }
+
+            sub {
+                display: inline-block;
+                font-size: 0.2813rem;
+                margin-top: 0.2344rem;
+                text-transform: uppercase;
+            }
+
+            .content {
+                width: 9.8438rem;
+                height: 7.1875rem;
+                margin: 0.7813rem auto 0;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 0.0156rem;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 0.625rem;
+                    background-color: #b7d9f2;
+                }
+
+                &:after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+
+                .left, .right {
+
+                    h4 {
+                        font-size: .40625rem;
+                        position: relative;
+
+                        &:before, &:after {
+                            box-sizing: border-box;
+                        }
+                    }
+
+                    .b {
+                        color: #00a4ff;
+                    }
+
+                    .g {
+                        color: #29cb80;
+                    }
+                    
+                    p {
+                        margin-top: 0.3125rem;
+                    }
+
+                }
+
+                .left {
+                    float: left;
+                    width: 4.9219rem;
+                    text-align: right;
+                    padding-right: 0.625rem;
+
+                    .l1 {
+                        margin-top: 1.9531rem;
+
+                        h4 {
+                        
+                            &:after {
+                                content: '';
+                                display: block;
+                                width: 0.375rem;
+                                height: 0.375rem;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                border: 0.0938rem solid #00a4ff;
+                                position: absolute;
+                                top: 50%;
+                                right: -0.8125rem;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+
+                    .l2 {
+                        margin-top: 2.3438rem;
+
+                        h4 {
+                        
+                            &:after {
+                                content: '';
+                                display: block;
+                                width: 0.375rem;
+                                height: 0.375rem;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                border: 0.0938rem solid #29cb80;
+                                position: absolute;
+                                top: 50%;
+                                right: -0.8125rem;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    float: right;
+                    width: 4.9219rem;
+                    text-align: left;
+                    padding-left: 0.625rem;
+
+                    .r1 {
+
+                        h4 {
+                        
+                            &:before {
+                                content: '';
+                                display: block;
+                                width: 0.375rem;
+                                height: 0.375rem;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                border: 0.0938rem solid #00a4ff;
+                                position: absolute;
+                                top: 50%;
+                                left: -0.8125rem;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+
+                    .r2 {
+                        margin-top: 2.4219rem;
+
+                        h4 {
+                        
+                            &:before {
+                                content: '';
+                                display: block;
+                                width: 0.375rem;
+                                height: 0.375rem;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                border: 0.0938rem solid #29cb80;
+                                position: absolute;
+                                top: 50%;
+                                left: -0.8125rem;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .philosophy-of-cooperation { 
+            text-align: center;
+            padding-top: 1.5625rem;
+            padding-bottom: 0.9375rem;
+
+            h3 {
+                font-size: 0.5rem;
+                font-weight: normal;
+            }
+
+            sub {
+                display: inline-block;
+                font-size: 0.2813rem;
+                margin-top: 0.2344rem;
+                text-transform: uppercase;
+            }
+            
+            .t  {
+                margin: 0.7813rem .3125rem 0;
+                background-color: #f2f7fa;
+                padding: .3125rem;
+
+                p {
+                    line-height: 2;
+                    text-align: left;
+                }
+            }
+
+            .b {
+                margin: .3125rem .3125rem 0;
+                
+                .block {
+                    height: 3.5938rem;
+                    background-color: #f2f7fa;
+                    position: relative;
+                    margin-bottom: .3125rem;
+
+                    &:before, &:after {
+                        top: 100%;
+                        left: 50%;
+                        border: solid transparent;
+                        content: " ";
+                        height: 0;
+                        width: 0;
+                        position: absolute;
+                        pointer-events: none;
+                        border-color: rgba(136, 183, 213, 0);
+                        border-top-color: #f2f7fa;
+                        border-width: 0.2344rem;
+                        margin-left: -0.2344rem;
+                    }
+
+                    &:before {
+                        border-top-color: #fff;
+                        top: 0;
+                    }
+
+                    &:nth-of-type(1) {
+
+                        &:before {
+                            border-top-color: #f2f7fa;
+                            left: 0;
+                        }
+                    }
+
+                    div {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        h4 {
+                            font-size: .40625rem;
+                        }
+
+                        p {
+                            white-space: nowrap;
+                            margin: 0.1563rem 0.1563rem 0;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                    }
+
+                    &.end {
+                        background-color: #00a4ff;
+                        color: #fff;
+
+                        &:after {
+                            border: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact {
+            background: transparent url('../assets/images/business-cooperation/6.png') top center/cover no-repeat;
+            text-align: center;
+            padding-top: 1.4063rem;
+            padding-bottom: 1.5625rem;
+
+            h3 {
+                font-size: 0.5rem;
+                font-weight: normal;
+                color: #fff;
+            }
+
+            sub {
+                display: inline-block;
+                font-size: 0.2813rem;
+                margin-top: 0.2344rem;
+                text-transform: uppercase;
+            }
+
+            .content {
+                margin: 0 auto;
+
+                .row {
+                    margin: 0.9375rem .3125rem 0;
+
+                    .col {
+                        text-align: left;
+
+                        textarea {
+                            display: block;
+                            width: 100%;
+                            height: 3.75rem;
+                            margin-bottom: 20px;
+                        }
+
+                        input {
+                            width: 100%;
+                            height: .9375rem;
+                            line-height: 1;
+                            padding: 0 0.3125rem;
+                            border: 0;
+                            border-radius: 0.3594rem;
+                            margin-bottom: 0.3125rem;
+                        }
+
+                        .phone {
+
+                            input {
+                                width: 5rem;
+                                margin-bottom: 0;
+                            }
+
+                            button {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     
-    @media #{$large-and-up} {}
+    @media #{$large-and-up} {
+        font-size: 14px;
+
+        button {
+            width: 170px;
+            // display: block;
+            height: 45px;
+            line-height: 44px;
+            border-radius: 25px;
+            background-color: #00a4ff;
+            color: #fff;
+            border: 0;
+            cursor: pointer;
+            position: relative;
+            font-size: 16px;
+
+            em {
+                font-style: normal;
+            }
+
+            span, img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all .15s linear;
+            }
+
+            img {
+                opacity: 0;
+            }
+
+            &:hover {
+
+                span {
+                    // transform: translate(-75px, -50%);
+                    left: 25px;
+                    transform: translate(0, -50%);
+                }
+                
+                img {
+                    opacity: 1;
+                    left: calc(100% - 40px);
+                    // transform: translate(60px, -50%);
+                    transform: translate(0, -50%);
+                }
+            }
+
+            &[disabled], &.disabled {
+                background-color: #e6e6e6;
+                color: #808080;
+
+                img {
+                    display: none;
+                }
+
+                &:hover {
+
+                    span {
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        .cooperation {
+            height: 950px;
+            text-align: center;
+
+            .content {
+                width: 1280px;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                &:after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+
+                .left {
+                    float: left;
+                }
+
+                .right {
+                    float: right;
+                    text-align: left;
+                    width: 600px;
+
+                    h3 {
+                        margin-top: 40px;
+                        font-size: 26px;
+                        font-weight: normal;
+                    }
+
+                    sub {
+                        display: inline-block;
+                        font-size: 12px;
+                        margin-top: 10px;
+                    }
+
+                    p {
+                        margin-top: 60px;
+                        line-height: 2.2;
+                    }
+
+                    .count {
+
+                        .g, .u {
+                            font-size: 16px;
+                            margin-top: 100px;
+                            position: relative;
+
+                            span {
+                                display: inline-block;
+                                font-size: 42px;
+                                font-weight: bold;
+                                margin-bottom: 20px;
+                            }
+
+                            em {
+                                display: inline-block;
+                                font-size: 42px;
+                                font-weight: bold;
+                                font-style: normal;
+                            }
+                        }
+
+                        .g {
+
+                            &:after {
+                                content: '';
+                                display: block;
+                                width: 1px;
+                                height: 65px;
+                                position: absolute;
+                                top: 10px;
+                                right: 50px;
+                                background-color: #e1e1e1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .what-is-igb {
+            height: 502px;
+            background: transparent url('../assets/images/business-cooperation/2.png') top center/cover no-repeat;
+            text-align: center;
+            padding-top: 95px;
+
+            h3 {
+                font-size: 26px;
+                color: #fff;
+                font-weight: normal;
+            }
+
+            sub {
+                display: inline-block;
+                font-size: 12px;
+                margin-top: 15px;
+                color: #dcdddd;
+            }
+
+            .row {
+                width: 1200px;
+                margin: 60px auto 0;
+                
+                .col {
+                    text-align: left;
+                    padding: 0 10px !important;
+
+                    h4 {
+                        font-size: 16px;
+                        color: #fff;
+                        margin-top: 20px;
+                    }
+
+                    p {
+                        color: #fff;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+
+        .market-analysis {
+            height: 700px;
+            text-align: center;
+
+            .content {
+                width: 1150px;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                &:after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+
+                .left {
+                    float: left;
+
+                    span {
+                        display: block;
+                        margin-top: 25px;
+                        font-size: 16px;
+                    }
+                }
+
+                .right {
+                    float: right;
+                    text-align: left;
+                    width: 590px;
+
+                    h3 {
+                        font-size: 26px;
+                        font-weight: normal;
+                    }
+
+                    sub {
+                        display: inline-block;
+                        font-size: 12px;
+                        margin-top: 10px;
+                    }
+
+                    img {
+                        display: block;
+                        margin-top: 70px;
+                    }
+
+                    p {
+                        margin-top: 60px;
+                        line-height: 2.2;
+                    }
+
+                    ul {
+                        margin-top: 60px;
+
+                        li {
+                            margin-bottom: 20px;
+                            position: relative;
+
+                            &:before {
+                                content: '';
+                                background-color: #b2b2b2;
+                                width: 8px;
+                                height: 8px;
+                                display: inline-block;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .the-benefits-of-igb {
+            height: 730px;
+            background: transparent url('../assets/images/business-cooperation/4.png') top center/cover no-repeat;
+            text-align: center;
+            padding-top: 90px;
+
+            h3 {
+                font-size: 26px;
+                font-weight: normal;
+            }
+
+            sub {
+                display: inline-block;
+                font-size: 12px;
+                margin-top: 15px;
+                text-transform: uppercase;
+            }
+
+            .content {
+                width: 630px;
+                height: 460px;
+                margin: 50px auto 0;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 1px;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 100px;
+                    background-color: #b7d9f2;
+                }
+
+                &:after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+
+                .left, .right {
+
+                    h4 {
+                        font-size: 18px;
+                        position: relative;
+
+                        &:before, &:after {
+                            box-sizing: border-box;
+                        }
+                    }
+
+                    .b {
+                        color: #00a4ff;
+                    }
+
+                    .g {
+                        color: #29cb80;
+                    }
+                    
+                    p {
+                        margin-top: 20px;
+                    }
+
+                }
+
+                .left {
+                    float: left;
+                    width: 315px;
+                    text-align: right;
+                    padding-right: 40px;
+
+                    .l1 {
+                        margin-top: 125px;
+
+                        h4 {
+                        
+                            &:after {
+                                content: '';
+                                display: block;
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                border: 6px solid #00a4ff;
+                                position: absolute;
+                                top: 50%;
+                                right: -52px;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+
+                    .l2 {
+                        margin-top: 150px;
+
+                        h4 {
+                        
+                            &:after {
+                                content: '';
+                                display: block;
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                border: 6px solid #29cb80;
+                                position: absolute;
+                                top: 50%;
+                                right: -52px;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    float: right;
+                    width: 315px;
+                    text-align: left;
+                    padding-left: 40px;
+
+                    .r1 {
+
+                        h4 {
+                        
+                            &:before {
+                                content: '';
+                                display: block;
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                border: 6px solid #00a4ff;
+                                position: absolute;
+                                top: 50%;
+                                left: -52px;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+
+                    .r2 {
+                        margin-top: 155px;
+
+                        h4 {
+                        
+                            &:before {
+                                content: '';
+                                display: block;
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                border: 6px solid #29cb80;
+                                position: absolute;
+                                top: 50%;
+                                left: -52px;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .philosophy-of-cooperation {
+            height: 750px;
+            text-align: center;
+            padding-top: 100px;
+
+            h3 {
+                font-size: 26px;
+                font-weight: normal;
+            }
+
+            sub {
+                display: inline-block;
+                font-size: 12px;
+                margin-top: 15px;
+                text-transform: uppercase;
+            }
+            
+            .t  {
+                width: 1180px;
+                height: 130px;
+                margin: 50px auto 0;
+                background-color: #f2f7fa;
+                padding-top: 35px;
+
+                p {
+                    line-height: 2;
+                    text-align: left;
+                    padding-left: 315px;
+                }
+            }
+
+            .b {
+                width: 1200px;
+                margin: 25px auto 0;
+                
+                &:after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+
+                .block {
+                    width: 280px;
+                    height: 230px;
+                    margin: 0 10px;
+                    background-color: #f2f7fa;
+                    position: relative;
+                    float: left;
+
+                    &:before, &:after {
+                        top: 50%;
+                        border: solid transparent;
+                        content: " ";
+                        height: 0;
+                        width: 0;
+                        position: absolute;
+                        pointer-events: none;
+                        border-color: rgba(136, 183, 213, 0);
+                        border-left-color: #f2f7fa;
+                        border-width: 15px;
+                        margin-top: -15px;
+                    }
+
+                    &:after {
+                        left: 100%;
+                    }
+
+                    &:before {
+                        border-left-color: #fff;
+                        left: 0;
+                    }
+
+                    &:nth-of-type(1) {
+
+                        &:before {
+                            border-left-color: #f2f7fa;
+                            left: 0;
+                        }
+                    }
+
+                    div {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        h4 {
+                            font-size: 18px;
+                        }
+
+                        p {
+                            white-space: nowrap;
+                            margin: 10px 10px 0;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                    }
+
+                    &.end {
+                        background-color: #00a4ff;
+                        color: #fff;
+
+                        &:after {
+                            border: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact {
+            height: 580px;
+            background: transparent url('../assets/images/business-cooperation/6.png') top center/cover no-repeat;
+            text-align: center;
+            padding-top: 90px;
+
+            h3 {
+                font-size: 26px;
+                font-weight: normal;
+                color: #fff;
+            }
+
+            sub {
+                display: inline-block;
+                font-size: 12px;
+                margin-top: 15px;
+                text-transform: uppercase;
+            }
+
+            .content {
+                width: 1200px;
+                margin: 0 auto;
+
+                .row {
+                    margin-top: 60px;
+
+                    .col {
+                        text-align: left;
+                        
+                        &:nth-of-type(1) {
+                            padding-right: 30px !important;
+                        }
+                        
+                        &:nth-of-type(2) {
+                            padding-left: 30px !important;
+                        }
+
+                        textarea {
+                            display: block;
+                            width: 100%;
+                            height: 240px;
+                        }
+
+                        input {
+                            width: 100%;
+                            height: 45px;
+                            line-height: 1;
+                            padding: 0 20px;
+                            border: 0;
+                            border-radius: 23px;
+                            margin-bottom: 20px;
+                        }
+
+                        .phone {
+
+                            input {
+                                width: 380px;
+                                margin-bottom: 0;
+                            }
+
+                            button {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     
 }

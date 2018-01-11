@@ -5,6 +5,7 @@ declare var FastClick: any;
 declare var isIE: any;
 declare var VeeValidate: any;
 declare var Vue: any;
+declare var CountUp: any;
 interface Window {
     isMobile: boolean;
     dialog: any;
