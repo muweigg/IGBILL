@@ -12,6 +12,7 @@ import 'script-loader!babel-loader!./third-party/pickadate.js/picker';
 import 'script-loader!babel-loader!./third-party/pickadate.js/picker.date';
 import 'script-loader!babel-loader!./third-party/pickadate.js/picker.time';
 import 'script-loader!babel-loader!./third-party/countUp/countUp';
+import 'script-loader!babel-loader!./third-party/clipboard/clipboard';
 
 import 'script-loader!babel-loader!vee-validate/dist/vee-validate';
 

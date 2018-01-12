@@ -28,4 +28,11 @@ $(() => {
 
     $dataFrom.pickadate(zh_CN);
     $dataTo.pickadate(zh_CN);
+
+    let copyLink = new Clipboard('#copyLink', {
+        text: function(trigger) {
+            window.tips.open('链接已复制');
+            return $('#link').val();
+        }
+    });
 });
