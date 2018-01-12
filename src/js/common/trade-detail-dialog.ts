@@ -75,7 +75,7 @@ $(() => {
                         skins += `
                             <tr>
                                 <td title="${skin.name}">${skin.name}</td>
-                                <td><span class="c1">￥${skin.money}</span></td>
+                                <td><span class="c1">${skin.money}</span></td>
                                 <td>${skin.status}</td>
                             </tr>
                         `;
@@ -83,7 +83,7 @@ $(() => {
 
                     let t2 = `
                         <div>
-                            <h4>充值饰品：</h4>
+                            <h4>${data.detail_title}</h4>
                             <div class="row">
                                 <div class="col s12">
                                     <table>
