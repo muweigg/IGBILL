@@ -67,7 +67,7 @@ body {
 
         .user {
             text-align: center;
-            height: 4.1406rem + .703125rem;
+            height: 4.1406rem + .703125rem * 1.7;
             border: 1px solid #dcdddd;
             background-color: #fff;
             position: relative;
@@ -97,6 +97,19 @@ body {
                 }
             }
 
+            p.wechat {
+                margin-top: 0.2344rem;
+                font-size: 0.2813rem;
+
+                * {
+                    margin: 0 0.0781rem;
+                }
+
+                a {
+                    color: #29cb80;
+                }
+            }
+
             .steam {
                 height: 0.7031rem;
                 line-height: 0.6719rem;
@@ -122,6 +135,12 @@ body {
             background-color: #fff;
             padding: 0 0 0.3125rem;
             margin-top: .3125rem;
+
+            &:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
 
             .balance {
                 margin-top: 0.3125rem;
@@ -196,13 +215,19 @@ body {
                 }
             }
 
-            .go-to-wallet, .go-to-recommend {
+            .go-to {
 
-                img {
-                    margin-top: 0.3125rem;
-                    height: 2.1875rem;
-                    // max-width: 100%;
-                    // transform: translate(0.1563rem, 0.7813rem);
+                .row {
+                    padding: .3125rem .3125rem 0;
+
+                    .col {
+                        padding: 0 5px !important;
+
+                        img {
+                            margin-top: 0.1563rem;
+                            width: 100%;
+                        }
+                    }
                 }
             }
 
@@ -348,6 +373,19 @@ body {
                             margin: 0 10px 0 0;
                         }
                     }
+
+                    p.wechat {
+                        margin-top: 10px;
+                        font-size: 14px;
+
+                        * {
+                            margin: 0 10px 0 0;
+                        }
+
+                        a {
+                            color: #29cb80;
+                        }
+                    }
                 }
             }
 
@@ -448,10 +486,19 @@ body {
                 }
             }
 
-            .go-to-wallet, .go-to-recommend {
-                
-                img {
-                    margin-top: $mt;
+            .go-to {
+
+                .row {
+                    padding-top: 30px;
+                    padding-right: 5px;
+
+                    .col {
+                        padding: 0 5px !important;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
                 }
             }
 

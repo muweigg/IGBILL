@@ -1,0 +1,75 @@
+{% extends './common/base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/wechat.css">
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+    <main class="wechat">
+        <div class="container-wrap">
+            <div class="wechat-wrap">
+
+                <!-- 微信绑定 -->
+                <div class="wechat-binding" style="display:none;">
+                    <h3>微信绑定</h3>
+                    <p>通过扫描二维码，完成绑定</p>
+                    <img src="./assets/images/wechat/qrcode.png" alt="">
+                </div>
+
+                <!-- 微信登录 -->
+                <div class="wechat-login" style="display:none;">
+                    <h3>微信登录</h3>
+                    <p>如果微信已绑定二维码，通过微信扫描二维码，完成登录</p>
+                    <img src="./assets/images/wechat/qrcode.png" alt="">
+                </div>
+
+                <!-- 微信绑定超时 -->
+                <div class="wechat-binding-timeout" style="display:none;">
+                    <div class="left">
+                        <img class="icon" src="./assets/images/wechat/wechat-binding-timeout.png"
+                            srcset="./assets/images/wechat/wechat-binding-timeout.png 1x, ./assets/images/wechat/wechat-binding-timeout@2x.png 2x, ./assets/images/wechat/wechat-binding-timeout@3x.png 3x">
+                    </div>
+                    <div class="right">
+                        <h3>抱歉，绑定超时！</h3>
+                        <p>请重新生成登录二维码！</p>
+                    </div>
+                </div>
+
+                <!-- 微信登录超时 -->
+                <div class="wechat-login-timeout" style="display:none;">
+                    <div class="left">
+                        <img class="icon" src="./assets/images/wechat/wechat-login-timeout.png"
+                            srcset="./assets/images/wechat/wechat-login-timeout.png 1x, ./assets/images/wechat/wechat-login-timeout@2x.png 2x, ./assets/images/wechat/wechat-login-timeout@3x.png 3x">
+                    </div>
+                    <div class="right">
+                        <h3>抱歉，登录超时！</h3>
+                        <p>请重新生成登录二维码！</p>
+                    </div>
+                </div>
+
+                <!-- 微信登录确认 -->
+                <div class="wechat-login-confirm" style="display:none;">
+                    <h3>微信登录</h3>
+                    <p>如果微信已绑定二维码，通过微信扫描二维码，完成登录</p>
+                    <img class="icon" src="./assets/images/wechat/wechat-confirm.png"
+                        srcset="./assets/images/wechat/wechat-confirm.png 1x, ./assets/images/wechat/wechat-confirm@2x.png 2x, ./assets/images/wechat/wechat-confirm@3x.png 3x">
+                    <p>已扫描，请在微信上完成微信登录！</p>
+                </div>
+
+                <!-- 微信绑定确认 -->
+                <div class="wechat-binding-confirm">
+                    <h3>微信绑定</h3>
+                    <p>通过微信扫描二维码，完成绑定</p>
+                    <img class="icon" src="./assets/images/wechat/wechat-confirm.png"
+                        srcset="./assets/images/wechat/wechat-confirm.png 1x, ./assets/images/wechat/wechat-confirm@2x.png 2x, ./assets/images/wechat/wechat-confirm@3x.png 3x">
+                    <p>已扫描，请在微信上完成绑定确认！</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
