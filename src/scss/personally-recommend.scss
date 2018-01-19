@@ -154,6 +154,34 @@ body {
                             }
                         }
                     }
+                    
+
+                    .my-qr-code {
+                        margin-top: 0.625rem;
+
+                        // div {
+                        //     padding-left: 0.4688rem;
+                        // }
+
+                        figure {
+                            width: 80%;
+                            border: 0.0156rem solid #dcdddd;
+                            text-align: center;
+                            margin: .3125rem auto 0;
+                            padding: .15625rem;
+
+                            img {
+                                width: 100%;
+                            }
+
+                            figcaption {
+                                margin-top: 0.1875rem;
+                                text-align: center;
+                                margin-top: 0.0781rem;
+                                font-size: .375rem;
+                            }
+                        }
+                    }
                 }
 
                 .personally-levels {
@@ -576,6 +604,33 @@ body {
 
                             p {
                                 margin-top: 10px;
+                            }
+                        }
+                    }
+
+                    .my-qr-code {
+
+                        div {
+                            padding-left: 30px;
+                        }
+
+                        figure {
+                            width: 130px;
+                            height: 140px;
+                            border: 1px solid #dcdddd;
+                            text-align: center;
+
+                            img {
+                                width: 96px;
+                                height: 96px;
+                                margin-top: 12px;
+                            }
+
+                            figcaption {
+                                margin-top: 12px;
+                                text-align: center;
+                                margin-top: 5px;
+                                font-size: 12px;
                             }
                         }
                     }
