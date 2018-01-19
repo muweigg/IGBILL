@@ -1,0 +1,30 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: transparent url('../assets/images/promotion/bg@2x.jpg') top center/cover no-repeat;
+    color: #fff;
+    font-size: 14px;
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .c1 {
+        color: #00a4ff;
+    }
+
+    header {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 15px;
+        background-color: rgba(0, 0, 0, .3);
+    }
+
+}
