@@ -218,7 +218,7 @@ body {
             .go-to {
 
                 .row {
-                    padding: .3125rem .3125rem 0;
+                    padding: .15625rem .3125rem 0;
 
                     .col {
                         padding: 0 5px !important;
@@ -341,7 +341,7 @@ body {
                 top: 15px;
                 left: 50%;
                 transform: translateX(-50%);
-                width: 80%;
+                width: 90%;
 
                 img {
                     // margin: 20px 0 10px;
@@ -361,7 +361,7 @@ body {
                         text-overflow: ellipsis;
                         overflow: hidden;
                         white-space: nowrap;
-                        margin-top: 20px;
+                        margin-top: 6px;
                     }
 
                     p.valid {
@@ -413,6 +413,7 @@ body {
             border: 1px solid #dcdddd;
             font-size: 16px;
             background-color: #fff;
+            margin-left: 35px;
 
             .balance {
                 margin-top: $mt;
@@ -420,7 +421,7 @@ body {
                 strong {
                     display: block;
                     color: #00a4ff;
-                    font-size: 42px;
+                    font-size: 34px;
                     margin: 5px 0 10px;
                 }
 
